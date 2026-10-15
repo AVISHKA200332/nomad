@@ -3,7 +3,7 @@
     <div class="footer-top">
       <!-- Centered Brand -->
       <a href="<?= url('/') ?>" class="footer-brand" aria-label="Avenora Tourism Home">
-        Avenora<span class="brand-dot"></span>
+        Avenora
       </a>
       <p class="footer-tagline">Crafting transformative journeys, private alpine expeditions, and mindful luxury escapes.</p>
 

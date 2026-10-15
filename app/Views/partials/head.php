@@ -18,21 +18,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Core & Design Tokens Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/variables.css') ?>">
-  <link rel="stylesheet" href="<?= asset('assets/css/reset.css') ?>">
-  <link rel="stylesheet" href="<?= asset('assets/css/global.css') ?>">
-  <link rel="stylesheet" href="<?= asset('assets/css/layout.css') ?>">
+  <link rel="stylesheet" href="<?= asset('assets/css/variables.css') ?>?v=2.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/reset.css') ?>?v=2.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/global.css') ?>?v=2.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/layout.css') ?>?v=2.0">
 
   <!-- Component Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>">
-  <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>">
-  <link rel="stylesheet" href="<?= asset('assets/css/components/cards.css') ?>">
-  <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=2.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>?v=2.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/cards.css') ?>?v=2.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=2.0">
 
   <!-- Page Stylesheet -->
-  <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>">
+  <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=2.0">
 
   <!-- Responsive Breakpoints -->
-  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>">
+  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=2.0">
 </head>
 <body>

@@ -5,12 +5,12 @@
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 94vh;
+  min-height: 96vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--color-navy);
-  background-image: url('../images/banners/hero-bg.jpg');
+  background-color: #1a3260;
+  background-image: url('../../images/banners/hero-bg.jpg');
   background-position: center 25%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,9 +25,10 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(3, 17, 38, 0.45) 0%,
-    rgba(3, 17, 38, 0.1) 40%,
-    rgba(3, 17, 38, 0.75) 100%
+    rgba(12, 28, 65, 0.4) 0%,
+    rgba(12, 28, 65, 0.05) 30%,
+    rgba(12, 28, 65, 0.15) 70%,
+    rgba(6, 16, 38, 0.65) 100%
   );
   pointer-events: none;
 }
@@ -48,14 +49,25 @@
 }
 
 .hero-display-title {
-  font-size: clamp(4.5rem, 15vw, 13.5rem);
-  font-weight: var(--fw-extrabold);
+  font-size: clamp(5rem, 16.5vw, 15.5rem);
+  font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.88;
-  color: rgba(255, 255, 255, 0.95);
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    #ffffff 35%,
+    rgba(255, 255, 255, 0.85) 60%,
+    rgba(255, 255, 255, 0.35) 90%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-transform: none;
-  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25));
   user-select: none;
+  margin: 0;
 }
 
 /* Hero Lower Content Row */
@@ -81,14 +93,13 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Hero Floating Card (Right) */
+/* Hero Floating Card (Right - Matched to Reference Design) */
 .hero-float-card {
-  width: 310px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(12px);
-  border-radius: var(--radius-xl);
-  padding: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  width: 325px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 22px 20px 20px 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
   color: var(--color-navy);
   transform: translateY(0);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
@@ -97,80 +108,62 @@
 
 .hero-float-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
 }
 
-.hero-card-header {
+.hero-card-header-block {
+  margin-bottom: 16px;
+}
+
+.hero-card-title-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin-bottom: 6px;
 }
 
-.hero-card-meta {
-  font-size: 0.75rem;
-  font-weight: var(--fw-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-muted);
+.hero-card-blue-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
 }
 
-.hero-card-media {
-  position: relative;
+.hero-card-main-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.hero-card-subtitle {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.hero-card-media-wrap {
   width: 100%;
-  height: 190px;
-  border-radius: var(--radius-lg);
+  height: 175px;
+  border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 12px;
 }
 
-.hero-card-media img {
+.hero-card-media-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.hero-card-play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
-}
-
-.hero-card-play:hover {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: var(--color-white);
-}
-
-.hero-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero-card-title {
-  font-size: 0.95rem;
-  font-weight: var(--fw-bold);
-  color: var(--color-navy);
-}
-
-.hero-card-action {
-  font-size: 0.8rem;
-  font-weight: var(--fw-semibold);
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  gap: 4px;
+.hero-float-card:hover .hero-card-media-wrap img {
+  transform: scale(1.04);
 }
 
 
@@ -700,7 +693,7 @@
   display: flex;
   align-items: center;
   background-color: var(--color-navy);
-  background-image: url('../images/banners/cta-mountain-bg.jpg');
+  background-image: url('../../images/banners/cta-mountain-bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

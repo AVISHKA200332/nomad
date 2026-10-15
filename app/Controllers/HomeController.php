@@ -15,10 +15,11 @@ class HomeController extends Controller
             
             // Hero Data
             'hero' => [
-                'headline' => 'Travel.',
-                'subhead' => 'Tailored journeys for travelers who want more than a standard trip.',
+                'headline' => 'Travelo',
+                'subhead' => "Tailored journeys for\ntravelers who want more than a standard trip.",
                 'cta' => 'Explore Destinations',
-                'badge' => 'High Alps • 3,450m',
+                'cardHeading' => 'Plan your next vacation',
+                'cardDesc' => 'Affordable tour packages, accommodations, and seamless booking services',
                 'cardTitle' => 'Mountain Expedition',
                 'cardLocation' => 'Swiss Alps Alpine Pass',
                 'cardCta' => 'Watch the Journey'

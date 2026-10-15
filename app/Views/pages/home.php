@@ -8,19 +8,19 @@
 <!-- ==========================================================================
      SECTION 01: Hero & Navigation Section
      ========================================================================== -->
-<section class="hero-section" id="hero">
+<section class="hero-section" id="hero" style="background-image: url('<?= asset('assets/images/banners/hero-bg.jpg') ?>');">
   <div class="hero-overlay"></div>
 
   <div class="container hero-content">
     <!-- Enormous Travel Display Headline -->
     <div class="hero-headline-wrap">
-      <h1 class="hero-display-title"><?= htmlspecialchars($hero['headline'] ?? 'Travel.') ?></h1>
+      <h1 class="hero-display-title"><?= htmlspecialchars($hero['headline'] ?? 'Travelo') ?></h1>
     </div>
 
     <!-- Hero Lower Content & Floating Card -->
     <div class="hero-bottom-row">
       <div class="hero-bottom-left">
-        <p class="hero-subhead"><?= htmlspecialchars($hero['subhead'] ?? 'Tailored journeys for travelers who want more than a standard trip.') ?></p>
+        <p class="hero-subhead"><?= nl2br(htmlspecialchars($hero['subhead'] ?? "Tailored journeys for\ntravelers who want more than a standard trip.")) ?></p>
         <a href="<?= url('/destinations') ?>" class="btn btn-white-pill">
           <span><?= htmlspecialchars($hero['cta'] ?? 'Explore Destinations') ?></span>
           <span class="arrow-circle">
@@ -32,31 +32,17 @@
         </a>
       </div>
 
-      <!-- Right Floating Feature Card -->
+      <!-- Right Floating Feature Card (Matched to Reference Image) -->
       <div class="hero-float-card">
-        <div class="hero-card-header">
-          <span class="hero-card-meta"><?= htmlspecialchars($hero['badge'] ?? 'High Alps • 3,450m') ?></span>
-          <span class="brand-dot"></span>
-        </div>
-        <div class="hero-card-media">
-          <img src="<?= asset('assets/images/banners/hero-card.jpg') ?>" alt="Alpine explorer overlooking mountains" loading="eager">
-          <button class="hero-card-play" aria-label="Play expedition preview video">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-          </button>
-        </div>
-        <div class="hero-card-footer">
-          <div>
-            <h2 class="hero-card-title"><?= htmlspecialchars($hero['cardTitle'] ?? 'Mountain Expedition') ?></h2>
-            <span style="font-size: 0.78rem; color: var(--color-text-muted);"><?= htmlspecialchars($hero['cardLocation'] ?? 'Swiss Alps Pass') ?></span>
+        <div class="hero-card-header-block">
+          <div class="hero-card-title-row">
+            <span class="hero-card-blue-dot"></span>
+            <h3 class="hero-card-main-title"><?= htmlspecialchars($hero['cardHeading'] ?? 'Plan your next vacation') ?></h3>
           </div>
-          <a href="#destinations" class="hero-card-action">
-            <span><?= htmlspecialchars($hero['cardCta'] ?? 'Watch') ?></span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </a>
+          <p class="hero-card-subtitle"><?= htmlspecialchars($hero['cardDesc'] ?? 'Affordable tour packages, accommodations, and seamless booking services') ?></p>
+        </div>
+        <div class="hero-card-media-wrap">
+          <img src="<?= asset('assets/images/banners/hero-card.jpg') ?>" alt="Traveler overlooking mountains" loading="eager">
         </div>
       </div>
     </div>
@@ -465,7 +451,7 @@
 <!-- ==========================================================================
      SECTION 11: Final Mountain Adventure CTA
      ========================================================================== -->
-<section class="final-cta-section" id="cta">
+<section class="final-cta-section" id="cta" style="background-image: url('<?= asset('assets/images/banners/cta-mountain-bg.jpg') ?>');">
   <div class="final-cta-overlay"></div>
   <div class="container">
     <div class="final-cta-content">
