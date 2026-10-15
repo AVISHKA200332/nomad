@@ -1,0 +1,2 @@
+﻿-- Avenora Tourism Platform Database Schema
+-- TODO: Define MySQL database tables, relations, indexes, and constraints in future phases.

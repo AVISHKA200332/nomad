@@ -1,0 +1,2 @@
+﻿# Apache Rewrite Rules for Avenora
+# TODO: Configure mod_rewrite to route incoming requests through index.php
