@@ -30,7 +30,11 @@
   <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=2.0">
 
   <!-- Page Stylesheet -->
-  <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=2.0">
+  <?php if (($activePage ?? 'home') === 'destinations'): ?>
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=2.0">
+  <?php else: ?>
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=2.0">
+  <?php endif; ?>
 
   <!-- Responsive Breakpoints -->
   <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=2.0">
