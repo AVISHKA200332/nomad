@@ -1,1 +1,386 @@
-﻿/* Card Component Styles (TODO: Define destination card and package card styles) */
+/* Reusable UI Cards & Panels */
+
+/* 1. Statistics Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-4xl);
+}
+
+.stat-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card-highlight {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 12px 36px rgba(48, 71, 244, 0.35);
+}
+
+.stat-card-highlight .stat-number,
+.stat-card-highlight .stat-label {
+  color: var(--color-white);
+}
+
+.stat-number {
+  font-size: clamp(2.5rem, 4vw, 3.4rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-main);
+  margin-bottom: var(--space-sm);
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+}
+
+.stat-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  background-color: rgba(3, 17, 38, 0.05);
+  color: var(--color-text-main);
+}
+
+.stat-card-highlight .stat-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+}
+
+/* 2. Destination Showcase Cards */
+.dest-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: block;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  background-color: var(--color-navy);
+}
+
+.dest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.dest-card-media {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.dest-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.dest-card:hover .dest-card-media img {
+  transform: scale(1.05);
+}
+
+.dest-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 17, 38, 0) 40%, rgba(3, 17, 38, 0.85) 100%);
+  pointer-events: none;
+}
+
+.dest-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-md);
+  color: var(--color-white);
+}
+
+.dest-card-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-xs);
+}
+
+.dest-card-title {
+  font-size: 1.45rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.dest-card-location {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* 3. Package Cards (Dark Navy Section) */
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-4xl);
+}
+
+.package-card {
+  background-color: var(--color-navy-card);
+  border: 1px solid var(--color-navy-border);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  display: flex;
+  gap: var(--space-xl);
+  align-items: center;
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(48, 71, 244, 0.6);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.package-card-media {
+  width: 180px;
+  height: 150px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.package-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.package-card:hover .package-card-media img {
+  transform: scale(1.06);
+}
+
+.package-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.package-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.82rem;
+  color: var(--color-primary-light);
+  color: #7d96ff;
+  margin-bottom: var(--space-xs);
+  font-weight: var(--fw-medium);
+}
+
+.package-card-title {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  line-height: 1.25;
+  margin-bottom: var(--space-xs);
+}
+
+.package-card-location {
+  font-size: 0.86rem;
+  color: var(--color-navy-muted);
+  margin-bottom: var(--space-md);
+}
+
+.package-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.package-card-price {
+  font-size: 1.15rem;
+  font-weight: var(--fw-extrabold);
+  color: var(--color-white);
+}
+
+.package-card-price span {
+  font-size: 0.78rem;
+  font-weight: var(--fw-regular);
+  color: var(--color-navy-muted);
+}
+
+/* 4. Experience Cards (Section 06) */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+}
+
+.exp-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.exp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.exp-card-media {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+}
+
+.exp-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.exp-card:hover .exp-card-media img {
+  transform: scale(1.06);
+}
+
+.exp-card-body {
+  padding: 4px 8px 12px 8px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.exp-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+}
+
+.exp-card-title {
+  font-size: 1.18rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-main);
+}
+
+.exp-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+  flex: 1;
+}
+
+.exp-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exp-card-count {
+  font-size: 0.8rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* 5. Moments Cards (Section 08) */
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-3xl);
+}
+
+.moment-card {
+  position: relative;
+  height: 440px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-navy);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.moment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.moment-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.moment-card:hover img {
+  transform: scale(1.06);
+}
+
+.moment-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-size: 0.82rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

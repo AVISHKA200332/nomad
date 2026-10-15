@@ -1,7 +1,14 @@
-﻿<?php
+<?php
+// Layout wrapper for all public pages
+require_once __DIR__ . '/../partials/head.php';
+require_once __DIR__ . '/../partials/navbar.php';
+?>
 
-/**
- * Main Layout Template
- *
- * TODO: Define master HTML wrapper including head, navigation, main content slot, and footer.
- */
+<main id="main-content">
+  <?= $content ?>
+</main>
+
+<?php
+require_once __DIR__ . '/../partials/footer.php';
+require_once __DIR__ . '/../partials/scripts.php';
+?>

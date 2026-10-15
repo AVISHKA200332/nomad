@@ -1,7 +1,8 @@
-﻿<?php
+<?php
 
 /**
- * Front Controller Entry Point
- *
- * TODO: Direct all incoming HTTP requests to bootstrap the application and dispatch routes.
+ * Avenora Front Controller
  */
+
+$router = require __DIR__ . '/../bootstrap/app.php';
+$router->dispatch();

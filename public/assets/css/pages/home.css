@@ -1,1 +1,744 @@
-﻿/* Home Page Styles (TODO: Define hero section, featured sections, and CTA styles) */
+/* Home Page Styles */
+
+/* ==========================================================================
+   SECTION 01: Hero Section
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-navy);
+  background-image: url('../images/banners/hero-bg.jpg');
+  background-position: center 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding-top: 130px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 17, 38, 0.45) 0%,
+    rgba(3, 17, 38, 0.1) 40%,
+    rgba(3, 17, 38, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Enormous Centered Display Headline */
+.hero-headline-wrap {
+  text-align: center;
+  padding: 20px 0 30px 0;
+}
+
+.hero-display-title {
+  font-size: clamp(4.5rem, 15vw, 13.5rem);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  color: rgba(255, 255, 255, 0.95);
+  text-transform: none;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+/* Hero Lower Content Row */
+.hero-bottom-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-2xl);
+  margin-top: auto;
+}
+
+.hero-bottom-left {
+  max-width: 520px;
+}
+
+.hero-subhead {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xl);
+  color: var(--color-white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero Floating Card (Right) */
+.hero-float-card {
+  width: 310px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-xl);
+  padding: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  color: var(--color-navy);
+  transform: translateY(0);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  flex-shrink: 0;
+}
+
+.hero-float-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.hero-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.hero-card-meta {
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.hero-card-media {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.hero-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.hero-card-play:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--color-white);
+}
+
+.hero-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-card-title {
+  font-size: 0.95rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy);
+}
+
+.hero-card-action {
+  font-size: 0.8rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+/* ==========================================================================
+   SECTION 02: Introduction & Statistics
+   ========================================================================== */
+.intro-section {
+  background-color: var(--color-bg-light);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.intro-editorial-row {
+  display: grid;
+  grid-template-columns: 240px 1fr 220px;
+  gap: var(--space-3xl);
+  align-items: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.intro-photo-left {
+  height: 290px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.intro-photo-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-center-content {
+  text-align: left;
+  padding: 0 var(--space-md);
+}
+
+.intro-text {
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-main);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xl);
+}
+
+.intro-photo-right {
+  height: 200px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.intro-photo-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ==========================================================================
+   SECTION 03: Destinations for Unforgettable Journeys
+   ========================================================================== */
+.destinations-section {
+  background-color: var(--color-bg-light);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.destinations-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr 200px;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.destinations-left {
+  position: sticky;
+  top: 120px;
+}
+
+.destinations-left .section-title {
+  margin-bottom: var(--space-lg);
+}
+
+.destinations-left .section-desc {
+  margin-bottom: var(--space-2xl);
+}
+
+.destinations-center-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.destinations-sidebar-nav {
+  position: sticky;
+  top: 120px;
+  padding-left: var(--space-lg);
+  border-left: 1px solid var(--color-border);
+}
+
+.dest-sidebar-title {
+  font-size: 0.78rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.dest-sidebar-item {
+  padding: 12px 0;
+  font-size: 0.92rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(3, 17, 38, 0.05);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.dest-sidebar-item:hover,
+.dest-sidebar-item.is-active {
+  color: var(--color-primary);
+}
+
+
+/* ==========================================================================
+   SECTION 04: Curated Travel Packages (Dark Navy Section)
+   ========================================================================== */
+.packages-section {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.packages-section .section-title {
+  color: var(--color-white);
+}
+
+.packages-section .section-desc {
+  color: var(--color-navy-muted);
+}
+
+.packages-cta-wrap {
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   SECTION 05: Travel Planning Services
+   ========================================================================== */
+.planning-section {
+  background-color: var(--color-bg-light);
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.planning-panel {
+  background-color: var(--color-white);
+  border-radius: var(--radius-2xl);
+  padding: 48px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-3xl);
+  margin-top: var(--space-3xl);
+  align-items: center;
+}
+
+.planning-services-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.planning-service-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-xl);
+  align-items: flex-start;
+  transition: transform var(--transition-fast);
+}
+
+.planning-service-item:first-child {
+  padding-top: 0;
+}
+
+.planning-service-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.service-num {
+  font-size: 1.1rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  width: 32px;
+}
+
+.service-content h3 {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-xs);
+}
+
+.service-content p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.planning-photos-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.planning-photo-card {
+  height: 180px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.planning-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.planning-photo-card:hover img {
+  transform: scale(1.06);
+}
+
+
+/* ==========================================================================
+   SECTION 06: Choose the Kind of Journey
+   ========================================================================== */
+.experience-section {
+  background-color: var(--color-bg-light);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.experience-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+
+/* ==========================================================================
+   SECTION 07: Blue Feature & Travel Services Section
+   ========================================================================== */
+.blue-feature-section {
+  background-color: var(--color-bg-sky);
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.blue-feature-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.blue-feature-left .section-title {
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  margin-bottom: var(--space-lg);
+}
+
+.blue-feature-left .section-desc {
+  color: #3b5368;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2xl);
+}
+
+.blue-service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.blue-service-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 28px 32px;
+  box-shadow: 0 8px 24px rgba(3, 17, 38, 0.08);
+  display: flex;
+  gap: var(--space-xl);
+  align-items: flex-start;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.blue-service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(3, 17, 38, 0.12);
+}
+
+.blue-service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.blue-service-info h3 {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy);
+  margin-bottom: var(--space-xs);
+}
+
+.blue-service-info p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+
+/* ==========================================================================
+   SECTION 08: Moments Gallery
+   ========================================================================== */
+.moments-section {
+  background-color: var(--color-bg-light);
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-5xl);
+}
+
+
+/* ==========================================================================
+   SECTION 09: Testimonial Feature
+   ========================================================================== */
+.testimonial-section {
+  background-color: var(--color-bg-light);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.testimonial-panel {
+  background-color: var(--color-white);
+  border-radius: var(--radius-2xl);
+  padding: 44px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  margin-top: var(--space-3xl);
+}
+
+.testimonial-photo-wrap {
+  width: 100%;
+  height: 400px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-body {
+  padding-right: var(--space-xl);
+}
+
+.testimonial-eyebrow {
+  font-size: 0.78rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  display: inline-block;
+}
+
+.testimonial-quote {
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: var(--fw-semibold);
+  line-height: 1.4;
+  color: var(--color-text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2xl);
+}
+
+.testimonial-author-meta h4 {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-main);
+}
+
+.testimonial-author-meta p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.testimonial-nav-arrows {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+.testimonial-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy);
+  transition: all var(--transition-fast);
+}
+
+.testimonial-arrow-btn:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+
+/* ==========================================================================
+   SECTION 10: Frequently Asked Questions
+   ========================================================================== */
+.faq-section {
+  background-color: var(--color-bg-light);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.faq-accordion-wrap {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.faq-item {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.faq-item.is-expanded {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(48, 71, 244, 0.3);
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-main);
+}
+
+.faq-toggle-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy);
+  flex-shrink: 0;
+  transition: transform var(--transition-base), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.faq-item.is-expanded .faq-toggle-icon {
+  transform: rotate(45deg);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+}
+
+.faq-answer-content {
+  padding: 0 28px 24px 28px;
+  font-size: 0.98rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   SECTION 11: Final Mountain Adventure CTA
+   ========================================================================== */
+.final-cta-section {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-navy);
+  background-image: url('../images/banners/cta-mountain-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: var(--space-5xl) 0;
+  overflow: hidden;
+}
+
+.final-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 17, 38, 0.88) 0%,
+    rgba(3, 17, 38, 0.6) 55%,
+    rgba(3, 17, 38, 0.25) 100%
+  );
+  pointer-events: none;
+}
+
+.final-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+
+.final-cta-title {
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-lg);
+  color: var(--color-white);
+}
+
+.final-cta-desc {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-2xl);
+  line-height: 1.5;
+}

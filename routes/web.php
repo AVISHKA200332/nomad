@@ -1,7 +1,14 @@
-﻿<?php
+<?php
 
 /**
  * Web Routes Definition
  *
- * TODO: Register application routes and map URI paths to controllers.
+ * Maps HTTP routes to controllers and actions.
  */
+
+/** @var \App\Core\Router $router */
+$router->get('/', 'HomeController@index');
+$router->get('/destinations', 'DestinationController@index');
+$router->get('/packages', 'PackageController@index');
+$router->get('/about', 'AboutController@index');
+$router->get('/contact', 'ContactController@index');

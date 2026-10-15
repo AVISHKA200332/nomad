@@ -1,1 +1,13 @@
-﻿/* Layout Styles (TODO: Define grid systems, containers, and structural wrappers) */
+/* Structural Layout Wrapper Styles */
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.site-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+}
