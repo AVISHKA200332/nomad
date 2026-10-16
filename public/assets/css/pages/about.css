@@ -1,1 +1,1373 @@
-﻿/* About Page Styles (TODO: Define company story, stats, and team section styles) */
+/* ==========================================================================
+   AVENORA — ABOUT PAGE STYLES
+   Pixel-Accurately Engineered to Match About.png Reference
+   ========================================================================== */
+
+/* Design Tokens for About Page */
+:root {
+  --color-about-bg: #EAF1F5;
+  --color-about-sky: #B4E3FB;
+  --color-about-navy: #031126;
+  --color-about-primary: #3047F4;
+  --color-about-primary-hover: #2135D9;
+  --color-about-text-main: #101820;
+  --color-about-text-muted: #6B7885;
+  --color-about-border: #E3EAF0;
+  --color-about-card-bg: #FFFFFF;
+}
+
+/* Base Body Adjustment for About Page */
+body.page-about {
+  background-color: var(--color-about-bg);
+}
+
+
+/* ==========================================================================
+   SECTION 01: Cinematic About Mountain Hero
+   ========================================================================== */
+.about-hero-section {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-about-navy);
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding-top: 150px;
+  padding-bottom: 90px;
+  overflow: hidden;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 17, 38, 0.90) 0%,
+    rgba(3, 17, 38, 0.72) 42%,
+    rgba(3, 17, 38, 0.28) 75%,
+    rgba(3, 17, 38, 0.08) 100%
+  ),
+  linear-gradient(
+    180deg,
+    rgba(3, 17, 38, 0.25) 0%,
+    transparent 45%,
+    rgba(3, 17, 38, 0.90) 100%
+  );
+  pointer-events: none;
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.about-hero-content {
+  max-width: 580px;
+  text-align: left;
+}
+
+.about-hero-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 5px 16px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.about-hero-title {
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 18px 0;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+.about-hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 32px 0;
+  max-width: 480px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.about-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* White Pill Button with Blue Arrow */
+.btn-white-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  color: var(--color-about-navy);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: 10px 14px 10px 24px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.btn-white-pill .arrow-circle-blue {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-about-primary);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-white-pill:hover {
+  background-color: #f7fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.btn-white-pill:hover .arrow-circle-blue {
+  transform: rotate(-45deg);
+  background-color: var(--color-about-primary-hover);
+}
+
+
+/* ==========================================================================
+   SECTION 02: About Avenora Introduction (Two Columns)
+   ========================================================================== */
+.about-intro-section {
+  background-color: var(--color-about-bg);
+  padding: 85px 0 60px 0;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Column: Traveler Photograph */
+.about-intro-photo-wrap {
+  width: 100%;
+}
+
+.about-intro-photo {
+  width: 100%;
+  height: 520px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(3, 17, 38, 0.08);
+  background-color: #dbe4ec;
+  position: relative;
+}
+
+.about-intro-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-intro-photo:hover img {
+  transform: scale(1.03);
+}
+
+/* Right Column: Company Story */
+.about-intro-content {
+  max-width: 540px;
+}
+
+.about-badge {
+  display: inline-block;
+  background-color: rgba(48, 71, 244, 0.08);
+  color: var(--color-about-primary);
+  border-radius: var(--radius-pill);
+  padding: 5px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.about-intro-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-about-text-main);
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px 0;
+}
+
+.about-intro-p {
+  font-size: 0.98rem;
+  line-height: 1.68;
+  color: var(--color-about-text-muted);
+  margin: 0 0 16px 0;
+}
+
+.about-intro-cta-wrap {
+  margin-top: 28px;
+}
+
+
+/* ==========================================================================
+   SECTION 03: Statistics Cards (3 Horizontal Cards)
+   ========================================================================== */
+.about-stats-section {
+  background-color: var(--color-about-bg);
+  padding: 10px 0 85px 0;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.about-stat-card {
+  border-radius: 26px;
+  padding: 38px 34px 34px 34px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+/* White Stat Cards (1 & 3) */
+.stat-card-white {
+  background-color: #ffffff;
+  color: var(--color-about-text-main);
+  box-shadow: 0 4px 24px rgba(3, 17, 38, 0.04);
+  border: 1px solid rgba(227, 234, 240, 0.85);
+}
+
+.stat-card-white:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(3, 17, 38, 0.08);
+}
+
+/* Royal Blue Middle Stat Card (2) */
+.stat-card-blue {
+  background-color: var(--color-about-primary);
+  color: #ffffff;
+  box-shadow: 0 12px 34px rgba(48, 71, 244, 0.28);
+  border: 1px solid transparent;
+}
+
+.stat-card-blue:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(48, 71, 244, 0.38);
+}
+
+/* Stat Top Row: Number & Icon */
+.stat-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.stat-number {
+  font-size: clamp(2.8rem, 4vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0;
+}
+
+.stat-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-card-white .stat-icon {
+  background-color: rgba(3, 17, 38, 0.05);
+  color: var(--color-about-navy);
+}
+
+.stat-card-blue .stat-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.stat-desc {
+  font-size: 0.94rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.stat-card-white .stat-desc {
+  color: var(--color-about-text-muted);
+}
+
+.stat-card-blue .stat-desc {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* ==========================================================================
+   SECTION 04: Interactive Travel Experience Showcase (Expanding Cards)
+   ========================================================================== */
+.about-exp-section {
+  background-color: var(--color-about-bg);
+  padding: 85px 0 100px 0;
+}
+
+.about-exp-intro-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: 40px;
+}
+
+.about-exp-intro-left {
+  max-width: 580px;
+}
+
+.about-exp-title {
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
+  font-weight: 800;
+  color: var(--color-about-text-main);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.about-exp-intro-right {
+  max-width: 420px;
+}
+
+.about-exp-desc {
+  font-size: 0.95rem;
+  color: var(--color-about-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Horizontal Expanding Cards Row */
+.about-exp-container {
+  display: flex;
+  gap: 16px;
+  height: 520px;
+  width: 100%;
+}
+
+.about-exp-card {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  flex: 1;
+  min-width: 68px;
+  cursor: pointer;
+  background-color: var(--color-about-navy);
+  box-shadow: 0 8px 24px rgba(3, 17, 38, 0.08);
+  transition: flex 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+  user-select: none;
+}
+
+/* Hover on collapsed cards */
+.about-exp-card:not(.is-expanded):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(3, 17, 38, 0.16);
+}
+
+/* Expanded Card State */
+.about-exp-card.is-expanded {
+  flex: 4;
+  cursor: default;
+}
+
+.about-exp-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-exp-card.is-expanded img {
+  transform: scale(1.02);
+}
+
+.about-exp-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 17, 38, 0.35) 0%,
+    rgba(3, 17, 38, 0.25) 45%,
+    rgba(3, 17, 38, 0.88) 100%
+  );
+  pointer-events: none;
+}
+
+/* Top Indicator inside Card */
+.about-exp-pill-top {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-about-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Collapsed Title (Rotated Vertical) */
+.about-exp-collapsed-label {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: center center;
+  white-space: nowrap;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+
+.about-exp-card.is-expanded .about-exp-collapsed-label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Expanded Card Content */
+.about-exp-expanded-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 34px;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+  pointer-events: none;
+}
+
+.about-exp-card.is-expanded .about-exp-expanded-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.about-exp-expanded-title {
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.about-exp-expanded-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 22px 0;
+  max-width: 440px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==========================================================================
+   SECTION 05: Dark Navy Journey Timeline
+   ========================================================================== */
+.about-timeline-section {
+  background-color: var(--color-about-navy);
+  color: #ffffff;
+  padding: 85px 0 115px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Marquee Outline Typography */
+.about-timeline-marquee {
+  font-size: clamp(3.2rem, 7.5vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.14);
+  color: transparent;
+  text-align: center;
+  margin-bottom: 50px;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Timeline Header Row */
+.about-timeline-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: 60px;
+}
+
+.about-timeline-header-left {
+  max-width: 580px;
+}
+
+.about-badge-dark {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  padding: 5px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.about-timeline-title {
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.about-timeline-header-right {
+  text-align: right;
+  max-width: 320px;
+}
+
+.about-timeline-counter {
+  font-size: clamp(2.4rem, 3.6vw, 3.2rem);
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.about-timeline-counter strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.about-timeline-counter-desc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Desktop Horizontal Timeline Wrapper */
+.about-timeline-wrapper {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+}
+
+/* Continuous Horizontal Center Line */
+.about-timeline-line {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 50%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* 5 Column Grid for Timeline Steps */
+.about-timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  min-height: 520px;
+}
+
+/* Each Step Column contains Top Zone, Center Marker, Bottom Zone */
+.about-timeline-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.timeline-zone-top,
+.timeline-zone-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+/* Center Marker Zone */
+.timeline-zone-center {
+  position: relative;
+  z-index: 3;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-marker-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--color-about-navy);
+  font-size: 0.95rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.12);
+  transition: all 0.25s ease;
+}
+
+.timeline-marker-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.22);
+}
+
+.about-timeline-col.is-active .timeline-marker-btn {
+  background-color: var(--color-about-primary);
+  color: #ffffff;
+  box-shadow: 0 0 0 8px rgba(48, 71, 244, 0.35);
+  transform: scale(1.15);
+}
+
+/* Timeline Cards */
+.timeline-card {
+  width: 100%;
+  max-width: 215px;
+  border-radius: 20px;
+  padding: 12px 14px 16px 14px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  user-select: none;
+}
+
+/* Inactive Card (White) */
+.timeline-card-white {
+  background-color: #ffffff;
+  color: var(--color-about-text-main);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.timeline-card-white:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* Active Card (Royal Blue) */
+.timeline-card-blue {
+  background-color: var(--color-about-primary);
+  color: #ffffff;
+  box-shadow: 0 14px 36px rgba(48, 71, 244, 0.45);
+  transform: translateY(-4px);
+}
+
+.timeline-card-photo {
+  width: 100%;
+  height: 98px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+.timeline-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.timeline-card-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 6px 0;
+}
+
+.timeline-card-white .timeline-card-title {
+  color: var(--color-about-text-main);
+}
+
+.timeline-card-blue .timeline-card-title {
+  color: #ffffff;
+}
+
+.timeline-card-desc {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.timeline-card-white .timeline-card-desc {
+  color: var(--color-about-text-muted);
+}
+
+.timeline-card-blue .timeline-card-desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ==========================================================================
+   SECTION 06: Why Travelers Choose Avenora (Sky Blue Background)
+   ========================================================================== */
+.about-why-section {
+  background-color: var(--color-about-sky);
+  padding: 95px 0 110px 0;
+}
+
+.about-why-container {
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Content */
+.about-why-left {
+  max-width: 420px;
+}
+
+.about-why-badge {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--color-about-primary);
+  border-radius: var(--radius-pill);
+  padding: 5px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.about-why-title {
+  font-size: clamp(2.2rem, 3.6vw, 3.1rem);
+  font-weight: 800;
+  color: var(--color-about-navy);
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+  margin: 0 0 16px 0;
+}
+
+.about-why-desc {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: rgba(3, 17, 38, 0.85);
+  margin: 0 0 32px 0;
+}
+
+/* Right Content: 2x2 Feature Cards Grid */
+.about-why-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.about-why-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 0 6px 20px rgba(3, 17, 38, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(3, 17, 38, 0.08);
+}
+
+.about-why-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: rgba(48, 71, 244, 0.08);
+  color: var(--color-about-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.about-why-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-about-text-main);
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.about-why-card-desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--color-about-text-muted);
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   SECTION 07: Journeys We Love to Design (Staggered Photo Gallery)
+   ========================================================================== */
+.about-gal-section {
+  background-color: var(--color-about-bg);
+  padding: 95px 0 120px 0;
+}
+
+.about-gal-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px auto;
+}
+
+.about-gal-title {
+  font-size: clamp(2.2rem, 3.4vw, 2.85rem);
+  font-weight: 800;
+  color: var(--color-about-text-main);
+  letter-spacing: -0.025em;
+  margin: 12px 0 10px 0;
+}
+
+.about-gal-desc {
+  font-size: 1rem;
+  color: var(--color-about-text-muted);
+  margin: 0;
+}
+
+/* 4 Staggered Gallery Columns */
+.about-gal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.about-gal-card {
+  position: relative;
+  height: 440px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(3, 17, 38, 0.08);
+  background-color: #dbe4ec;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.about-gal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-gal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(3, 17, 38, 0.14);
+}
+
+.about-gal-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Staggered Vertical Offsets matching screenshot */
+.gal-offset-down {
+  margin-top: 36px;
+}
+
+.gal-offset-up {
+  margin-top: 0;
+}
+
+/* Category Pill Label at Bottom */
+.about-gal-pill {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-pill);
+  padding: 8px 24px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-about-text-main);
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.about-gal-card:hover .about-gal-pill {
+  background-color: #ffffff;
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================================================
+   SECTION 08: Cinematic Adventure Mountain CTA Banner
+   ========================================================================== */
+.about-cta-section {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-about-navy);
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.about-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 17, 38, 0.90) 0%,
+    rgba(3, 17, 38, 0.72) 42%,
+    rgba(3, 17, 38, 0.25) 75%,
+    rgba(3, 17, 38, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.about-cta-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.about-cta-content {
+  max-width: 580px;
+}
+
+.about-cta-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.about-cta-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 28px 0;
+}
+
+.about-cta-btn-wrap {
+  display: flex;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Large Desktop (1440px and Above) */
+@media (min-width: 1440px) {
+  .about-hero-section {
+    min-height: 680px;
+  }
+  .about-intro-photo {
+    height: 540px;
+  }
+  .about-exp-container {
+    height: 540px;
+  }
+  .about-gal-card {
+    height: 460px;
+  }
+}
+
+/* Medium Desktop (1024px – 1439px) */
+@media (max-width: 1200px) {
+  .about-intro-grid {
+    gap: 40px;
+  }
+  .about-intro-photo {
+    height: 480px;
+  }
+  .about-stats-grid {
+    gap: 20px;
+  }
+  .about-stat-card {
+    padding: 30px 24px;
+  }
+  .about-why-container {
+    gap: 40px;
+  }
+  .about-timeline-grid {
+    gap: 12px;
+  }
+  .timeline-card {
+    max-width: 185px;
+    padding: 10px 12px;
+  }
+  .timeline-card-photo {
+    height: 85px;
+  }
+}
+
+/* Tablet (768px – 1023px) */
+@media (max-width: 1023px) {
+  .about-hero-section {
+    min-height: 540px;
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-intro-photo {
+    height: 400px;
+  }
+
+  .about-intro-content {
+    max-width: 100%;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .about-exp-intro-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* Expanding Cards on Tablet */
+  .about-exp-container {
+    height: 460px;
+  }
+
+  .about-exp-card.is-expanded {
+    flex: 3;
+  }
+
+  /* Timeline on Tablet: horizontal scrollable or stack */
+  .about-timeline-wrapper {
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+
+  .about-timeline-grid {
+    min-width: 860px;
+  }
+
+  .about-timeline-line {
+    left: 40px;
+    right: 40px;
+  }
+
+  /* Why Avenora on Tablet */
+  .about-why-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-why-left {
+    max-width: 100%;
+  }
+
+  /* Gallery on Tablet: 2x2 grid */
+  .about-gal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .gal-offset-down {
+    margin-top: 0;
+  }
+}
+
+/* Mobile Screens (Below 768px) */
+@media (max-width: 767px) {
+  .about-hero-section {
+    min-height: 480px;
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+
+  .about-hero-title {
+    font-size: 2.3rem;
+  }
+
+  .about-hero-desc {
+    font-size: 0.96rem;
+    margin-bottom: 24px;
+  }
+
+  .about-hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .about-hero-buttons .btn-white-pill {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .about-intro-section {
+    padding: 55px 0 45px 0;
+  }
+
+  .about-intro-photo {
+    height: 320px;
+  }
+
+  .about-stats-section {
+    padding: 0 0 65px 0;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-stat-card {
+    min-height: auto;
+    padding: 26px 22px;
+  }
+
+  .about-exp-section {
+    padding: 55px 0 75px 0;
+  }
+
+  /* Mobile Experience Selector: Vertical Accordion */
+  .about-exp-container {
+    flex-direction: column;
+    height: auto;
+    gap: 14px;
+  }
+
+  .about-exp-card {
+    height: 72px;
+    min-width: 100%;
+    flex: none;
+    transition: height 0.4s ease;
+  }
+
+  .about-exp-card.is-expanded {
+    height: 380px;
+  }
+
+  .about-exp-collapsed-label {
+    transform: none;
+    left: 70px;
+    bottom: 24px;
+    font-size: 1rem;
+  }
+
+  .about-exp-expanded-content {
+    padding: 22px;
+  }
+
+  .about-exp-expanded-title {
+    font-size: 1.5rem;
+  }
+
+  .about-exp-expanded-desc {
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+  }
+
+  /* Mobile Timeline: Vertical Step Flow */
+  .about-timeline-section {
+    padding: 55px 0 75px 0;
+  }
+
+  .about-timeline-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .about-timeline-header-right {
+    text-align: left;
+  }
+
+  .about-timeline-marquee {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .about-timeline-wrapper {
+    min-height: auto;
+    display: block;
+  }
+
+  .about-timeline-line {
+    display: none;
+  }
+
+  .about-timeline-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: auto;
+    min-width: 100%;
+  }
+
+  .about-timeline-col {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    height: auto;
+  }
+
+  .timeline-zone-top,
+  .timeline-zone-bottom {
+    display: block;
+    width: 100%;
+  }
+
+  .timeline-zone-center {
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .timeline-card {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .timeline-card-photo {
+    height: 140px;
+  }
+
+  /* Mobile Why Section */
+  .about-why-section {
+    padding: 60px 0 75px 0;
+  }
+
+  .about-why-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-why-card {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  /* Mobile Gallery */
+  .about-gal-section {
+    padding: 60px 0 80px 0;
+  }
+
+  .about-gal-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-gal-card {
+    height: 360px;
+  }
+
+  /* Mobile CTA */
+  .about-cta-section {
+    min-height: 420px;
+    padding: 60px 0;
+  }
+
+  .about-cta-title {
+    font-size: 1.85rem;
+  }
+
+  .about-cta-desc {
+    font-size: 0.92rem;
+  }
+}
+
+/* Small Mobile (320px – 374px) */
+@media (max-width: 374px) {
+  .about-hero-title {
+    font-size: 1.95rem;
+  }
+  .about-intro-title {
+    font-size: 1.6rem;
+  }
+  .about-why-title {
+    font-size: 1.7rem;
+  }
+  .about-gal-title {
+    font-size: 1.65rem;
+  }
+}
