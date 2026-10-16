@@ -32,6 +32,8 @@
   <!-- Page Stylesheet -->
   <?php if (($activePage ?? 'home') === 'destinations'): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=2.0">
+  <?php elseif (($activePage ?? 'home') === 'packages'): ?>
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/package.css') ?>?v=2.0">
   <?php else: ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=2.0">
   <?php endif; ?>
