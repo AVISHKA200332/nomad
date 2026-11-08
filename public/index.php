@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Avenora Front Controller
+ * The Lankan Nomad Front Controller
+ * © Orbis Global - 2026
  */
 
 $router = require __DIR__ . '/../bootstrap/app.php';

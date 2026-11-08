@@ -30,11 +30,12 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  font-size: 1.6rem;
+  font-size: clamp(1.15rem, 4vw, 1.55rem);
   font-weight: var(--fw-extrabold);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--color-white);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand-dot {
@@ -49,21 +50,22 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: 2px;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 6px;
+  padding: 5px 8px;
   border-radius: var(--radius-pill);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .nav-link {
-  padding: 8px 18px;
+  padding: 7px 13px;
   border-radius: var(--radius-pill);
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   font-weight: var(--fw-medium);
   color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
   transition: all var(--transition-fast);
 }
 
@@ -119,15 +121,18 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 300px;
+  width: min(320px, 86vw);
   height: 100vh;
+  height: 100dvh;
   background: var(--color-navy);
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  padding: 80px 32px 40px 32px;
+  padding: 70px 24px 30px 24px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  gap: var(--space-md);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   transition: right var(--transition-base);
 }
 
@@ -136,12 +141,15 @@
 }
 
 .mobile-nav-drawer .nav-link {
-  font-size: 1.15rem;
-  padding: 12px 0;
+  font-size: 1.05rem;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0;
   background: none;
   color: rgba(255, 255, 255, 0.85);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .mobile-nav-drawer .nav-link.is-active {
@@ -152,18 +160,19 @@
 
 .mobile-nav-close {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 36px;
-  height: 36px;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
   color: var(--color-white);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-pill);
   cursor: pointer;
+  border: none;
 }
 
 .mobile-nav-backdrop {

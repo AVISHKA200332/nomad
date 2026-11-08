@@ -8,114 +8,80 @@ class DestinationController extends Controller
 {
     public function index(): void
     {
-        $destinations = [
-            [
-                'id' => 1,
-                'title' => 'Tulum Beach Villa Retreat',
-                'location' => 'Tulum, Mexico',
-                'region' => 'Americas',
-                'rating' => '4.5',
-                'image' => 'assets/images/destinations/destination-1.jpg',
-            ],
-            [
-                'id' => 2,
-                'title' => 'Patagonia Lake Trek',
-                'location' => 'Torres del Paine, Chile',
-                'region' => 'Americas',
-                'rating' => '4.5',
-                'image' => 'assets/images/destinations/moment-2.jpg',
-            ],
-            [
-                'id' => 3,
-                'title' => 'Krabi Limestone Cruise',
-                'location' => 'Krabi, Thailand',
-                'region' => 'Asia',
-                'rating' => '4.5',
-                'image' => 'assets/images/packages/exp-4.jpg',
-            ],
-            [
-                'id' => 4,
-                'title' => 'Maldives Overwater Retreat',
-                'location' => 'Baa Atoll, Maldives',
-                'region' => 'Asia',
-                'rating' => '4.5',
-                'image' => 'assets/images/packages/package-1.jpg',
-            ],
-            [
-                'id' => 5,
-                'title' => 'Santorini Private Escape',
-                'location' => 'Santorini, Greece',
-                'region' => 'Europe',
-                'rating' => '4.5',
-                'image' => 'assets/images/packages/package-2.jpg',
-            ],
-            [
-                'id' => 6,
-                'title' => 'Malibu Cliff Retreat',
-                'location' => 'Malibu, California',
-                'region' => 'Americas',
-                'rating' => '4.5',
-                'image' => 'assets/images/destinations/service-1.jpg',
-            ],
-            [
-                'id' => 7,
-                'title' => 'Modern Desert Haven',
-                'location' => 'Dubai Desert, UAE',
-                'region' => 'Asia',
-                'rating' => '4.5',
-                'image' => 'assets/images/destinations/moment-3.jpg',
-            ],
-            [
-                'id' => 8,
-                'title' => 'Santorini Sunset Tour',
-                'location' => 'Santorini, Greece',
-                'region' => 'Europe',
-                'rating' => '4.5',
-                'image' => 'assets/images/packages/exp-2.jpg',
-            ],
-            [
-                'id' => 9,
-                'title' => 'Bali Island Escape',
-                'location' => 'Bali, Indonesia',
-                'region' => 'Asia',
-                'rating' => '4.5',
-                'image' => 'assets/images/destinations/moment-1.jpg',
-            ],
-        ];
-
-        $faqs = [
-            [
-                'q' => 'Do I need to choose a destination first?',
-                'a' => 'No, you do not need to know your destination before contacting us. Share your travel style, budget, preferred dates, and the type of experiences you want, and we will help you find the best destination options.'
-            ],
-            [
-                'q' => 'Can travel packages be customized?',
-                'a' => 'Yes, every travel package can be customized based on your needs. You can adjust the trip duration, hotel type, activities, private tours, transfers, dining experiences, and special moments to match your travel plans.'
-            ],
-            [
-                'q' => 'Do you plan honeymoons and private trips?',
-                'a' => 'Yes, we plan romantic honeymoons, private escapes, family vacations, group adventures, and luxury retreats. Each itinerary is carefully designed with handpicked stays, local experiences, and smooth travel arrangements.'
-            ],
-            [
-                'q' => 'How does pricing work?',
-                'a' => 'Trip pricing depends on your destination, travel dates, hotel category, package duration, activities, transportation, and level of customization. We provide a clear and detailed quote before confirming your travel plan.'
-            ],
-            [
-                'q' => 'Can you help with flights and transfers?',
-                'a' => 'We can help guide your flight planning, airport transfers, private drivers, local transportation, and travel timing. Our goal is to make your journey smooth, comfortable, and stress-free from arrival to departure.'
-            ],
-            [
-                'q' => 'Can I request a trip for a future date?',
-                'a' => 'Absolutely. You can request a trip for future travel dates, seasonal holidays, honeymoon plans, family vacations, or special occasions. Planning early also helps secure better hotels, experiences, and travel availability.'
-            ]
-        ];
-
         $data = [
-            'metaTitle' => 'Destinations | Avenora — Explore Extraordinary Places',
-            'metaDescription' => 'Discover inspiring destinations with Avenora. Explore tropical escapes, mountain adventures, private retreats, and remarkable places around the world.',
+            'metaTitle' => 'Destinations in Sri Lanka | The Lankan Nomad - Extended Stays',
+            'metaDescription' => 'Find the Sri Lanka that feels right for you. Coastal communities, lively cities, misty hills, and historic landscapes across Colombo, South Coast, Ahangama, Kandy, Ella, and Cultural Triangle.',
             'activePage' => 'destinations',
-            'destinations' => $destinations,
-            'faqs' => $faqs
+
+            'hero' => [
+                'eyebrow' => 'FIND YOUR REGION',
+                'headline' => 'Find the Sri Lanka that feels right for you.',
+                'lead' => "Coastal communities, lively cities, misty hills and historic landscapes—Sri Lanka offers different ways to experience everyday life.\n\nExplore the regions below and consider what matters most to you: climate, pace of life, transport, amenities, work needs or access to nature.",
+                'cta' => 'Help Me Choose'
+            ],
+
+            'destinations' => [
+                [
+                    'num' => '01',
+                    'name' => 'Colombo',
+                    'headline' => 'Connected living, with the city at your doorstep.',
+                    'desc' => 'Colombo offers a more urban side of Sri Lanka, with restaurants, cafés, shopping, business districts and a broad range of everyday amenities. Consider Colombo if you prefer city convenience, access to services and a busier environment.',
+                    'lifestyleHighlights' => 'cafés, restaurants, shopping, urban neighbourhoods and city-based activities.',
+                    'considerBefore' => 'traffic, neighbourhood differences, travel times and accommodation costs.',
+                    'cta' => 'Enquire About Staying in Colombo',
+                    'image' => 'assets/images/srilanka/colombo_skyline.jpg'
+                ],
+                [
+                    'num' => '02',
+                    'name' => 'Weligama & the South Coast',
+                    'headline' => 'A coastal lifestyle with room to explore.',
+                    'desc' => 'The South Coast is known for its beaches, coastal communities, surf culture, cafés and a laid-back atmosphere. Different towns offer different combinations of convenience, nightlife, quiet surroundings and access to the sea. Consider this region if you enjoy outdoor living and a coastal environment.',
+                    'lifestyleHighlights' => 'beaches, surf, cafés, coastal walks and weekend exploration.',
+                    'considerBefore' => 'seasonal conditions, transport, internet at the specific property and proximity to everyday essentials.',
+                    'cta' => 'Explore the South Coast',
+                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
+                ],
+                [
+                    'num' => '03',
+                    'name' => 'Ahangama & Nearby Coastal Towns',
+                    'headline' => 'Creative energy by the ocean.',
+                    'desc' => 'Discover coastal communities with cafés, food spots, surf culture and a mix of quieter neighbourhoods and lively social spaces. The experience can vary by location and season, so consider your preferred balance of work, rest and social activities.',
+                    'lifestyleHighlights' => 'coastal cafés, surfing, food and local experiences.',
+                    'considerBefore' => 'distance to essential services, noise, transport and seasonal accommodation demand.',
+                    'cta' => 'Enquire About the Coast',
+                    'image' => 'assets/images/srilanka/ahangama_coast.jpg'
+                ],
+                [
+                    'num' => '04',
+                    'name' => 'Kandy',
+                    'headline' => 'Green surroundings and cultural character.',
+                    'desc' => 'Kandy offers a different pace from the coast, with surrounding hills, cultural landmarks, markets and access to other parts of the Central Province. Consider Kandy if you prefer a larger inland town and enjoy cultural experiences and scenic surroundings.',
+                    'lifestyleHighlights' => 'cultural sites, local markets, green landscapes and regional travel.',
+                    'considerBefore' => 'terrain, commuting requirements, weather and the facilities available in your preferred neighbourhood.',
+                    'cta' => 'Discover Kandy',
+                    'image' => 'assets/images/srilanka/kandy_temple.jpg'
+                ],
+                [
+                    'num' => '05',
+                    'name' => 'Ella',
+                    'headline' => 'A slower rhythm among the hills.',
+                    'desc' => 'Ella is surrounded by green hills, tea landscapes and scenic walking routes. It appeals to visitors seeking nature, mountain views and access to outdoor experiences.',
+                    'lifestyleHighlights' => 'walking, viewpoints, tea-country scenery and day trips.',
+                    'considerBefore' => 'availability of long-stay accommodation, local services, internet reliability and transport needs.',
+                    'cta' => 'Explore Ella',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
+                ],
+                [
+                    'num' => '06',
+                    'name' => 'The Cultural Triangle',
+                    'headline' => "A deeper connection with Sri Lanka's heritage.",
+                    'desc' => "Discover historic cities, archaeological landmarks, cultural traditions and rural landscapes in Sri Lanka's interior. This region may suit visitors who want to explore history and heritage or spend time in a quieter setting.",
+                    'lifestyleHighlights' => 'heritage, cultural experiences, landscapes and regional exploration.',
+                    'considerBefore' => 'transport, distance between attractions, access to daily amenities and the specific location of your accommodation.',
+                    'cta' => 'Explore the Cultural Triangle',
+                    'image' => 'assets/images/srilanka/sigiriya.jpg'
+                ]
+            ]
         ];
 
         $this->render('pages/destination', $data);

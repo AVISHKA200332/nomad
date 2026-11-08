@@ -1,10 +1,6 @@
   <!-- Application Scripts -->
-  <script src="<?= asset('assets/js/navigation.js') ?>"></script>
-  <script src="<?= asset('assets/js/main.js') ?>"></script>
-  <?php if (($activePage ?? 'home') === 'destinations'): ?>
-    <script src="<?= asset('assets/js/modules/destinations.js') ?>"></script>
-  <?php elseif (($activePage ?? 'home') === 'about'): ?>
-    <script src="<?= asset('assets/js/modules/about.js') ?>"></script>
-  <?php endif; ?>
+  <script src="<?= asset('assets/js/navigation.js') ?>?v=3.0"></script>
+  <script src="<?= asset('assets/js/main.js') ?>?v=3.0"></script>
+  <script src="<?= asset('assets/js/modules/plan-stay.js') ?>?v=3.0"></script>
 </body>
 </html>

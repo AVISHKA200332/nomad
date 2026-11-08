@@ -36,12 +36,7 @@
 /* ==========================================================================
    3. Tablet (768px – 1023px)
    ========================================================================== */
-@media (max-width: 1023px) {
-  .section {
-    padding-top: var(--space-4xl);
-    padding-bottom: var(--space-4xl);
-  }
-
+@media (max-width: 1180px) {
   /* Navigation */
   .nav-menu,
   .btn-nav-cta {
@@ -50,6 +45,13 @@
 
   .nav-toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-4xl);
   }
 
   /* Hero */

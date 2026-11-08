@@ -1,0 +1,47 @@
+<?php
+/**
+ * The Lankan Nomad - Cookie Policy
+ * © Orbis Global - 2026
+ */
+?>
+
+<section style="background: var(--color-navy); padding: 140px 0 60px; color: #fff; text-align: center;">
+  <div class="container">
+    <span class="nomad-eyebrow nomad-eyebrow-light">LEGAL INFORMATION</span>
+    <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 12px;">Cookie Policy</h1>
+    <p style="color: var(--color-navy-muted); font-size: 1rem; max-width: 600px; margin: 0 auto;">
+      How we use cookies to provide a smooth, secure, and personalized browsing experience.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="background-color: #f8fafc;">
+  <div class="container">
+    <div class="legal-container">
+      <div class="legal-meta-bar">
+        <span><strong>Effective Date:</strong> January 1, 2026</span>
+        <span><strong>Operating Brand:</strong> The Lankan Nomad (Orbis Global)</span>
+      </div>
+
+      <div class="legal-body">
+        <h2>1. What Are Cookies?</h2>
+        <p>Cookies are small text files placed on your computer or mobile device when you browse websites. They are widely used to make websites work efficiently, remember your preferences, and provide analytical data to website owners.</p>
+
+        <h2>2. How We Use Cookies</h2>
+        <p>The Lankan Nomad uses cookies for the following essential purposes:</p>
+        <ul>
+          <li><strong>Strictly Necessary Cookies:</strong> Essential for website navigation, form security, CSRF protection, and session handling when you fill out stay enquiries.</li>
+          <li><strong>Performance and Analytics Cookies:</strong> Help us understand which pages (such as Destinations or the Sri Lanka Guide) are most visited, allowing us to enhance site structure and responsiveness.</li>
+          <li><strong>Functional Cookies:</strong> Remember your choices (such as preferred regions or stay duration filter options) to save you time during your return visits.</li>
+        </ul>
+
+        <h2>3. Managing Your Cookie Preferences</h2>
+        <p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser settings to decline cookies if you prefer. Please note that disabling cookies may affect certain interactive features on our website.</p>
+
+        <h2>4. Contact Us</h2>
+        <p>If you have any questions regarding our use of cookies, please contact us at <a href="mailto:privacy@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">privacy@thelankannomad.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
