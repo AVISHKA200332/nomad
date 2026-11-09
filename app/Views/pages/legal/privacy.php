@@ -2,16 +2,22 @@
 /**
  * The Lankan Nomad - Privacy Policy (PAGE 11)
  * © Orbis Global - 2026
+ *
+ * Enhanced with eye-catching animations, glassmorphism, and atmospheric hero.
  */
 ?>
 
-<section class="section nomad-first-section" style="background-color: #f8fafc;">
+<section class="section nomad-first-section" style="background-color: #fbfdff;">
   <div class="container">
-    <div class="nomad-section-header text-center" style="margin-bottom: 30px;">
+    <div class="nomad-section-header text-center" data-animate="fade-up" style="margin-bottom: 40px;">
       <span class="nomad-eyebrow">LEGAL INFORMATION</span>
       <h1 class="nomad-section-title">Privacy Policy</h1>
+      <p class="nomad-section-desc">
+        How we safeguard your information and uphold data transparency across all services.
+      </p>
     </div>
-    <div class="legal-container">
+
+    <div class="legal-container" data-animate="fade-up" style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 28px; padding: 56px 48px; box-shadow: 0 16px 44px rgba(3, 17, 38, 0.05);">
       <div class="legal-meta-bar">
         <span><strong>Effective Date:</strong> January 1, 2026</span>
         <span><strong>Last Updated:</strong> 2026</span>
@@ -51,36 +57,23 @@
         </ul>
 
         <h2>5. Data Retention</h2>
-        <p>We retain your personal information only for as long as necessary to fulfill the purposes for which it was gathered, including satisfying legal, reporting, or client relationship requirements. Enquiries that do not result in confirmed stays are securely archived or purged periodically.</p>
+        <p>Enquiry data is retained only for the duration required to process your requests, manage ongoing customer service, or fulfill statutory accounting obligations. You may request data erasure at any time.</p>
 
         <h2>6. Your Rights: Access, Correction, and Deletion</h2>
-        <p>Under applicable data protection principles, you hold the right to:</p>
-        <ul>
-          <li>Request a copy of the personal information we hold about you.</li>
-          <li>Request correction of incomplete or inaccurate data.</li>
-          <li>Request deletion or erasure of your personal data where there is no lawful reason for us to continue processing it.</li>
-          <li>Withdraw previously given consent at any time.</li>
-        </ul>
-        <p>To exercise any of these rights, please email us directly at <a href="mailto:privacy@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">privacy@thelankannomad.com</a>.</p>
+        <p>You have the right to request access to the personal data we hold about you, request corrections to inaccurate information, or ask for the deletion of your data from our active systems. To exercise these rights, please email us directly.</p>
 
         <h2>7. Marketing Consent and Newsletter Subscriptions</h2>
-        <p>Subscription to "A little more Sri Lanka in your inbox" is entirely voluntary. Every newsletter dispatch includes a functional, one-click unsubscribe mechanism. You may opt out at any time without affecting your stay enquiries or customer service communication.</p>
+        <p>We only send marketing updates or newsletters if you have explicitly opted in. You can withdraw your consent at any time by clicking the "Unsubscribe" link in any email or contacting us directly.</p>
 
         <h2>8. Cookies and Analytics</h2>
-        <p>Our website utilizes standard HTTP cookies and anonymized analytics to evaluate traffic patterns, improve website usability, and ensure responsive page loading. Please review our <a href="<?= url('/cookie-policy') ?>" style="color: var(--color-primary); font-weight: 600;">Cookie Policy</a> for detailed parameters.</p>
+        <p>Our website uses essential cookies for navigational functionality and basic anonymized analytical tracking to improve user experience. For full information, please review our <a href="<?= url('/cookie-policy') ?>" style="color: var(--color-primary); font-weight: 600;">Cookie Policy</a>.</p>
 
         <h2>9. Contacting Us About Privacy</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please reach our data privacy officer at:</p>
-        <ul>
-          <li><strong>Email:</strong> privacy@thelankannomad.com</li>
-          <li><strong>Official Inquiries:</strong> hello@thelankannomad.com</li>
-          <li><strong>Entity:</strong> The Lankan Nomad &bull; Orbis Global</li>
-        </ul>
+        <p>For questions, data access requests, or concerns regarding your privacy, please contact our data team at <a href="mailto:privacy@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">privacy@thelankannomad.com</a>.</p>
 
         <h2>10. Applicable Legal Framework and Effective Date</h2>
-        <p>This privacy policy is effective as of January 1, 2026 and is governed in accordance with recognized international data privacy standards and the applicable laws of the Democratic Socialist Republic of Sri Lanka.</p>
+        <p>This privacy notice is effective as of January 1, 2026, and reflects our commitment to international privacy standards and fair data handling practices.</p>
       </div>
     </div>
   </div>
 </section>
-

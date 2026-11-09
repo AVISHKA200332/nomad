@@ -2,13 +2,17 @@
 /**
  * The Lankan Nomad - Contact / Plan Your Stay View (PAGE 09)
  * © Orbis Global - 2026
+ *
+ * Enhanced with eye-catching animations, glassmorphism, and atmospheric hero.
  */
 ?>
 
-<!-- Plan Your Stay Form Section -->
-<section class="section nomad-first-section" id="enquiry-form">
+<!-- ==========================================================================
+     PLAN YOUR STAY FORM SECTION: Modern Glassmorphic Container
+     ========================================================================== -->
+<section class="section nomad-first-section" id="enquiry-form" style="background-color: #fbfdff;">
   <div class="container" style="max-width: 960px;">
-    <div class="nomad-section-header text-center">
+    <div class="nomad-section-header text-center" data-animate="fade-up" style="margin-bottom: 40px;">
       <span class="nomad-eyebrow">YOUR STAY ENQUIRY</span>
       <h1 class="nomad-section-title"><?= htmlspecialchars($hero['formTitle']) ?></h1>
       <p class="nomad-section-desc">
@@ -16,7 +20,7 @@
       </p>
     </div>
 
-    <div class="plan-stay-wrap">
+    <div class="plan-stay-wrap" data-animate="fade-up" style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 28px; padding: 48px; box-shadow: 0 16px 44px rgba(3, 17, 38, 0.06);">
       <!-- Status Alerts -->
       <?php if (!empty($successMsg)): ?>
         <div class="alert-nomad alert-success-nomad" role="alert">
@@ -35,7 +39,10 @@
 
       <form action="<?= url('/contact') ?>" method="POST" id="planStayForm" novalidate>
         <!-- Part 1: About You -->
-        <h3 class="plan-section-title">About You</h3>
+        <h3 class="plan-section-title" style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 0.9rem; background: var(--color-primary); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800;">1</span>
+          <span>About You</span>
+        </h3>
         <div class="form-grid-2">
           <div class="form-group">
             <label for="first_name" class="form-label">First name <span class="req">*</span></label>
@@ -64,7 +71,10 @@
         </div>
 
         <!-- Part 2: Your Plans -->
-        <h3 class="plan-section-title">Your Plans</h3>
+        <h3 class="plan-section-title" style="display: flex; align-items: center; gap: 10px; margin-top: 36px;">
+          <span style="font-size: 0.9rem; background: var(--color-primary); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800;">2</span>
+          <span>Your Plans</span>
+        </h3>
         <div class="form-grid-2">
           <div class="form-group">
             <label for="arrival_date" class="form-label">Intended arrival date <span class="req">*</span></label>
@@ -108,7 +118,10 @@
         </div>
 
         <!-- Part 3: What Do You Need Help With? -->
-        <h3 class="plan-section-title">What Do You Need Help With?</h3>
+        <h3 class="plan-section-title" style="display: flex; align-items: center; gap: 10px; margin-top: 36px;">
+          <span style="font-size: 0.9rem; background: var(--color-primary); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800;">3</span>
+          <span>What Do You Need Help With?</span>
+        </h3>
         <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-bottom: 16px;">Select all areas where you would like our team's guidance:</p>
         <div class="checkbox-grid-nomad">
           <?php
@@ -134,7 +147,10 @@
         </div>
 
         <!-- Part 4: Your Preferences -->
-        <h3 class="plan-section-title">Your Preferences</h3>
+        <h3 class="plan-section-title" style="display: flex; align-items: center; gap: 10px; margin-top: 36px;">
+          <span style="font-size: 0.9rem; background: var(--color-primary); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800;">4</span>
+          <span>Your Preferences</span>
+        </h3>
         <div class="form-grid-2">
           <div class="form-group">
             <label for="budget" class="form-label">Approximate accommodation budget</label>
@@ -185,7 +201,8 @@
           </label>
         </div>
 
-        <button type="submit" class="btn btn-primary" id="submitEnquiryBtn" style="width: 100%; justify-content: center; padding: 16px; font-size: 1.05rem;">
+        <button type="submit" class="btn btn-primary" id="submitEnquiryBtn" style="width: 100%; justify-content: center; padding: 18px; font-size: 1.05rem;">
+          <span class="btn-shimmer-sweep"></span>
           <span>Send My Enquiry</span>
           <span class="arrow-circle arrow-circle-white">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -198,7 +215,7 @@
     </div>
 
     <!-- Alternative Direct Contact (PAGE 09) -->
-    <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-2xl); padding: 40px; margin-top: 48px; box-shadow: var(--shadow-sm);">
+    <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 24px; padding: 40px; margin-top: 48px; box-shadow: 0 8px 30px rgba(3, 17, 38, 0.04);" data-animate="fade-up">
       <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">
         Prefer to contact us directly?
       </h3>
@@ -207,21 +224,21 @@
       </p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-        <div style="background: #f8fafc; padding: 20px; border-radius: var(--radius-lg);">
+        <div style="background: #f8fafc; padding: 22px; border-radius: 16px; border: 1px solid #e2e8f0; transition: transform 0.25s ease, box-shadow 0.25s ease;">
           <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary); margin-bottom: 6px;">Email</div>
           <a href="mailto:<?= htmlspecialchars($directContact['email']) ?>" style="font-size: 1.05rem; font-weight: 600; color: var(--color-navy); text-decoration: none;">
             <?= htmlspecialchars($directContact['email']) ?>
           </a>
         </div>
 
-        <div style="background: #f8fafc; padding: 20px; border-radius: var(--radius-lg);">
+        <div style="background: #f8fafc; padding: 22px; border-radius: 16px; border: 1px solid #e2e8f0; transition: transform 0.25s ease, box-shadow 0.25s ease;">
           <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary); margin-bottom: 6px;">WhatsApp</div>
           <a href="<?= htmlspecialchars($directContact['whatsappLink']) ?>" target="_blank" rel="noopener noreferrer" style="font-size: 1.05rem; font-weight: 600; color: var(--color-navy); text-decoration: none;">
             <?= htmlspecialchars($directContact['whatsapp']) ?>
           </a>
         </div>
 
-        <div style="background: #f8fafc; padding: 20px; border-radius: var(--radius-lg);">
+        <div style="background: #f8fafc; padding: 22px; border-radius: 16px; border: 1px solid #e2e8f0; transition: transform 0.25s ease, box-shadow 0.25s ease;">
           <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary); margin-bottom: 6px;">Business hours</div>
           <div style="font-size: 0.98rem; font-weight: 600; color: var(--color-navy);">
             <?= htmlspecialchars($directContact['businessHours']) ?>

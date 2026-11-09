@@ -2,16 +2,22 @@
 /**
  * The Lankan Nomad - Cookie Policy
  * © Orbis Global - 2026
+ *
+ * Enhanced with eye-catching animations, glassmorphism, and atmospheric hero.
  */
 ?>
 
-<section class="section nomad-first-section" style="background-color: #f8fafc;">
+<section class="section nomad-first-section" style="background-color: #fbfdff;">
   <div class="container">
-    <div class="nomad-section-header text-center" style="margin-bottom: 30px;">
+    <div class="nomad-section-header text-center" data-animate="fade-up" style="margin-bottom: 40px;">
       <span class="nomad-eyebrow">LEGAL INFORMATION</span>
       <h1 class="nomad-section-title">Cookie Policy</h1>
+      <p class="nomad-section-desc">
+        Information on how we use cookies to ensure a smooth, secure browsing experience.
+      </p>
     </div>
-    <div class="legal-container">
+
+    <div class="legal-container" data-animate="fade-up" style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 28px; padding: 56px 48px; box-shadow: 0 16px 44px rgba(3, 17, 38, 0.05);">
       <div class="legal-meta-bar">
         <span><strong>Effective Date:</strong> January 1, 2026</span>
         <span><strong>Operating Brand:</strong> The Lankan Nomad (Orbis Global)</span>
@@ -38,4 +44,3 @@
     </div>
   </div>
 </section>
-

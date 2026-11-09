@@ -58,8 +58,8 @@ $checks['P01 Home: Hero Eyebrow YOUR NEXT CHAPTER STARTS HERE'] = strpos($htmlHo
 $checks['P01 Home: Hero Headline Live Sri Lanka, Your Way.'] = strpos($htmlHome, 'Live Sri Lanka, Your Way.') !== false;
 $checks['P01 Home: Hero Subhead text'] = strpos($htmlHome, 'Discover a more effortless way to experience Sri Lanka.') !== false;
 $checks['P01 Home: Hero Supporting line'] = strpos($htmlHome, 'Longer stays. Local experiences. A more personal way to discover Sri Lanka.') !== false;
-$checks['P01 Home: Intro Eyebrow A DIFFERENT WAY TO EXPERIENCE SRI LANKA'] = strpos($htmlHome, 'A DIFFERENT WAY TO EXPERIENCE SRI LANKA') !== false;
-$checks['P01 Home: Intro Headline Come for the experience. Stay for the lifestyle.'] = strpos($htmlHome, 'Come for the experience. Stay for the lifestyle.') !== false;
+$checks['P01 Home: Intro section removed as requested'] = strpos($htmlHome, 'A DIFFERENT WAY TO EXPERIENCE SRI LANKA') === false;
+$checks['P01 Home: Hero floating 300+ days box removed as requested'] = strpos($htmlHome, 'hero-floating-stat-badge') === false;
 $checks['P01 Home: Stay Durations 03, 06, 12 Months'] =
     strpos($htmlHome, '03 Months') !== false &&
     strpos($htmlHome, '06 Months') !== false &&

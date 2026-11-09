@@ -2,13 +2,17 @@
 /**
  * The Lankan Nomad - Experiences View (PAGE 05)
  * © Orbis Global - 2026
+ *
+ * Enhanced with eye-catching animations, glassmorphism, and showcase cards.
  */
 ?>
 
-<!-- 5 Experience Categories -->
+<!-- ==========================================================================
+     5 EXPERIENCE CATEGORIES: Clean First Section with Luxury Showcase Cards
+     ========================================================================== -->
 <section class="section nomad-first-section" id="experience-categories">
   <div class="container">
-    <div class="nomad-section-header text-center">
+    <div class="nomad-section-header text-center" data-animate="fade-up">
       <span class="nomad-eyebrow">AUTHENTIC ISLAND LIVING</span>
       <h1 class="nomad-section-title">Experiences rooted in local life.</h1>
       <p class="nomad-section-desc" style="max-width: 740px; margin: 0 auto;">
@@ -18,7 +22,7 @@
 
     <div class="services-detail-list">
       <?php foreach ($experiences as $idx => $exp): ?>
-        <div class="service-detail-item" id="exp-<?= $idx + 1 ?>">
+        <div class="service-detail-item" id="exp-<?= $idx + 1 ?>" data-animate="fade-up" data-delay="<?= 80 * ($idx % 3 + 1) ?>">
           <div class="service-detail-content">
             <span class="service-detail-num">Experience Category <?= sprintf('%02d', $idx + 1) ?></span>
             <h3 class="service-detail-title"><?= htmlspecialchars($exp['title']) ?></h3>
@@ -31,7 +35,10 @@
               <div class="service-info-title">Moments to look forward to:</div>
               <ul>
                 <?php foreach ($exp['highlights'] as $hl): ?>
-                  <li><?= htmlspecialchars($hl) ?></li>
+                  <li>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="color: #10b981; flex-shrink: 0; margin-right: 6px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><?= htmlspecialchars($hl) ?></span>
+                  </li>
                 <?php endforeach; ?>
               </ul>
             </div>
@@ -48,7 +55,7 @@
           </div>
 
           <div class="service-detail-visual" style="border-radius: var(--radius-xl); overflow: hidden; height: 100%; min-height: 340px; box-shadow: var(--shadow-md);">
-            <img src="<?= asset($exp['image']) ?>" alt="<?= htmlspecialchars($exp['title']) ?>" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="<?= asset($exp['image']) ?>" alt="<?= htmlspecialchars($exp['title']) ?>" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       <?php endforeach; ?>
@@ -56,9 +63,12 @@
   </div>
 </section>
 
-<!-- Local Experiences CTA -->
-<section class="container" style="margin-bottom: 80px;">
+<!-- ==========================================================================
+     LOCAL EXPERIENCES CLOSING CTA: Radiant Ambient Mesh Banner
+     ========================================================================== -->
+<section class="container" style="margin-bottom: 80px;" data-animate="scale-up">
   <div class="enquiry-cta-section">
+    <div class="enquiry-cta-mesh"></div>
     <div class="enquiry-cta-overlay"></div>
     <div class="enquiry-cta-content">
       <span class="nomad-eyebrow nomad-eyebrow-light">DISCOVER YOUR PATH</span>
@@ -67,7 +77,8 @@
         <?= htmlspecialchars($closingCta['desc']) ?>
       </p>
       <div class="enquiry-cta-buttons">
-        <a href="<?= url('/plan-your-stay?service=experiences') ?>" class="btn btn-primary" style="padding: 14px 36px; font-size: 1rem;">
+        <a href="<?= url('/plan-your-stay?service=experiences') ?>" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
+          <span class="btn-shimmer-sweep"></span>
           <span><?= htmlspecialchars($closingCta['cta']) ?></span>
           <span class="arrow-circle arrow-circle-white">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -80,4 +91,3 @@
     </div>
   </div>
 </section>
-

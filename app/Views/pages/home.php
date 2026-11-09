@@ -140,15 +140,6 @@
               </a>
             </div>
           </div>
-
-          <!-- Floating Ambient Stat Badge -->
-          <div class="hero-floating-stat-badge">
-            <div class="stat-badge-icon">&#x1F305;</div>
-            <div class="stat-badge-text">
-              <strong>300+ Days</strong>
-              <span>Tropical Sunshine &amp; Waves</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -175,63 +166,6 @@
       <div class="hero-trust-col">
         <span class="trust-stat-num" data-counter="100" data-suffix="%">100%</span>
         <span class="trust-stat-label">Fast Fiber-Tested Workspaces</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ==========================================================================
-     SECTION 03: Introductory Section with Glass Highlights
-     ========================================================================== -->
-<section class="section nomad-intro-section" id="intro">
-  <div class="intro-bg-glow"></div>
-  <div class="container">
-    <div class="nomad-section-header text-center" data-animate="fade-up">
-      <span class="nomad-eyebrow"><?= htmlspecialchars($intro['eyebrow']) ?></span>
-      <h2 class="nomad-section-title"><?= htmlspecialchars($intro['headline']) ?></h2>
-      <p class="intro-highlight-lead">
-        <?= htmlspecialchars($intro['lead']) ?>
-      </p>
-      <div class="nomad-section-desc intro-desc-box">
-        <p style="margin-bottom: 14px;">
-          Imagine starting your morning with fresh tropical air, working from a peaceful coastal town, discovering a favourite local café and spending your weekends exploring beaches, mountains and historic towns.
-        </p>
-        <p>
-          The Lankan Nomad is designed for people who want to experience more of Sri Lanka at their own pace. We help you explore your options for a longer stay and organise the details that make everyday living easier.
-        </p>
-      </div>
-
-      <!-- Feature Highlight Pills -->
-      <div class="intro-pills-row" data-animate="fade-up" data-delay="100">
-        <div class="intro-pill-item">
-          <span class="intro-pill-icon">&#x2615;</span>
-          <span>Coastal Workspaces &amp; Cafes</span>
-        </div>
-        <div class="intro-pill-item">
-          <span class="intro-pill-icon">&#x1F3C4;</span>
-          <span>Warm Waters &amp; Surf Breaks</span>
-        </div>
-        <div class="intro-pill-item">
-          <span class="intro-pill-icon">&#x1F686;</span>
-          <span>Highland Rail Escapes</span>
-        </div>
-        <div class="intro-pill-item">
-          <span class="intro-pill-icon">&#x1F33F;</span>
-          <span>Tranquil Mountain Retreats</span>
-        </div>
-      </div>
-
-      <div style="margin-top: 32px;" data-animate="fade-up" data-delay="150">
-        <a href="<?= url('/services') ?>" class="btn btn-outline">
-          <span><?= htmlspecialchars($intro['cta']) ?></span>
-          <span class="arrow-circle">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </span>
-        </a>
       </div>
     </div>
   </div>
