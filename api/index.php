@@ -10,3 +10,4 @@ $_SERVER['SCRIPT_NAME'] = '/index.php';
 
 // Dispatch via front controller
 require __DIR__ . '/../public/index.php';
+
