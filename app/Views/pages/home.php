@@ -67,8 +67,8 @@
       </div>
       <a href="<?= url('/services') ?>" class="btn btn-outline">
         <span><?= htmlspecialchars($intro['cta']) ?></span>
-        <span class="arrow-circle arrow-circle-white" style="background: var(--color-primary);">
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <span class="arrow-circle">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
@@ -110,8 +110,8 @@
 
           <a href="<?= url('/plan-your-stay?duration=' . urlencode($d['durationValue'])) ?>" class="btn <?= !empty($d['highlight']) ? 'btn-primary' : 'btn-outline' ?>">
             <span><?= htmlspecialchars($d['cta']) ?></span>
-            <span class="arrow-circle arrow-circle-white" style="<?= empty($d['highlight']) ? 'background: var(--color-primary);' : '' ?>">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <span class="<?= !empty($d['highlight']) ? 'arrow-circle arrow-circle-white' : 'arrow-circle' ?>">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -119,11 +119,6 @@
           </a>
         </div>
       <?php endforeach; ?>
-    </div>
-
-    <!-- Section 04 Mandatory Note -->
-    <div class="nomad-note-box">
-      <strong>NOTE:</strong> Every stay is different. Accommodation, services, availability and costs depend on your requirements and the options available.
     </div>
   </div>
 </section>
@@ -200,14 +195,10 @@
           <div class="destination-nomad-content">
             <h3 class="destination-nomad-title"><?= htmlspecialchars($dest['name']) ?></h3>
             <p class="destination-nomad-desc"><?= htmlspecialchars($dest['desc']) ?></p>
-            <div class="destination-nomad-consider">
-              <strong>Consider before choosing:</strong>
-              <?= htmlspecialchars($dest['consider']) ?>
-            </div>
             <a href="<?= url('/plan-your-stay?destination=' . urlencode($dest['name'])) ?>" class="btn btn-outline" style="margin-top: auto; justify-content: center;">
               <span>Enquire About This Region</span>
-              <span class="arrow-circle arrow-circle-white" style="background: var(--color-primary);">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <span class="arrow-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
@@ -216,11 +207,6 @@
           </div>
         </div>
       <?php endforeach; ?>
-    </div>
-
-    <!-- Section 06 Mandatory Note -->
-    <div class="nomad-note-box">
-      <strong>NOTE:</strong> Destinations shown are examples of Sri Lanka's regions. Confirm actual service areas and accommodation availability before presenting locations as bookable.
     </div>
 
     <div style="text-align: center; margin-top: 36px;">
@@ -378,11 +364,6 @@
       <?php endforeach; ?>
     </div>
 
-    <!-- Section 10 Mandatory Note -->
-    <div class="nomad-note-box">
-      <strong>NOTE:</strong> Specific tours, guides, tickets and activities should only be advertised when they are actually available through the company or verified providers.
-    </div>
-
     <div style="text-align: center; margin-top: 36px;">
       <a href="<?= url('/experiences') ?>" class="btn btn-primary" style="padding: 12px 32px;">
         <span>Explore Experiences</span>
@@ -429,8 +410,8 @@
     <div style="text-align: center; margin-top: 36px;">
       <a href="<?= url('/guide') ?>" class="btn btn-outline" style="padding: 12px 32px;">
         <span>Read the Sri Lanka Guide</span>
-        <span class="arrow-circle arrow-circle-white" style="background: var(--color-primary);">
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <span class="arrow-circle">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
@@ -449,7 +430,7 @@
     <div class="enquiry-cta-overlay"></div>
     <div class="enquiry-cta-content">
       <span class="nomad-eyebrow nomad-eyebrow-light">YOUR NEXT CHAPTER AWAITS</span>
-      <h2 class="enquiry-cta-title">Let's plan your Sri Lankan stay.</h2>
+      <h2 class="enquiry-cta-title text-white">Let's plan your Sri Lankan stay.</h2>
       <p class="enquiry-cta-desc">
         Three months, six months or a whole year. Whatever your plans look like, start with a conversation about what you need and how you'd like to live.
       </p>

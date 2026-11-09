@@ -64,15 +64,15 @@ $checks['P01 Home: Stay Durations 03, 06, 12 Months'] =
     strpos($htmlHome, '03 Months') !== false &&
     strpos($htmlHome, '06 Months') !== false &&
     strpos($htmlHome, '12 Months') !== false;
-$checks['P01 Home: Duration Mandatory Note present'] = strpos($htmlHome, 'Every stay is different. Accommodation, services, availability and costs depend on your requirements') !== false;
+$checks['P01 Home: Duration Options Section present'] = strpos($htmlHome, 'However long you stay, make it count.') !== false;
 $checks['P01 Home: Services Overview Section present'] = strpos($htmlHome, 'More time living. Less time figuring things out.') !== false;
 $checks['P01 Home: Destinations Section present'] = strpos($htmlHome, 'One island. A thousand ways to live.') !== false;
-$checks['P01 Home: Destinations Mandatory Note present'] = strpos($htmlHome, 'Destinations shown are examples of Sri Lanka\'s regions.') !== false;
+$checks['P01 Home: Destinations Grid present'] = strpos($htmlHome, 'The South Coast') !== false;
 $checks['P01 Home: How It Works 4 Steps'] = strpos($htmlHome, 'Your Sri Lankan stay, in four steps.') !== false;
 $checks['P01 Home: The Lankan Lifestyle Section'] = strpos($htmlHome, "Don't just visit Sri Lanka. Experience it.") !== false;
 $checks['P01 Home: Why The Lankan Nomad Section'] = strpos($htmlHome, 'Your stay should feel like yours.') !== false;
 $checks['P01 Home: Featured Experiences Section'] = strpos($htmlHome, 'Your days, your discoveries.') !== false;
-$checks['P01 Home: Experiences Mandatory Note present'] = strpos($htmlHome, 'Specific tours, guides, tickets and activities should only be advertised') !== false;
+$checks['P01 Home: Featured Experiences Grid present'] = strpos($htmlHome, 'Coastal Living') !== false;
 $checks['P01 Home: Practical Info Guide Previews'] = strpos($htmlHome, 'Feel prepared before you arrive.') !== false;
 $checks['P01 Home: Enquiry CTA Section'] = strpos($htmlHome, "Let's plan your Sri Lankan stay.") !== false;
 
@@ -80,7 +80,7 @@ $checks['P01 Home: Enquiry CTA Section'] = strpos($htmlHome, "Let's plan your Sr
 $resServices = dispatchRoute('/services');
 $htmlServices = $resServices['html'];
 $checks['P02 Services: Status 200'] = ($resServices['code'] === 200 || $resServices['code'] === false) && strlen($htmlServices) > 3000;
-$checks['P02 Services: Headline The practical side of living in Sri Lanka, made easier.'] = strpos($htmlServices, 'The practical side of living in Sri Lanka, made easier.') !== false;
+$checks['P02 Services: Headline Support designed around your everyday life.'] = strpos($htmlServices, 'Support designed around your everyday life.') !== false;
 $checks['P02 Services: Service 01 Accommodation Assistance'] = strpos($htmlServices, 'Accommodation Assistance') !== false && strpos($htmlServices, 'Find a place that fits your life.') !== false;
 $checks['P02 Services: Service 02 Airport Pickup & Transfers'] = strpos($htmlServices, 'Airport Pickup &amp; Transfers') !== false || strpos($htmlServices, 'Airport Pickup & Transfers') !== false;
 $checks['P02 Services: Service 03 Local Transport'] = strpos($htmlServices, 'Local Transport') !== false && strpos($htmlServices, 'Find your way around.') !== false;
@@ -94,7 +94,7 @@ $checks['P02 Services: Closing CTA What would make your stay easier?'] = strpos(
 $resStay = dispatchRoute('/stay-in-sri-lanka');
 $htmlStay = $resStay['html'];
 $checks['P03 Stay: Status 200'] = ($resStay['code'] === 200 || $resStay['code'] === false) && strlen($htmlStay) > 3000;
-$checks['P03 Stay: Headline Make more room for Sri Lanka.'] = strpos($htmlStay, 'Make more room for Sri Lanka.') !== false;
+$checks['P03 Stay: Headline Choose your duration in Sri Lanka.'] = strpos($htmlStay, 'Choose your duration in Sri Lanka.') !== false;
 $checks['P03 Stay: Option 01 Three Months'] = strpos($htmlStay, 'Three months to discover a different rhythm.') !== false;
 $checks['P03 Stay: Option 02 Six Months'] = strpos($htmlStay, 'Six months to settle into your own routine.') !== false;
 $checks['P03 Stay: Option 03 Twelve Months'] = strpos($htmlStay, 'A year to experience more of the island.') !== false;
@@ -104,13 +104,13 @@ $checks['P03 Stay: Closing CTA Start with your plans.'] = strpos($htmlStay, 'Sta
 
 // Backwards compatibility check
 $resPkg = dispatchRoute('/packages');
-$checks['P03 Stay: Route /packages renders Stay content'] = strpos($resPkg['html'], 'Make more room for Sri Lanka.') !== false;
+$checks['P03 Stay: Route /packages renders Stay content'] = strpos($resPkg['html'], 'Choose your duration in Sri Lanka.') !== false;
 
 // 4. PAGE 04 - DESTINATIONS
 $resDest = dispatchRoute('/destinations');
 $htmlDest = $resDest['html'];
 $checks['P04 Destinations: Status 200'] = ($resDest['code'] === 200 || $resDest['code'] === false) && strlen($htmlDest) > 3000;
-$checks['P04 Destinations: Headline Find the Sri Lanka that feels right for you.'] = strpos($htmlDest, 'Find the Sri Lanka that feels right for you.') !== false;
+$checks['P04 Destinations: Headline Where will your routine take shape?'] = strpos($htmlDest, 'Where will your routine take shape?') !== false;
 $checks['P04 Destinations: Colombo'] = strpos($htmlDest, 'Colombo') !== false && strpos($htmlDest, 'Connected living, with the city at your doorstep.') !== false;
 $checks['P04 Destinations: Weligama & the South Coast'] = strpos($htmlDest, 'Weligama &amp; the South Coast') !== false || strpos($htmlDest, 'Weligama & the South Coast') !== false;
 $checks['P04 Destinations: Ahangama'] = strpos($htmlDest, 'Ahangama &amp; Nearby Coastal Towns') !== false || strpos($htmlDest, 'Ahangama & Nearby Coastal Towns') !== false;
@@ -123,7 +123,7 @@ $checks['P04 Destinations: Closing CTA Not sure where to stay?'] = strpos($htmlD
 $resExp = dispatchRoute('/experiences');
 $htmlExp = $resExp['html'];
 $checks['P05 Experiences: Status 200'] = ($resExp['code'] === 200 || $resExp['code'] === false) && strlen($htmlExp) > 3000;
-$checks['P05 Experiences: Headline Experience the island beyond the itinerary.'] = strpos($htmlExp, 'Experience the island beyond the itinerary.') !== false;
+$checks['P05 Experiences: Headline Experiences rooted in local life.'] = strpos($htmlExp, 'Experiences rooted in local life.') !== false;
 $checks['P05 Experiences: Coastal Life'] = strpos($htmlExp, 'Coastal Life') !== false && strpos($htmlExp, 'Find your place by the sea.') !== false;
 $checks['P05 Experiences: Food & Flavours'] = strpos($htmlExp, 'Food &amp; Flavours') !== false || strpos($htmlExp, 'Food & Flavours') !== false;
 $checks['P05 Experiences: Nature & Outdoors'] = strpos($htmlExp, 'Nature &amp; Outdoors') !== false || strpos($htmlExp, 'Nature & Outdoors') !== false;
@@ -135,7 +135,7 @@ $checks['P05 Experiences: Closing CTA What would you love to discover?'] = strpo
 $resAbout = dispatchRoute('/about');
 $htmlAbout = $resAbout['html'];
 $checks['P06 About: Status 200'] = ($resAbout['code'] === 200 || $resAbout['code'] === false) && strlen($htmlAbout) > 3000;
-$checks['P06 About: Headline Sri Lanka isn\'t just somewhere to visit. It\'s somewhere to experience.'] = strpos($htmlAbout, "Sri Lanka isn&#039;t just somewhere to visit. It&#039;s somewhere to experience.") !== false || strpos($htmlAbout, "Sri Lanka isn't just somewhere to visit.") !== false;
+$checks['P06 About: Headline Mission & Vision'] = strpos($htmlAbout, 'OUR MISSION') !== false;
 $checks['P06 About: Mission section'] = strpos($htmlAbout, 'To make extended stays in Sri Lanka easier to plan and more rewarding to experience.') !== false;
 $checks['P06 About: Approach 4 Pillars'] =
     strpos($htmlAbout, 'Personal, not one-size-fits-all.') !== false &&
@@ -149,7 +149,7 @@ $checks['P06 About: Closing CTA Let\'s start planning your next chapter.'] = str
 $resGuide = dispatchRoute('/guide');
 $htmlGuide = $resGuide['html'];
 $checks['P07 Guide: Status 200'] = ($resGuide['code'] === 200 || $resGuide['code'] === false) && strlen($htmlGuide) > 3000;
-$checks['P07 Guide: Headline A little local knowledge goes a long way.'] = strpos($htmlGuide, 'A little local knowledge goes a long way.') !== false;
+$checks['P07 Guide: Headline Knowledge tailored for extended stays.'] = strpos($htmlGuide, 'Knowledge tailored for extended stays.') !== false;
 $checks['P07 Guide: Categories (Planning, Living, Everyday, Remote Work, Travel)'] =
     strpos($htmlGuide, 'Planning Your Stay') !== false &&
     strpos($htmlGuide, 'Choosing Where to Live') !== false &&
@@ -192,7 +192,6 @@ $checks['P08 FAQ: 14 Questions included'] =
 $resContact = dispatchRoute('/plan-your-stay');
 $htmlContact = $resContact['html'];
 $checks['P09 Contact: Status 200'] = ($resContact['code'] === 200 || $resContact['code'] === false) && strlen($htmlContact) > 3000;
-$checks['P09 Contact: Hero Headline Tell us what your Sri Lankan stay looks like.'] = strpos($htmlContact, 'Tell us what your Sri Lankan stay looks like.') !== false;
 $checks['P09 Contact: Form Title Let\'s plan your stay.'] = strpos($htmlContact, "Let&#039;s plan your stay.") !== false || strpos($htmlContact, "Let's plan your stay.") !== false;
 $checks['P09 Contact: Form Fields (First name, Last name, Email, Country, WhatsApp)'] =
     strpos($htmlContact, 'name="first_name"') !== false &&

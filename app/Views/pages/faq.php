@@ -5,23 +5,12 @@
  */
 ?>
 
-<!-- Hero Section (No Hero Picture) -->
-<section class="nomad-hero-inner" style="min-height: 42vh; padding: 135px 0 65px;">
-  <div class="container nomad-hero-content">
-    <span class="nomad-eyebrow nomad-eyebrow-light"><?= htmlspecialchars($hero['eyebrow']) ?></span>
-    <h1 class="nomad-hero-title"><?= htmlspecialchars($hero['headline']) ?></h1>
-    <div class="nomad-hero-lead">
-      <p><?= htmlspecialchars($hero['lead']) ?></p>
-    </div>
-  </div>
-</section>
-
 <!-- Accordion Section -->
-<section class="section" id="faq-list">
+<section class="section nomad-first-section" id="faq-list">
   <div class="container" style="max-width: 920px;">
     <div class="nomad-section-header text-center">
       <span class="nomad-eyebrow">HELP &amp; CLARITY</span>
-      <h2 class="nomad-section-title">Common Questions &amp; Practical Information</h2>
+      <h1 class="nomad-section-title">Common Questions &amp; Practical Information</h1>
       <p class="nomad-section-desc">
         Click any question below to read detailed guidance from our team.
       </p>
@@ -43,11 +32,6 @@
           </div>
         </div>
       <?php endforeach; ?>
-    </div>
-
-    <!-- Closing Advice Box -->
-    <div class="nomad-note-box" style="margin-top: 48px;">
-      <strong>Have a question not listed here?</strong> Contact our team directly via our enquiry form, WhatsApp, or email and we will be delighted to clarify your arrangements.
     </div>
 
     <div style="text-align: center; margin-top: 40px;">

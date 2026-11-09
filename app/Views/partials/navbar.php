@@ -1,7 +1,7 @@
 <?php
 $currentPage = $activePage ?? 'home';
 ?>
-<header class="site-header">
+<header class="site-header <?= ($currentPage === 'home') ? 'is-home-header' : 'is-inner-header' ?>">
   <div class="container nav-container">
     <!-- Brand Wordmark -->
     <a href="<?= url('/') ?>" class="nav-brand" aria-label="The Lankan Nomad Home">

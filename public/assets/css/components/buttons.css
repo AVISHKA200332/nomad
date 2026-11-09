@@ -59,10 +59,21 @@
   background-color: transparent;
 }
 
+.btn-outline .arrow-circle {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
 .btn-outline:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
   background-color: var(--color-primary-light);
+}
+
+.btn-outline:hover .arrow-circle {
+  transform: translateX(3px) rotate(-45deg);
+  background-color: var(--color-primary-hover);
+  color: #ffffff;
 }
 
 /* Compact Nav Button */

@@ -5,19 +5,12 @@
  */
 ?>
 
-<!-- Simple Legal Header -->
-<section style="background: var(--color-navy); padding: 140px 0 60px; color: #fff; text-align: center;">
+<section class="section nomad-first-section" style="background-color: #f8fafc;">
   <div class="container">
-    <span class="nomad-eyebrow nomad-eyebrow-light">LEGAL INFORMATION</span>
-    <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 12px;">Terms &amp; Conditions</h1>
-    <p style="color: var(--color-navy-muted); font-size: 1rem; max-width: 600px; margin: 0 auto;">
-      General Terms of Service governing enquiries, service agreements, and extended stay arrangements.
-    </p>
-  </div>
-</section>
-
-<section class="section" style="background-color: #f8fafc;">
-  <div class="container">
+    <div class="nomad-section-header text-center" style="margin-bottom: 30px;">
+      <span class="nomad-eyebrow">LEGAL INFORMATION</span>
+      <h1 class="nomad-section-title">Terms &amp; Conditions</h1>
+    </div>
     <div class="legal-container">
       <div class="legal-meta-bar">
         <span><strong>Effective Date:</strong> January 1, 2026</span>

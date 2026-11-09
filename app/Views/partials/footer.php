@@ -129,9 +129,14 @@ $currentPage = $activePage ?? 'home';
 
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom">
-      <p class="footer-copyright">
-        &copy; 2026 The Lankan Nomad. All rights reserved. &bull; &copy; Orbis Global - 2026
-      </p>
+      <div class="footer-copyright-group">
+        <p class="footer-copyright">
+          &copy; 2026 The Lankan Nomad. All rights reserved.
+        </p>
+        <p class="footer-orbis" style="font-size: 0.88rem; color: #cbd5e1; margin-top: 4px; font-weight: 500;">
+          &copy; Orbis Global - 2026
+        </p>
+      </div>
       <div class="footer-legal-links">
         <a href="<?= url('/privacy-policy') ?>">Privacy Policy</a>
         <a href="<?= url('/terms') ?>">Terms &amp; Conditions</a>

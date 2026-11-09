@@ -5,35 +5,12 @@
  */
 ?>
 
-<!-- Hero Section (No Hero Picture) -->
-<section class="nomad-hero-inner">
-  <div class="container nomad-hero-content">
-    <span class="nomad-eyebrow nomad-eyebrow-light"><?= htmlspecialchars($hero['eyebrow']) ?></span>
-    <h1 class="nomad-hero-title"><?= htmlspecialchars($hero['headline']) ?></h1>
-    <div class="nomad-hero-lead">
-      <p>The most memorable parts of a long stay often happen between the big attractions: a new favourite meal, a familiar walking route, a conversation with a local or a weekend spent somewhere unexpected.</p>
-      <p>Discover the experiences that can make your time in Sri Lanka more meaningful.</p>
-    </div>
-    <div class="nomad-hero-actions">
-      <a href="<?= url('/plan-your-stay?service=experiences') ?>" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;">
-        <span><?= htmlspecialchars($hero['cta']) ?></span>
-        <span class="arrow-circle arrow-circle-white">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- 5 Experience Categories -->
-<section class="section" id="experience-categories">
+<section class="section nomad-first-section" id="experience-categories">
   <div class="container">
     <div class="nomad-section-header text-center">
       <span class="nomad-eyebrow">AUTHENTIC ISLAND LIVING</span>
-      <h2 class="nomad-section-title">Experiences rooted in local life.</h2>
+      <h1 class="nomad-section-title">Experiences rooted in local life.</h1>
       <p class="nomad-section-desc" style="max-width: 740px; margin: 0 auto;">
         Enjoy enriching moments that connect you to people, culture, wilderness, and coastal rhythms.
       </p>
@@ -61,8 +38,8 @@
 
             <a href="<?= url('/plan-your-stay?experience=' . urlencode($exp['title'])) ?>" class="btn btn-outline">
               <span>Enquire About <?= htmlspecialchars($exp['title']) ?></span>
-              <span class="arrow-circle arrow-circle-white" style="background: var(--color-primary);">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <span class="arrow-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
@@ -76,11 +53,6 @@
         </div>
       <?php endforeach; ?>
     </div>
-
-    <!-- Mandatory Note from Prompt Section 10 -->
-    <div class="nomad-note-box" style="margin-top: 40px;">
-      <strong>NOTE:</strong> Specific tours, guides, tickets and activities should only be advertised when they are actually available through the company or verified providers.
-    </div>
   </div>
 </section>
 
@@ -90,7 +62,7 @@
     <div class="enquiry-cta-overlay"></div>
     <div class="enquiry-cta-content">
       <span class="nomad-eyebrow nomad-eyebrow-light">DISCOVER YOUR PATH</span>
-      <h2 class="enquiry-cta-title"><?= htmlspecialchars($closingCta['headline']) ?></h2>
+      <h2 class="enquiry-cta-title text-white"><?= htmlspecialchars($closingCta['headline']) ?></h2>
       <p class="enquiry-cta-desc">
         <?= htmlspecialchars($closingCta['desc']) ?>
       </p>

@@ -94,9 +94,14 @@
   height: 32px;
   border-radius: var(--radius-pill);
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: #ffffff;
   transition: transform var(--transition-fast), background-color var(--transition-fast);
   flex-shrink: 0;
+}
+
+.arrow-circle svg {
+  display: block;
+  stroke: currentColor;
 }
 
 .arrow-circle-white {
@@ -107,6 +112,21 @@
 .arrow-circle-dark {
   background-color: var(--color-navy);
   color: var(--color-white);
+}
+
+/* Ensure any outline button or primary-bg circle has a crisp white arrow */
+.btn-outline .arrow-circle,
+.btn-outline .arrow-circle-white,
+.arrow-circle[style*="var(--color-primary)"] {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+}
+
+.btn-outline:hover .arrow-circle,
+.btn-outline:hover .arrow-circle-white {
+  background-color: var(--color-primary-hover) !important;
+  color: #ffffff !important;
+  transform: translateX(3px) rotate(-45deg);
 }
 
 /* Micro-animations */

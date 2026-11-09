@@ -67,24 +67,35 @@
 .nomad-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(3, 17, 38, 0.65) 0%, rgba(3, 17, 38, 0.88) 100%);
+  /* Directional scrim: deep navy behind the text on the left for razor-sharp typography readability, fading to completely clear across the right so the beach, ocean, and sky remain vibrant and sunlit */
+  background:
+    linear-gradient(90deg,
+      rgba(3, 17, 38, 0.88) 0%,
+      rgba(3, 17, 38, 0.80) 38%,
+      rgba(3, 17, 38, 0.55) 55%,
+      rgba(3, 17, 38, 0.20) 72%,
+      rgba(3, 17, 38, 0.0) 85%,
+      transparent 100%
+    ),
+    linear-gradient(180deg,
+      rgba(3, 17, 38, 0.55) 0%,
+      transparent 20%,
+      transparent 75%,
+      rgba(3, 17, 38, 0.40) 100%
+    );
   z-index: 1;
+  pointer-events: none;
 }
 
-/* Inner Page Hero (No Hero Picture - Clean, Sophisticated Dark Navy) */
+/* First Content Section on Inner Pages (Clears Fixed Navbar - Hero ONLY on Home Page) */
+.nomad-first-section {
+  padding-top: 130px !important;
+}
+
+/* Deprecated Inner Headers */
+.nomad-page-header,
 .nomad-hero-inner {
-  position: relative;
-  min-height: 44vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(180deg, #031126 0%, #071936 60%, #0b2246 100%);
-  padding: 145px 0 65px;
-  color: var(--color-white);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.nomad-hero-inner .nomad-hero-overlay {
-  display: none;
+  display: none !important;
 }
 
 .nomad-hero-content {
@@ -93,24 +104,47 @@
   max-width: 860px;
 }
 
+.nomad-hero .nomad-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(14, 165, 233, 0.22);
+  border: 1px solid rgba(125, 211, 252, 0.45);
+  color: #bae6fd;
+  padding: 7px 18px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
 .nomad-hero-title {
   font-size: clamp(2.5rem, 5vw, 4.2rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.1;
+  line-height: 1.12;
   color: #ffffff;
   margin-bottom: 24px;
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.9), 0 1px 4px rgba(0, 0, 0, 0.95);
 }
 
 .nomad-hero-lead {
   font-size: clamp(1.1rem, 1.8vw, 1.35rem);
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.7;
+  color: #ffffff;
   margin-bottom: 32px;
+  font-weight: 500;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.95);
 }
 
 .nomad-hero-lead p {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .nomad-hero-actions {
@@ -118,25 +152,28 @@
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .nomad-hero-supporting {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
+  font-size: 0.98rem;
+  color: #ffffff;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .nomad-hero-supporting::before {
   content: "";
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--color-bg-sky);
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+  flex-shrink: 0;
 }
 
 /* Notice / Disclaimer Note Box */
@@ -697,7 +734,7 @@
   padding: 80px 40px;
   margin: 60px 0;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   box-shadow: var(--shadow-lg);
 }
 
@@ -715,17 +752,39 @@
   margin: 0 auto;
 }
 
+.enquiry-cta-section .nomad-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(14, 165, 233, 0.22);
+  border: 1px solid rgba(125, 211, 252, 0.45);
+  color: #bae6fd;
+  padding: 7px 20px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
 .enquiry-cta-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   line-height: 1.15;
+  color: #ffffff !important;
   margin-bottom: 20px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
 }
 
 .enquiry-cta-desc {
   font-size: 1.15rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95) !important;
   margin-bottom: 32px;
 }
 
@@ -1361,6 +1420,10 @@
     padding: 120px 0 60px;
   }
 
+  .nomad-hero .nomad-hero-overlay {
+    background: linear-gradient(180deg, rgba(3, 17, 38, 0.78) 0%, rgba(3, 17, 38, 0.65) 45%, rgba(3, 17, 38, 0.80) 100%);
+  }
+
   .nomad-hero-title {
     font-size: clamp(2.1rem, 9vw, 2.9rem);
     line-height: 1.15;
@@ -1390,21 +1453,9 @@
     line-height: 1.5;
   }
 
-  /* Inner Hero (Pages 02-09, Legal) on Mobile */
-  .nomad-hero-inner {
-    min-height: auto;
-    padding: 110px 0 45px;
-  }
-
-  .nomad-hero-inner .nomad-hero-title {
-    font-size: clamp(1.8rem, 7.5vw, 2.5rem);
-    line-height: 1.18;
-  }
-
-  .nomad-hero-inner .nomad-hero-lead {
-    font-size: 0.98rem;
-    line-height: 1.55;
-    margin-bottom: 20px;
+  /* First Content Section on Mobile (Clears Fixed Navbar) */
+  .nomad-first-section {
+    padding-top: 100px !important;
   }
 
   /* Durations */
@@ -1562,6 +1613,7 @@
   .enquiry-cta-title {
     font-size: 1.7rem;
     line-height: 1.2;
+    color: #ffffff !important;
   }
 
   .enquiry-cta-desc {

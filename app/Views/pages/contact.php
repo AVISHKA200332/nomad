@@ -5,24 +5,12 @@
  */
 ?>
 
-<!-- Hero Section (No Hero Picture) -->
-<section class="nomad-hero-inner" style="min-height: 42vh; padding: 135px 0 65px;">
-  <div class="container nomad-hero-content">
-    <span class="nomad-eyebrow nomad-eyebrow-light"><?= htmlspecialchars($hero['eyebrow']) ?></span>
-    <h1 class="nomad-hero-title"><?= htmlspecialchars($hero['headline']) ?></h1>
-    <div class="nomad-hero-lead">
-      <p>Whether you already know where you'd like to live or need help exploring your options, we're here to start the conversation.</p>
-      <p>Share a few details about your plans, and we'll take it from there.</p>
-    </div>
-  </div>
-</section>
-
 <!-- Plan Your Stay Form Section -->
-<section class="section" id="enquiry-form">
+<section class="section nomad-first-section" id="enquiry-form">
   <div class="container" style="max-width: 960px;">
     <div class="nomad-section-header text-center">
       <span class="nomad-eyebrow">YOUR STAY ENQUIRY</span>
-      <h2 class="nomad-section-title"><?= htmlspecialchars($hero['formTitle']) ?></h2>
+      <h1 class="nomad-section-title"><?= htmlspecialchars($hero['formTitle']) ?></h1>
       <p class="nomad-section-desc">
         Complete the form below to receive a personalized consultation and quotation.
       </p>

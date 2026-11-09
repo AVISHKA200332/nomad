@@ -5,32 +5,8 @@
  */
 ?>
 
-<!-- Hero Section (No Hero Picture) -->
-<section class="nomad-hero-inner">
-  <div class="container nomad-hero-content">
-    <span class="nomad-eyebrow nomad-eyebrow-light"><?= htmlspecialchars($hero['eyebrow']) ?></span>
-    <h1 class="nomad-hero-title"><?= htmlspecialchars($hero['headline']) ?></h1>
-    <div class="nomad-hero-lead">
-      <p>The Lankan Nomad is built around a simple idea: staying longer in a place should make it easier to experience more of what makes it special.</p>
-      <p>A longer stay brings different questions. Where will you live? How will you get around? Which location fits your routine? What should you organise before you arrive?</p>
-      <p>Our aim is to help people planning an extended stay in Sri Lanka navigate those questions and explore arrangements that fit their individual plans.</p>
-    </div>
-    <div class="nomad-hero-actions">
-      <a href="<?= url('/plan-your-stay') ?>" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;">
-        <span>Plan Your Stay</span>
-        <span class="arrow-circle arrow-circle-white">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- Mission & Vision Section -->
-<section class="section" id="mission-vision">
+<section class="section nomad-first-section" id="mission-vision">
   <div class="container">
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px;">
       <!-- Mission Card -->
@@ -84,11 +60,6 @@
         </div>
       <?php endforeach; ?>
     </div>
-
-    <!-- Mandatory Note from Prompt Page 06 -->
-    <div class="nomad-note-box" style="margin-top: 40px;">
-      <strong>NOTE:</strong> Company registration details (© Orbis Global - 2026), verified local partnerships, and team details are reflected in compliance with official standards. We maintain authentic representation across all operations.
-    </div>
   </div>
 </section>
 
@@ -98,7 +69,7 @@
     <div class="enquiry-cta-overlay"></div>
     <div class="enquiry-cta-content">
       <span class="nomad-eyebrow nomad-eyebrow-light">THE NEXT CHAPTER</span>
-      <h2 class="enquiry-cta-title">Let's start planning your next chapter.</h2>
+      <h2 class="enquiry-cta-title text-white">Let's start planning your next chapter.</h2>
       <p class="enquiry-cta-desc">
         Connect with our team to discover how an extended stay in Sri Lanka can look and feel for you.
       </p>

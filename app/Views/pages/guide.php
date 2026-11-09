@@ -5,35 +5,12 @@
  */
 ?>
 
-<!-- Hero Section (No Hero Picture) -->
-<section class="nomad-hero-inner">
-  <div class="container nomad-hero-content">
-    <span class="nomad-eyebrow nomad-eyebrow-light"><?= htmlspecialchars($hero['eyebrow']) ?></span>
-    <h1 class="nomad-hero-title"><?= htmlspecialchars($hero['headline']) ?></h1>
-    <div class="nomad-hero-lead">
-      <p>Practical information and thoughtful inspiration for people planning to spend more time in Sri Lanka.</p>
-      <p>From choosing where to stay to understanding everyday transport, our guides help you ask the right questions before you arrive.</p>
-    </div>
-    <div class="nomad-hero-actions">
-      <a href="<?= url('/plan-your-stay') ?>" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;">
-        <span><?= htmlspecialchars($hero['cta']) ?></span>
-        <span class="arrow-circle arrow-circle-white">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- 5 Themes / Categories Section -->
-<section class="section" id="guide-categories">
+<section class="section nomad-first-section" id="guide-categories">
   <div class="container">
     <div class="nomad-section-header text-center">
       <span class="nomad-eyebrow">ESSENTIAL TOPICS</span>
-      <h2 class="nomad-section-title">Knowledge tailored for extended stays.</h2>
+      <h1 class="nomad-section-title">Knowledge tailored for extended stays.</h1>
       <p class="nomad-section-desc" style="max-width: 740px; margin: 0 auto;">
         Key pillars to research before making travel, accommodation, and remote-work commitments.
       </p>
@@ -94,8 +71,8 @@
 
           <a href="<?= url('/plan-your-stay?topic=' . urlencode($art['title'])) ?>" class="btn btn-outline" style="justify-content: center;">
             <span>Enquire on This Topic</span>
-            <span class="arrow-circle arrow-circle-white" style="background: var(--color-primary);">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <span class="arrow-circle">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -113,7 +90,7 @@
     <div class="enquiry-cta-overlay"></div>
     <div class="enquiry-cta-content">
       <span class="nomad-eyebrow nomad-eyebrow-light">TAKE THE NEXT STEP</span>
-      <h2 class="enquiry-cta-title"><?= htmlspecialchars($blogCta['headline']) ?></h2>
+      <h2 class="enquiry-cta-title text-white"><?= htmlspecialchars($blogCta['headline']) ?></h2>
       <p class="enquiry-cta-desc">
         <?= htmlspecialchars($blogCta['desc']) ?>
       </p>
