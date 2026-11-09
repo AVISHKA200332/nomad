@@ -1,7 +1,6 @@
-﻿<?php
-
+<?php
 /**
  * Header Partial
- *
- * TODO: Define top bar, branding header, or announcement elements.
+ * Dispatches the primary site navbar and top bar container
  */
+require __DIR__ . '/navbar.php';

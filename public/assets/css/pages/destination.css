@@ -1,1 +1,572 @@
-﻿/* Destination Page Styles (TODO: Define destination grid, filter bar, and details styles) */
+/* ==========================================================================
+   AVENORA — DESTINATION PAGE STYLES
+   Pixel-Accurately Crafted to Match Destination.png Reference
+   ========================================================================== */
+
+/* Design Tokens for Destination Page */
+:root {
+  --color-dest-bg: #EAF1F5;
+  --color-dest-card-bg: #FFFFFF;
+  --color-dest-text-main: #101820;
+  --color-dest-text-muted: #687684;
+  --color-dest-icon-circle: #E3F4FC;
+  --color-dest-primary: #3047F4;
+  --color-dest-navy: #031126;
+}
+
+/* ==========================================================================
+   SECTION 01: Mountain Hero
+   ========================================================================== */
+.dest-hero-section {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dest-navy);
+  background-position: center 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding-top: 140px;
+  padding-bottom: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dest-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 17, 38, 0.45) 0%,
+    rgba(3, 17, 38, 0.20) 35%,
+    rgba(3, 17, 38, 0.65) 75%,
+    rgba(3, 17, 38, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+.dest-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.dest-hero-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.dest-hero-title {
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.dest-hero-desc {
+  max-width: 620px;
+  margin: 0 auto 32px auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dest-hero-cta-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.dest-hero-cta {
+  font-size: 0.95rem;
+  padding: 10px 14px 10px 24px;
+}
+
+
+/* ==========================================================================
+   SECTION 02 & 03: Explore All Destinations & 3x3 Card Grid
+   ========================================================================== */
+.dest-main-section {
+  background-color: var(--color-dest-bg);
+  padding: 80px 0 100px 0;
+}
+
+.dest-intro-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: 40px;
+}
+
+.dest-intro-left {
+  max-width: 580px;
+}
+
+.dest-badge {
+  display: inline-block;
+  background-color: rgba(48, 71, 244, 0.08);
+  color: var(--color-dest-primary);
+  border-radius: var(--radius-pill);
+  padding: 5px 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.dest-section-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-dest-text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.dest-section-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-dest-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Category Filter Pills */
+.dest-filters-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dest-filter-btn {
+  background-color: #ffffff;
+  color: var(--color-dest-text-main);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-pill);
+  padding: 8px 22px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.dest-filter-btn:hover {
+  border-color: rgba(48, 71, 244, 0.25);
+  color: var(--color-dest-primary);
+  transform: translateY(-1px);
+}
+
+.dest-filter-btn.is-active {
+  background-color: #ffffff;
+  color: var(--color-dest-primary);
+  border-color: rgba(48, 71, 244, 0.4);
+  box-shadow: 0 4px 14px rgba(48, 71, 244, 0.14);
+}
+
+/* 3x3 Card Grid */
+.dest-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Destination Card Component */
+.dest-card {
+  background-color: var(--color-dest-card-bg);
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.09);
+}
+
+.dest-card-media {
+  width: 100%;
+  height: 185px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: #e2e8f0;
+}
+
+.dest-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dest-card:hover .dest-card-media img {
+  transform: scale(1.05);
+}
+
+.dest-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2px 4px 4px 4px;
+}
+
+.dest-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-dest-text-main);
+  margin-bottom: 6px;
+}
+
+.dest-star-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.dest-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dest-text-main);
+  line-height: 1.35;
+  margin: 0 0 14px 0;
+  min-height: 44px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dest-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.dest-card-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: var(--color-dest-text-muted);
+  font-weight: 500;
+}
+
+.dest-card-location svg {
+  color: var(--color-dest-text-muted);
+  flex-shrink: 0;
+}
+
+.dest-card-action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-dest-icon-circle);
+  color: var(--color-dest-text-main);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dest-card:hover .dest-card-action-btn {
+  background-color: var(--color-dest-primary);
+  color: var(--color-white);
+  transform: rotate(-45deg);
+}
+
+/* Empty State */
+.dest-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.dest-empty-icon {
+  color: var(--color-dest-primary);
+  margin-bottom: 16px;
+}
+
+.dest-empty-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-dest-text-main);
+  margin-bottom: 8px;
+}
+
+.dest-empty-desc {
+  font-size: 0.95rem;
+  color: var(--color-dest-text-muted);
+  margin-bottom: 24px;
+}
+
+
+/* ==========================================================================
+   SECTION 04: Frequently Asked Questions
+   ========================================================================== */
+.dest-faq-section {
+  background-color: var(--color-dest-bg);
+  padding: 40px 0 100px 0;
+}
+
+.dest-faq-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.dest-faq-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  color: var(--color-dest-text-main);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-top: 8px;
+}
+
+.dest-faq-accordion {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.dest-faq-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.dest-faq-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.dest-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.dest-faq-question {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dest-text-main);
+  line-height: 1.35;
+}
+
+.dest-faq-arrow {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-dest-icon-circle);
+  color: var(--color-dest-text-main);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.dest-faq-trigger[aria-expanded="true"] .dest-faq-arrow {
+  transform: rotate(180deg);
+  background-color: var(--color-dest-primary);
+  color: var(--color-white);
+}
+
+.dest-faq-body {
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.dest-faq-content {
+  padding: 16px 24px 22px 24px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-dest-text-muted);
+}
+
+
+/* ==========================================================================
+   SECTION 05: Full-Width Photographic Adventure CTA
+   ========================================================================== */
+.dest-cta-section {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-dest-navy);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.dest-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 17, 38, 0.90) 0%,
+    rgba(3, 17, 38, 0.72) 40%,
+    rgba(3, 17, 38, 0.25) 75%,
+    rgba(3, 17, 38, 0.10) 100%
+  );
+  pointer-events: none;
+}
+
+.dest-cta-container {
+  position: relative;
+  z-index: 2;
+}
+
+.dest-cta-content {
+  max-width: 580px;
+}
+
+.dest-cta-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.dest-cta-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 28px;
+}
+
+.dest-cta-btn-wrap {
+  display: flex;
+}
+
+.dest-cta-btn {
+  padding: 10px 14px 10px 24px;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Laptop / Medium Screens (1024px – 1399px) */
+@media (max-width: 1200px) {
+  .dest-cards-grid {
+    gap: 20px;
+  }
+}
+
+/* Tablet (768px – 1023px) */
+@media (max-width: 1023px) {
+  .dest-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dest-intro-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dest-filters-group {
+    width: 100%;
+  }
+
+  .dest-hero-section {
+    min-height: 500px;
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+}
+
+/* Mobile Screens (Below 768px) */
+@media (max-width: 767px) {
+  .dest-hero-section {
+    min-height: 460px;
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+
+  .dest-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .dest-hero-desc {
+    font-size: 0.95rem;
+  }
+
+  .dest-main-section {
+    padding: 50px 0 70px 0;
+  }
+
+  .dest-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dest-filters-group {
+    gap: 6px;
+  }
+
+  .dest-filter-btn {
+    padding: 6px 16px;
+    font-size: 0.82rem;
+  }
+
+  .dest-faq-section {
+    padding: 20px 0 70px 0;
+  }
+
+  .dest-faq-title {
+    font-size: 2rem;
+  }
+
+  .dest-faq-trigger {
+    padding: 16px 18px;
+  }
+
+  .dest-cta-section {
+    min-height: 420px;
+    padding: 60px 0;
+  }
+
+  .dest-cta-title {
+    font-size: 1.85rem;
+  }
+
+  .dest-cta-desc {
+    font-size: 0.9rem;
+  }
+}

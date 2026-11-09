@@ -1,1 +1,499 @@
-﻿/* Package Page Styles (TODO: Define package listing, pricing tables, and filter styles) */
+/* ==========================================================================
+   AVENORA — PACKAGE PAGE STYLES
+   Pixel-Accurately Engineered to Match Package.png Reference
+   ========================================================================== */
+
+/* Design Tokens for Package Page */
+:root {
+  --color-pkg-bg: #EAF1F5;
+  --color-pkg-card-bg: #FFFFFF;
+  --color-pkg-text-main: #111820;
+  --color-pkg-text-muted: #6B7885;
+  --color-pkg-primary: #3047F4;
+  --color-pkg-primary-hover: #2135D9;
+  --color-pkg-navy: #031126;
+  --color-pkg-border: #E3EAF0;
+}
+
+/* ==========================================================================
+   SECTION 01: Travel Package Hero Section
+   ========================================================================== */
+.pkg-hero-section {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-pkg-navy);
+  background-position: center 22%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding-top: 150px;
+  padding-bottom: 90px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pkg-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 17, 38, 0.40) 0%,
+    rgba(3, 17, 38, 0.15) 30%,
+    rgba(3, 17, 38, 0.65) 70%,
+    rgba(3, 17, 38, 0.98) 100%
+  );
+  pointer-events: none;
+}
+
+.pkg-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.pkg-hero-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.pkg-hero-title {
+  font-size: clamp(2.6rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 18px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.pkg-hero-desc {
+  max-width: 630px;
+  margin: 0 auto 32px auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pkg-hero-cta-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.pkg-hero-cta {
+  font-size: 0.95rem;
+  padding: 10px 14px 10px 24px;
+  background-color: #ffffff;
+  color: var(--color-pkg-navy);
+}
+
+.pkg-hero-cta:hover {
+  background-color: #f7fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==========================================================================
+   SECTION 02 & 03: Travel Packages Section & The 5 Cards
+   ========================================================================== */
+.pkg-main-section {
+  background-color: var(--color-pkg-bg);
+  padding: 85px 0 115px 0; /* Generous top and bottom spacing */
+}
+
+/* Header Row: Left Title & Right Description */
+.pkg-intro-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: 48px;
+}
+
+.pkg-intro-left {
+  max-width: 580px;
+}
+
+.pkg-badge {
+  display: inline-block;
+  background-color: rgba(48, 71, 244, 0.08);
+  color: var(--color-pkg-primary);
+  border-radius: var(--radius-pill);
+  padding: 5px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.pkg-section-title {
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
+  font-weight: 800;
+  color: var(--color-pkg-text-main);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.pkg-intro-right {
+  max-width: 380px;
+  text-align: left;
+}
+
+.pkg-section-desc {
+  font-size: 0.95rem;
+  color: var(--color-pkg-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Vertical List of 5 Package Cards */
+.pkg-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Individual Package Card */
+.pkg-card {
+  background-color: var(--color-pkg-card-bg);
+  border-radius: 28px;
+  padding: 22px 24px 22px 44px;
+  box-shadow: 0 4px 24px rgba(3, 17, 38, 0.04);
+  border: 1px solid rgba(227, 234, 240, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.pkg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 42px rgba(3, 17, 38, 0.08);
+}
+
+/* Card Left Column: Content */
+.pkg-card-content {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pkg-card-title {
+  font-size: clamp(1.65rem, 2.3vw, 2.15rem);
+  font-weight: 800;
+  color: var(--color-pkg-text-main);
+  letter-spacing: -0.025em;
+  line-height: 1.22;
+  margin: 0 0 16px 0;
+}
+
+.pkg-card-desc {
+  font-size: 0.96rem;
+  line-height: 1.62;
+  color: var(--color-pkg-text-muted);
+  margin: 0 0 28px 0;
+  max-width: 420px;
+}
+
+.pkg-card-action {
+  display: flex;
+}
+
+/* Pill CTA Button inside Package Card */
+.btn-pkg-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  color: var(--color-pkg-text-main);
+  border: 1.5px solid var(--color-pkg-border);
+  border-radius: var(--radius-pill);
+  padding: 8px 10px 8px 22px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.btn-pkg-cta .arrow-circle-blue {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-pkg-primary);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.pkg-card:hover .btn-pkg-cta {
+  border-color: rgba(48, 71, 244, 0.35);
+  box-shadow: 0 4px 14px rgba(48, 71, 244, 0.12);
+}
+
+.pkg-card:hover .btn-pkg-cta .arrow-circle-blue,
+.btn-pkg-cta:hover .arrow-circle-blue {
+  transform: rotate(-45deg);
+  background-color: var(--color-pkg-primary-hover);
+}
+
+/* Card Right Column: Image Inset */
+.pkg-card-media-wrap {
+  width: 53%;
+  flex-shrink: 0;
+}
+
+.pkg-card-media {
+  width: 100%;
+  height: 295px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  position: relative;
+}
+
+.pkg-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pkg-card:hover .pkg-card-media img {
+  transform: scale(1.04);
+}
+
+
+/* ==========================================================================
+   SECTION 04: Cinematic Adventure CTA Banner
+   ========================================================================== */
+.pkg-cta-section {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-pkg-navy);
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.pkg-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 17, 38, 0.90) 0%,
+    rgba(3, 17, 38, 0.72) 42%,
+    rgba(3, 17, 38, 0.25) 75%,
+    rgba(3, 17, 38, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.pkg-cta-container {
+  position: relative;
+  z-index: 2;
+}
+
+.pkg-cta-content {
+  max-width: 580px;
+}
+
+.pkg-cta-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pkg-cta-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 28px;
+}
+
+.pkg-cta-btn-wrap {
+  display: flex;
+}
+
+.pkg-cta-btn {
+  padding: 10px 14px 10px 24px;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Large Desktop (1440px and Above) */
+@media (min-width: 1440px) {
+  .pkg-card {
+    padding: 26px 28px 26px 50px;
+  }
+  .pkg-card-media {
+    height: 315px;
+  }
+}
+
+/* Medium Desktop (1024px – 1439px) */
+@media (max-width: 1200px) {
+  .pkg-card {
+    padding: 20px 20px 20px 32px;
+    gap: 28px;
+  }
+  .pkg-card-media-wrap {
+    width: 50%;
+  }
+  .pkg-card-media {
+    height: 260px;
+  }
+}
+
+/* Tablet (768px – 1023px) */
+@media (max-width: 1023px) {
+  .pkg-intro-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .pkg-intro-right {
+    max-width: 100%;
+  }
+
+  .pkg-card {
+    padding: 20px;
+    gap: 24px;
+    border-radius: 22px;
+  }
+
+  .pkg-card-media-wrap {
+    width: 48%;
+  }
+
+  .pkg-card-media {
+    height: 220px;
+    border-radius: 16px;
+  }
+
+  .pkg-hero-section {
+    min-height: 500px;
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+}
+
+/* Mobile Screens (Below 768px) */
+@media (max-width: 767px) {
+  .pkg-hero-section {
+    min-height: 460px;
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+
+  .pkg-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .pkg-hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .pkg-main-section {
+    padding: 55px 0 75px 0;
+  }
+
+  .pkg-cards-list {
+    gap: 24px;
+  }
+
+  /* Stack Card Vertically on Mobile: Image first, then Title, Desc, Button */
+  .pkg-card {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    padding: 18px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+
+  .pkg-card-media-wrap {
+    width: 100%;
+  }
+
+  .pkg-card-media {
+    height: 210px;
+    border-radius: 14px;
+  }
+
+  .pkg-card-content {
+    max-width: 100%;
+  }
+
+  .pkg-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .pkg-card-desc {
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+  }
+
+  .pkg-cta-section {
+    min-height: 420px;
+    padding: 60px 0;
+  }
+
+  .pkg-cta-title {
+    font-size: 1.85rem;
+  }
+
+  .pkg-cta-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (320px – 374px) */
+@media (max-width: 374px) {
+  .pkg-card {
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .pkg-card-media {
+    height: 180px;
+  }
+
+  .pkg-card-title {
+    font-size: 1.35rem;
+  }
+
+  .btn-pkg-cta {
+    padding: 8px 10px 8px 16px;
+    font-size: 0.85rem;
+  }
+}

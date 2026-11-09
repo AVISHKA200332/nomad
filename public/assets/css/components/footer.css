@@ -1,1 +1,198 @@
-﻿/* Footer Component Styles (TODO: Define footer layout, links, and bottom bar styles) */
+/* Footer Component */
+
+.site-footer {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-3xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.footer-brand {
+  font-size: 2.4rem;
+  font-weight: var(--fw-extrabold);
+  letter-spacing: -0.03em;
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: var(--color-navy-muted);
+  margin-bottom: var(--space-lg);
+  max-width: 440px;
+}
+
+.footer-email-link {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  margin-bottom: var(--space-2xl);
+  display: inline-block;
+}
+
+.footer-email-link:hover {
+  color: #a8baff;
+  transform: translateY(-2px);
+}
+
+/* Footer Navigation Links with Active State */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: var(--space-3xl);
+}
+
+.footer-nav a {
+  font-size: 0.92rem;
+  font-weight: var(--fw-medium);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+
+.footer-nav a:hover {
+  color: var(--color-white);
+}
+
+.footer-nav a.is-active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: var(--fw-semibold);
+  box-shadow: 0 4px 14px rgba(48, 71, 244, 0.4);
+}
+
+/* Social Media Links with Labels */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-btn:hover {
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Newsletter Input Form */
+.footer-newsletter-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: var(--space-3xl);
+}
+
+.footer-newsletter-title {
+  font-size: 1.15rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.footer-newsletter {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 6px 6px 6px 20px;
+  border-radius: var(--radius-pill);
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+.footer-newsletter:focus-within {
+  border-color: var(--color-primary);
+}
+
+.footer-newsletter input {
+  flex: 1;
+  color: var(--color-white);
+  font-size: 0.95rem;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.footer-newsletter input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-newsletter button {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  padding: 10px 26px;
+  border-radius: var(--radius-pill);
+  font-weight: var(--fw-bold);
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.footer-newsletter button:hover {
+  background-color: #f0f4f8;
+  transform: translateY(-1px);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  padding-top: var(--space-2xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-navy-muted);
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.footer-legal-links a {
+  color: var(--color-navy-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-legal-links a:hover {
+  color: var(--color-white);
+}

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  * Contact Message Model

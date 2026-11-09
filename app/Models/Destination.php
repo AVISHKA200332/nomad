@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  * Destination Model

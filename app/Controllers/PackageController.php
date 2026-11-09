@@ -1,7 +1,15 @@
-﻿<?php
+<?php
 
-/**
- * Package Controller
- *
- * TODO: Handle requests for browsing tourism and travel packages.
- */
+namespace App\Controllers;
+
+use App\Core\Controller;
+
+class PackageController extends Controller
+{
+    public function index(): void
+    {
+        // Maintain clean backwards compatibility with package route
+        $stayController = new StayController();
+        $stayController->index();
+    }
+}

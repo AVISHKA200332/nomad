@@ -1,7 +1,9 @@
-﻿<?php
+<?php
 
 /**
- * Front Controller Entry Point
- *
- * TODO: Direct all incoming HTTP requests to bootstrap the application and dispatch routes.
+ * The Lankan Nomad Front Controller
+ * © Orbis Global - 2026
  */
+
+$router = require __DIR__ . '/../bootstrap/app.php';
+$router->dispatch();
