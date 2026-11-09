@@ -120,13 +120,6 @@ $currentPage = $activePage ?? 'home';
       </div>
     </div>
 
-    <!-- General Guidance Note (PAGE 10 Note) -->
-    <div class="footer-disclaimer-box">
-      <p>
-        <strong>Guidance Note:</strong> Information on this website is provided for general guidance. Services, accommodation, prices and availability are subject to confirmation. Visitors are responsible for verifying applicable travel and immigration requirements.
-      </p>
-    </div>
-
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom">
       <div class="footer-copyright-group">
