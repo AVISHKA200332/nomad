@@ -6,23 +6,19 @@
 ?>
 
 <!-- ==========================================================================
-     SECTION 01: Hero & Navigation Section
+     SECTION 01: Hero Section
      ========================================================================== -->
 <section class="hero-section" id="hero" style="background-image: url('<?= asset('assets/images/banners/hero-bg.jpg') ?>');">
   <div class="hero-overlay"></div>
 
   <div class="container hero-content">
-    <!-- Enormous Travel Display Headline -->
-    <div class="hero-headline-wrap">
-      <h1 class="hero-display-title"><?= htmlspecialchars($hero['headline'] ?? 'Travelo') ?></h1>
-    </div>
-
-    <!-- Hero Lower Content & Floating Card -->
-    <div class="hero-bottom-row">
-      <div class="hero-bottom-left">
-        <p class="hero-subhead"><?= nl2br(htmlspecialchars($hero['subhead'] ?? "Tailored journeys for\ntravelers who want more than a standard trip.")) ?></p>
-        <a href="<?= url('/destinations') ?>" class="btn btn-white-pill">
-          <span><?= htmlspecialchars($hero['cta'] ?? 'Explore Destinations') ?></span>
+    <div class="hero-text-content">
+      <h1 class="hero-title"><?= htmlspecialchars($hero['title'] ?? 'Live Sri Lanka, Your Way.') ?></h1>
+      <p class="hero-desc"><?= htmlspecialchars($hero['desc'] ?? 'Discover Sri Lanka beyond the destination. From accommodation to arrival and everyday living, The Lankan Nomad makes your extended stay effortless.') ?></p>
+      <p class="hero-tagline"><?= htmlspecialchars($hero['tagline'] ?? 'Make Sri Lanka your home away from home.') ?></p>
+      <div class="hero-actions">
+        <a href="<?= url('/stay-in-sri-lanka') ?>" class="btn btn-white-pill">
+          <span><?= htmlspecialchars($hero['cta'] ?? 'Explore Stays') ?></span>
           <span class="arrow-circle">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -30,20 +26,15 @@
             </svg>
           </span>
         </a>
-      </div>
-
-      <!-- Right Floating Feature Card (Matched to Reference Image) -->
-      <div class="hero-float-card">
-        <div class="hero-card-header-block">
-          <div class="hero-card-title-row">
-            <span class="hero-card-blue-dot"></span>
-            <h3 class="hero-card-main-title"><?= htmlspecialchars($hero['cardHeading'] ?? 'Plan your next vacation') ?></h3>
-          </div>
-          <p class="hero-card-subtitle"><?= htmlspecialchars($hero['cardDesc'] ?? 'Affordable tour packages, accommodations, and seamless booking services') ?></p>
-        </div>
-        <div class="hero-card-media-wrap">
-          <img src="<?= asset('assets/images/banners/hero-card.jpg') ?>" alt="Traveler overlooking mountains" loading="eager">
-        </div>
+        <a href="<?= url('/plan-your-stay') ?>" class="btn btn-hero-glass">
+          <span><?= htmlspecialchars($hero['ctaSecondary'] ?? 'Plan Your Stay') ?></span>
+          <span class="arrow-circle arrow-circle-white">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
   </div>

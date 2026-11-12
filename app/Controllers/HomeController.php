@@ -15,14 +15,11 @@ class HomeController extends Controller
             
             // Hero Data
             'hero' => [
-                'headline' => 'Travelo',
-                'subhead' => "Tailored journeys for\ntravelers who want more than a standard trip.",
-                'cta' => 'Explore Destinations',
-                'cardHeading' => 'Plan your next vacation',
-                'cardDesc' => 'Affordable tour packages, accommodations, and seamless booking services',
-                'cardTitle' => 'Mountain Expedition',
-                'cardLocation' => 'Swiss Alps Alpine Pass',
-                'cardCta' => 'Watch the Journey'
+                'title' => 'Live Sri Lanka, Your Way.',
+                'desc' => 'Discover Sri Lanka beyond the destination. From accommodation to arrival and everyday living, The Lankan Nomad makes your extended stay effortless.',
+                'tagline' => 'Make Sri Lanka your home away from home.',
+                'cta' => 'Explore Stays',
+                'ctaSecondary' => 'Plan Your Stay'
             ],
 
             // Statistics Data

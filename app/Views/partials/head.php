@@ -38,7 +38,7 @@
 
   <!-- Page Specific Stylesheets -->
   <?php if (($activePage ?? 'home') === 'home'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=4.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=4.3">
   <?php elseif (($activePage ?? 'home') === 'destinations'): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=4.0">
   <?php elseif (in_array($activePage ?? '', ['stay', 'packages'])): ?>
@@ -48,6 +48,6 @@
   <?php endif; ?>
 
   <!-- Responsive Breakpoints -->
-  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=4.1">
+  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=4.3">
 </head>
 <body class="page-<?= htmlspecialchars($activePage ?? 'home') ?>">

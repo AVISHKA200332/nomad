@@ -165,12 +165,31 @@
     min-height: 85vh;
   }
 
-  .hero-display-title {
-    font-size: clamp(3.8rem, 16vw, 6rem);
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
   }
 
-  .hero-subhead {
-    font-size: 1.25rem;
+  .hero-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-text-content {
+    max-width: 100%;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 11, 24, 0.75) 0%,
+      rgba(2, 11, 24, 0.70) 40%,
+      rgba(2, 11, 24, 0.94) 100%
+    ) !important;
   }
 
   .package-card {
