@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="<?= asset('assets/css/layout.css') ?>?v=3.9">
 
   <!-- Component Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=3.9">
-  <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>?v=3.9">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=4.1">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>?v=4.1">
   <link rel="stylesheet" href="<?= asset('assets/css/components/cards.css') ?>?v=3.9">
   <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=3.9">
 
@@ -48,6 +48,6 @@
   <?php endif; ?>
 
   <!-- Responsive Breakpoints -->
-  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=4.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=4.1">
 </head>
 <body class="page-<?= htmlspecialchars($activePage ?? 'home') ?>">

@@ -1,8 +1,9 @@
 <?php
 $currentPage = $activePage ?? 'home';
 ?>
-<header class="site-header <?= ($currentPage === 'home') ? 'is-home-header' : 'is-inner-header' ?>">
-  <div class="container nav-container">
+<!-- Site Header with Blue Background (Unified Across All Pages) -->
+<header class="site-header is-inner-header">
+  <div class="nav-container">
     <!-- Brand Wordmark / Logo -->
     <a href="<?= url('/') ?>" class="nav-brand" aria-label="Avenora Travel Home">
       <img src="<?= asset('assets/images/logo/logo.png') ?>" alt="Avenora" class="site-logo">
