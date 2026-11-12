@@ -1,70 +1,6 @@
 <?php
 $currentPage = $activePage ?? 'home';
 ?>
-<?php if ($currentPage === 'home'): ?>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <!-- Top Navigation Links with Active State -->
-      <nav class="footer-nav" aria-label="Footer Navigation">
-        <a href="<?= url('/') ?>" class="<?= ($activePage ?? 'home') === 'home' ? 'is-active' : '' ?>">Home</a>
-        <a href="<?= url('/about') ?>" class="<?= ($activePage ?? 'home') === 'about' ? 'is-active' : '' ?>">About</a>
-        <a href="<?= url('/destinations') ?>" class="<?= ($activePage ?? 'home') === 'destinations' ? 'is-active' : '' ?>">Destination</a>
-        <a href="<?= url('/packages') ?>" class="<?= ($activePage ?? 'home') === 'packages' ? 'is-active' : '' ?>">Package</a>
-        <a href="<?= url('/contact') ?>" class="<?= ($activePage ?? 'home') === 'contact' ? 'is-active' : '' ?>">Contact</a>
-      </nav>
-
-      <!-- Large Centered Email Display -->
-      <a href="mailto:Avenora@gmail.com" class="footer-email-link">Avenora@gmail.com</a>
-
-      <!-- Social Media Icons with Labels -->
-      <div class="footer-socials">
-        <a href="#" class="social-btn" aria-label="Facebook">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-          </svg>
-          <span>Facebook</span>
-        </a>
-        <a href="#" class="social-btn" aria-label="Instagram">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-          <span>Instagram</span>
-        </a>
-        <a href="#" class="social-btn" aria-label="Twitter / X">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-          </svg>
-          <span>Twitter (X)</span>
-        </a>
-      </div>
-
-      <!-- Newsletter Heading and Input -->
-      <div class="footer-newsletter-wrap">
-        <h4 class="footer-newsletter-title">Newsletter</h4>
-        <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Avenora travel dispatches!');">
-          <label for="footer-email-input" class="sr-only">Your email address</label>
-          <input type="email" id="footer-email-input" placeholder="Enter your email" required>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Footer Bottom Legal & Copyright -->
-    <div class="footer-bottom">
-      <p class="footer-copyright">All Copyright &mdash; Avenora Design by Creative Discovery Studio</p>
-      <div class="footer-legal-links">
-        <a href="#">Style Guide</a>
-        <a href="#">Licenses</a>
-        <a href="#">Changelog</a>
-        <a href="#">404</a>
-      </div>
-    </div>
-  </div>
-</footer>
-<?php else: ?>
 <footer class="site-footer">
   <div class="container">
     <!-- Newsletter Section (Section 13) -->
@@ -77,7 +13,7 @@ $currentPage = $activePage ?? 'home';
             Discover destination inspiration, practical long-stay tips, local recommendations and ideas for experiencing Sri Lanka at your own pace.
           </p>
         </div>
-        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to The Lankan Nomad dispatches!');">
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to dispatches!');">
           <div class="footer-input-group">
             <label for="footer-newsletter-email" class="sr-only">Your email address</label>
             <input type="email" id="footer-newsletter-email" placeholder="Your email address" required>
@@ -92,7 +28,7 @@ $currentPage = $activePage ?? 'home';
             </button>
           </div>
           <p class="footer-newsletter-privacy">
-            By subscribing, you agree to receive updates from The Lankan Nomad. You can unsubscribe at any time.
+            By subscribing, you agree to receive updates. You can unsubscribe at any time.
           </p>
         </form>
       </div>
@@ -102,8 +38,8 @@ $currentPage = $activePage ?? 'home';
     <div class="footer-grid">
       <!-- Brand & Mission Column -->
       <div class="footer-col footer-col-brand">
-        <a href="<?= url('/') ?>" class="footer-brand">
-          THE LANKAN NOMAD
+        <a href="<?= url('/') ?>" class="footer-brand" aria-label="Avenora Travel Home">
+          <img src="<?= asset('assets/images/logo/logo.png') ?>" alt="Avenora" class="site-footer-logo">
         </a>
         <p class="footer-tagline-main">Stay longer. Live locally. Discover Sri Lanka.</p>
         <p class="footer-subtext">A more thoughtful way to plan an extended stay in Sri Lanka.</p>
@@ -163,7 +99,7 @@ $currentPage = $activePage ?? 'home';
         <div class="footer-contact-details">
           <div class="contact-item">
             <span class="contact-label">Email:</span>
-            <a href="mailto:hello@thelankannomad.com" class="contact-val">hello@thelankannomad.com</a>
+            <a href="mailto:hello@avenora.example" class="contact-val">hello@avenora.example</a>
           </div>
           <div class="contact-item">
             <span class="contact-label">WhatsApp:</span>
@@ -188,10 +124,7 @@ $currentPage = $activePage ?? 'home';
     <div class="footer-bottom">
       <div class="footer-copyright-group">
         <p class="footer-copyright">
-          &copy; 2026 The Lankan Nomad. All rights reserved.
-        </p>
-        <p class="footer-orbis" style="font-size: 0.88rem; color: #cbd5e1; margin-top: 4px; font-weight: 500;">
-          &copy; Orbis Global - 2026
+          &copy; 2026 Avenora. All rights reserved.
         </p>
       </div>
       <div class="footer-legal-links">
@@ -202,4 +135,3 @@ $currentPage = $activePage ?? 'home';
     </div>
   </div>
 </footer>
-<?php endif; ?>

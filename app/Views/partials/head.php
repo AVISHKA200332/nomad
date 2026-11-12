@@ -12,6 +12,10 @@
   <meta property="og:description" content="<?= htmlspecialchars($metaDescription ?? 'Longer stays. Local experiences. A more personal way to discover Sri Lanka.') ?>">
   <meta property="og:image" content="<?= asset('assets/images/banners/hero-bg.jpg') ?>">
 
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/png" href="<?= asset('assets/images/logo/logo.png') ?>">
+  <link rel="apple-touch-icon" href="<?= asset('assets/images/logo/logo.png') ?>">
+
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,10 +33,8 @@
   <link rel="stylesheet" href="<?= asset('assets/css/components/cards.css') ?>?v=3.9">
   <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=3.9">
 
-  <!-- Lankan Nomad Master Design System -->
-  <?php if (($activePage ?? 'home') !== 'home'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/nomad.css') ?>?v=4.0">
-  <?php endif; ?>
+  <!-- Master Design System (for unified navbar and footer) -->
+  <link rel="stylesheet" href="<?= asset('assets/css/pages/nomad.css') ?>?v=4.0">
 
   <!-- Page Specific Stylesheets -->
   <?php if (($activePage ?? 'home') === 'home'): ?>

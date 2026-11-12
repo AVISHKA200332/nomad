@@ -27,6 +27,14 @@
   gap: var(--space-xs);
 }
 
+.site-footer-logo {
+  height: 44px;
+  width: auto;
+  max-width: 210px;
+  object-fit: contain;
+  display: inline-block;
+}
+
 .footer-tagline {
   font-size: 1rem;
   color: var(--color-navy-muted);
