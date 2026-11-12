@@ -9,242 +9,244 @@ class HomeController extends Controller
     public function index(): void
     {
         $data = [
-            'metaTitle' => 'The Lankan Nomad | Live Sri Lanka, Your Way',
-            'metaDescription' => 'Discover a more effortless way to experience Sri Lanka. Extended stays, accommodation, arrival assistance, and local living support.',
+            'metaTitle' => 'Avenora | Discover Extraordinary Travel Experiences',
+            'metaDescription' => 'Explore unforgettable destinations, curated travel packages, and extraordinary adventures with Avenora.',
             'activePage' => 'home',
-
-            // 2. Hero Section
+            
+            // Hero Data
             'hero' => [
-                'eyebrow' => 'YOUR NEXT CHAPTER STARTS HERE',
-                'headline' => 'Live Sri Lanka, Your Way.',
-                'lead' => "Discover a more effortless way to experience Sri Lanka. From finding your place to stay to arranging your arrival and settling into everyday life, The Lankan Nomad helps you plan an extended stay that feels right for you.\n\nWhether you're here for three months, six months or a year, make Sri Lanka more than a destination. Make it your home away from home.",
-                'ctaPlan' => 'Plan Your Stay',
-                'ctaExplore' => 'Explore Sri Lanka',
-                'supportingLine' => 'Longer stays. Local experiences. A more personal way to discover Sri Lanka.'
+                'headline' => 'Travelo',
+                'subhead' => "Tailored journeys for\ntravelers who want more than a standard trip.",
+                'cta' => 'Explore Destinations',
+                'cardHeading' => 'Plan your next vacation',
+                'cardDesc' => 'Affordable tour packages, accommodations, and seamless booking services',
+                'cardTitle' => 'Mountain Expedition',
+                'cardLocation' => 'Swiss Alps Alpine Pass',
+                'cardCta' => 'Watch the Journey'
             ],
 
-            // 3. Introductory Section
-            'intro' => [
-                'eyebrow' => 'A DIFFERENT WAY TO EXPERIENCE SRI LANKA',
-                'headline' => 'Come for the experience. Stay for the lifestyle.',
-                'lead' => 'Some places are too beautiful to experience in just a few days.',
-                'body' => "Imagine starting your morning with fresh tropical air, working from a peaceful coastal town, discovering a favourite local café and spending your weekends exploring beaches, mountains and historic towns.\n\nThe Lankan Nomad is designed for people who want to experience more of Sri Lanka at their own pace. We help you explore your options for a longer stay and organise the details that make everyday living easier.",
-                'cta' => 'Discover How It Works'
-            ],
-
-            // 4. Choose Your Stay Duration
-            'durations' => [
+            // Statistics Data
+            'stats' => [
                 [
-                    'tag' => '03 Months',
-                    'title' => 'A Season in Sri Lanka',
-                    'desc' => 'Long enough to settle into a new routine, discover your favourite places and experience more than the usual tourist trail.',
-                    'idealFor' => 'extended holidays, seasonal stays and people exploring life in Sri Lanka.',
-                    'cta' => 'Explore a 3-Month Stay',
-                    'url' => url('/stay-in-sri-lanka#3-months'),
-                    'durationValue' => '3 months'
+                    'number' => '1394+',
+                    'label' => 'Successful Expeditions',
+                    'highlight' => false
                 ],
                 [
-                    'tag' => '06 Months',
-                    'title' => 'Find Your Rhythm',
-                    'desc' => 'Give yourself more time to settle in, explore different regions and create a lifestyle that balances work, leisure and discovery.',
-                    'idealFor' => 'remote workers, longer-term visitors and people seeking a deeper local experience.',
-                    'cta' => 'Explore a 6-Month Stay',
-                    'url' => url('/stay-in-sri-lanka#6-months'),
-                    'durationValue' => '6 months',
+                    'number' => '13K+',
+                    'label' => 'Happy Adventurers',
                     'highlight' => true
                 ],
                 [
-                    'tag' => '12 Months',
-                    'title' => 'Make It Your Home Away from Home',
-                    'desc' => 'Experience the changing rhythms of Sri Lanka throughout the year. Plan a longer-term lifestyle with accommodation and support suited to your circumstances.',
-                    'idealFor' => 'people considering an extended relocation, a year abroad or a longer personal adventure.',
-                    'cta' => 'Explore a 12-Month Stay',
-                    'url' => url('/stay-in-sri-lanka#12-months'),
-                    'durationValue' => '12 months'
+                    'number' => '130+',
+                    'label' => 'Global Destinations',
+                    'highlight' => false
                 ]
             ],
 
-            // 5. Services Overview
-            'services' => [
-                [
-                    'num' => '01',
-                    'title' => 'Find Your Place',
-                    'desc' => 'Explore accommodation options that match your preferred location, lifestyle, length of stay and budget.',
-                    'icon' => 'home',
-                    'image' => 'assets/images/srilanka/galle_fort.jpg'
-                ],
-                [
-                    'num' => '02',
-                    'title' => 'Arrive with Confidence',
-                    'desc' => 'Plan your arrival and enquire about airport pickup and onward transport arrangements.',
-                    'icon' => 'plane',
-                    'image' => 'assets/images/srilanka/colombo_skyline.jpg'
-                ],
-                [
-                    'num' => '03',
-                    'title' => 'Settle into Everyday Life',
-                    'desc' => 'Get help understanding local options and arranging the practical details of your stay, depending on the support available.',
-                    'icon' => 'sun',
-                    'image' => 'assets/images/srilanka/ahangama_coast.jpg'
-                ],
-                [
-                    'num' => '04',
-                    'title' => 'Explore Beyond Your Doorstep',
-                    'desc' => 'Discover beaches, food, culture, nature and local experiences that make Sri Lanka special.',
-                    'icon' => 'compass',
-                    'image' => 'assets/images/srilanka/sigiriya.jpg'
-                ],
-                [
-                    'num' => '05',
-                    'title' => 'Work from Somewhere Inspiring',
-                    'desc' => "If you're working remotely, explore work-friendly locations and suitable internet or workspace options before you arrive.",
-                    'icon' => 'wifi',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
-                ],
-                [
-                    'num' => '06',
-                    'title' => 'Make a Plan That Fits You',
-                    'desc' => "Tell us what matters to you, and we'll help you explore suitable arrangements for your stay.",
-                    'icon' => 'calendar',
-                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
-                ]
-            ],
-
-            // 6. Destination Discovery
+            // Featured Destinations Data
             'destinations' => [
                 [
-                    'name' => 'Colombo & the Western Coast',
-                    'tagline' => 'City energy. Everyday convenience.',
-                    'desc' => 'Explore urban life, cafés, restaurants, shopping, business districts and convenient access to everyday amenities. Ideal for people who prefer a more connected city lifestyle.',
-                    'consider' => 'traffic, neighbourhood differences, travel times and accommodation costs.',
-                    'image' => 'assets/images/srilanka/colombo_skyline.jpg'
+                    'title' => 'Amalfi Coastal Haven',
+                    'location' => 'Campania, Italy',
+                    'tag' => 'Luxury Retreat',
+                    'image' => 'assets/images/destinations/destination-1.jpg',
+                    'desc' => 'Cliffside villas, private yacht charters, and Mediterranean sunsets.'
                 ],
                 [
-                    'name' => 'The South Coast',
-                    'tagline' => 'Ocean mornings. Easygoing afternoons.',
-                    'desc' => 'Discover coastal communities, beautiful beaches, local cafés, surf culture and a relaxed rhythm of life. Locations to explore include Weligama, Mirissa, Ahangama and Hiriketiya.',
-                    'consider' => 'seasonal conditions, transport, internet at the specific property and proximity to everyday essentials.',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
+                    'title' => 'Geiranger Fjord Vista',
+                    'location' => 'Sunnmøre, Norway',
+                    'tag' => 'Alpine Exploration',
+                    'image' => 'assets/images/destinations/destination-2.jpg',
+                    'desc' => 'Majestic deep turquoise fjords, cascading waterfalls, and mountain peaks.'
+                ]
+            ],
+            'destinationFilters' => [
+                '01 Northern Fjords',
+                '02 Mediterranean Coast',
+                '03 Alpine Summits',
+                '04 Tropical Archipelagos'
+            ],
+
+            // Curated Travel Packages Data
+            'packages' => [
+                [
+                    'title' => 'Maldives Overwater Sanctuary',
+                    'location' => 'Baa Atoll, Maldives',
+                    'duration' => '7 Days • 6 Nights',
+                    'price' => '$2,850',
+                    'image' => 'assets/images/packages/package-1.jpg',
+                    'desc' => 'Private overwater villa with direct coral lagoon access and private Dhoni sailing.'
                 ],
                 [
-                    'name' => 'Kandy & the Hill Country',
-                    'tagline' => 'Green landscapes. A slower rhythm.',
-                    'desc' => 'Experience misty hills, tea country, cooler surroundings, scenic journeys and a different side of everyday Sri Lankan life.',
-                    'consider' => 'terrain, commuting requirements, weather and available neighbourhood facilities.',
-                    'image' => 'assets/images/srilanka/kandy_temple.jpg'
+                    'title' => 'Tahiti & Bora Bora Explorer',
+                    'location' => 'Society Islands, Polynesia',
+                    'duration' => '10 Days • 9 Nights',
+                    'price' => '$3,400',
+                    'image' => 'assets/images/packages/package-2.jpg',
+                    'desc' => 'Lush volcanic peaks, white sand shores, and traditional Polynesian hospitality.'
                 ],
                 [
-                    'name' => 'Ella & the Highlands',
-                    'tagline' => 'Mountain air. Open horizons.',
-                    'desc' => 'Discover walking trails, mountain views, tea plantations and a nature-focused lifestyle.',
-                    'consider' => 'long-stay accommodation, local services, internet reliability and transport needs.',
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
+                    'title' => 'Dalmatian Coast & Historic Isles',
+                    'location' => 'Dubrovnik & Hvar, Croatia',
+                    'duration' => '8 Days • 7 Nights',
+                    'price' => '$2,150',
+                    'image' => 'assets/images/packages/package-3.jpg',
+                    'desc' => 'Historic coastal fortresses, sapphire Adriatic bays, and olive grove estates.'
                 ],
                 [
-                    'name' => 'The Cultural Triangle',
-                    'tagline' => 'History, heritage and unforgettable landscapes.',
-                    'desc' => "Explore Sri Lanka's ancient cities, remarkable heritage sites, rural landscapes and rich cultural traditions.",
-                    'consider' => 'transport, distances between attractions and access to daily amenities.',
-                    'image' => 'assets/images/srilanka/sigiriya.jpg'
+                    'title' => 'Bavarian & Swiss Alpine Trail',
+                    'location' => 'Zermatt & Tyrol, Alps',
+                    'duration' => '6 Days • 5 Nights',
+                    'price' => '$1,980',
+                    'image' => 'assets/images/packages/package-4.jpg',
+                    'desc' => 'Medieval castle vistas, high-alpine passes, and luxury mountain chalets.'
                 ]
             ],
 
-            // 7. How It Works Steps
-            'steps' => [
+            // Travel Planning Services Data
+            'services' => [
                 [
                     'number' => '01',
-                    'title' => 'Tell Us Your Plans',
-                    'desc' => 'Share your intended arrival date, length of stay, preferred location, budget and what you need help arranging.'
+                    'title' => 'Personalized Itineraries',
+                    'desc' => 'Custom-designed routes tailored precisely to your pace, passions, and personal adventure style.',
+                    'image' => 'assets/images/destinations/service-1.jpg'
                 ],
                 [
                     'number' => '02',
-                    'title' => 'Explore Your Options',
-                    'desc' => "We'll help you review suitable options and clarify which services may be available for your plans."
+                    'title' => 'Accommodation Arrangements',
+                    'desc' => 'Vetted boutique lodges, secluded oceanfront villas, and panoramic alpine chalets.',
+                    'image' => 'assets/images/destinations/service-2.jpg'
                 ],
                 [
                     'number' => '03',
-                    'title' => 'Prepare for Arrival',
-                    'desc' => 'Once arrangements are confirmed, organise the relevant details before your journey, including accommodation and transport where applicable.'
+                    'title' => 'Local Experiences',
+                    'desc' => 'Privileged access to indigenous artisans, private vineyard tastings, and hidden sanctuaries.',
+                    'image' => 'assets/images/destinations/service-3.jpg'
                 ],
                 [
                     'number' => '04',
-                    'title' => 'Start Living Sri Lanka',
-                    'desc' => 'Arrive with a clearer plan and begin discovering the places, people and everyday experiences that make your stay memorable.'
+                    'title' => 'Guided Adventures',
+                    'desc' => 'Certified mountaineers and veteran wilderness leaders providing technical safety and storytelling.',
+                    'image' => 'assets/images/destinations/service-4.jpg'
                 ]
             ],
 
-            // 8. The Lankan Lifestyle Highlights
-            'lifestyle' => [
-                'Morning walks beside the Indian Ocean.',
-                'Fresh tropical fruit from a local market.',
-                'A favourite café becoming part of your routine.',
-                'Scenic train journeys through the highlands.',
-                'Weekend escapes into nature.',
-                'Local food, traditions and conversations.',
-                'Finding your own rhythm in a new place.'
-            ],
-
-            // 9. Why The Lankan Nomad
-            'whyUs' => [
-                [
-                    'title' => 'Built Around Your Plans',
-                    'desc' => 'Your travel dates, lifestyle, location preferences and priorities help shape the options we explore with you.'
-                ],
-                [
-                    'title' => 'Local Perspective',
-                    'desc' => 'Discover Sri Lanka through its regions, communities, culture and everyday experiences.'
-                ],
-                [
-                    'title' => 'Practical Planning',
-                    'desc' => 'Explore important details before arrival so you can make informed decisions about your stay.'
-                ],
-                [
-                    'title' => 'More Than a Holiday',
-                    'desc' => 'Think beyond sightseeing and plan for the practicalities of living somewhere for longer.'
-                ],
-                [
-                    'title' => 'One Starting Point',
-                    'desc' => 'Bring your questions and requirements together in one enquiry instead of trying to organise every detail separately.'
-                ]
-            ],
-
-            // 10. Featured Experiences
+            // Journey Experience Categories Data
             'experiences' => [
                 [
-                    'title' => 'Coastal Living',
-                    'desc' => 'Find your own rhythm by the sea, discover coastal towns and enjoy the changing moods of the Indian Ocean.',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
+                    'title' => 'Hiking & Trekking',
+                    'desc' => 'Traverse scenic ridgelines, high passes, and secluded valleys.',
+                    'image' => 'assets/images/packages/exp-1.jpg',
+                    'tag' => '24 Tours'
                 ],
                 [
-                    'title' => 'Food & Local Flavours',
-                    'desc' => "Explore Sri Lankan rice and curry, hoppers, tropical fruit, local sweets and the island's celebrated tea culture.",
-                    'image' => 'assets/images/srilanka/srilankan_cuisine.jpg'
+                    'title' => 'Mountain Adventures',
+                    'desc' => 'Climb legendary peaks with world-class mountaineering leaders.',
+                    'image' => 'assets/images/packages/exp-2.jpg',
+                    'tag' => '18 Tours'
                 ],
                 [
-                    'title' => 'Nature & Adventure',
-                    'desc' => 'Discover forest trails, waterfalls, wildlife experiences and scenic landscapes with suitable local providers.',
-                    'image' => 'assets/images/srilanka/yala_wildlife.jpg'
+                    'title' => 'Tropical Escapes',
+                    'desc' => 'Unwind on pristine atolls, private islets, and coral lagoons.',
+                    'image' => 'assets/images/packages/exp-3.jpg',
+                    'tag' => '15 Tours'
                 ],
                 [
-                    'title' => 'Culture & Heritage',
-                    'desc' => 'Explore historic sites, local traditions, architecture and the cultural stories that shape Sri Lanka.',
-                    'image' => 'assets/images/srilanka/kandy_temple.jpg'
+                    'title' => 'Wildlife Experiences',
+                    'desc' => 'Observe endangered species in protected, ethical sanctuaries.',
+                    'image' => 'assets/images/packages/exp-4.jpg',
+                    'tag' => '12 Tours'
                 ],
                 [
-                    'title' => 'Weekend Escapes',
-                    'desc' => 'Use your longer stay as an opportunity to discover places beyond your everyday neighbourhood.',
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
+                    'title' => 'Island Exploration',
+                    'desc' => 'Discover remote archipelagos, hidden sea caves, and cliff coasts.',
+                    'image' => 'assets/images/packages/exp-5.jpg',
+                    'tag' => '16 Tours'
+                ],
+                [
+                    'title' => 'Cultural Journeys',
+                    'desc' => 'Immerse in ancient heritage, historic landmarks, and traditions.',
+                    'image' => 'assets/images/packages/exp-6.jpg',
+                    'tag' => '20 Tours'
                 ]
             ],
 
-            // 11. Practical Information Guide Previews
-            'guides' => [
-                'Planning Your First Month in Sri Lanka',
-                'Choosing the Right Region for Your Lifestyle',
-                'Understanding Everyday Transport',
-                'What to Consider Before Renting Accommodation',
-                'Working Remotely from Sri Lanka',
-                'Preparing for a Longer Stay'
+            // Blue Feature Section Data
+            'blueFeatures' => [
+                [
+                    'title' => 'All-Inclusive Precision',
+                    'desc' => 'From helicopter transfers to private permits, every detail is orchestrated with obsessive care.'
+                ],
+                [
+                    'title' => 'Certified Expert Guides',
+                    'desc' => 'Our expedition leaders bring decades of wilderness mastery and deep local heritage.'
+                ],
+                [
+                    'title' => '24/7 Dedicated Concierge',
+                    'desc' => 'Direct round-the-clock support at every step of your international voyage.'
+                ]
+            ],
+
+            // Travel Moments Photo Gallery Data
+            'moments' => [
+                [
+                    'badge' => 'Aiguille du Midi • 3,842m',
+                    'location' => 'Chamonix, French Alps',
+                    'image' => 'assets/images/destinations/moment-1.jpg'
+                ],
+                [
+                    'badge' => 'Patagonia Vista • Lake Trail',
+                    'location' => 'Torres del Paine, Chile',
+                    'image' => 'assets/images/destinations/moment-2.jpg'
+                ],
+                [
+                    'badge' => 'Dolomites Lake Reflection',
+                    'location' => 'Lago di Braies, Italy',
+                    'image' => 'assets/images/destinations/moment-3.jpg'
+                ],
+                [
+                    'badge' => 'Mont Blanc Glacier Trek',
+                    'location' => 'Haute-Savoie, France',
+                    'image' => 'assets/images/destinations/moment-4.jpg'
+                ]
+            ],
+
+            // Testimonial Feature Data
+            'testimonial' => [
+                'quote' => '“Avenora transformed how we experience the wild. Every mountain pass, private campsite, and local guide was chosen with unmatched care. It wasn’t just a vacation—it was deeply transformative.”',
+                'author' => 'Elena Rostova',
+                'role' => 'Alpine Trekker & Wildlife Photographer',
+                'location' => 'Zurich, Switzerland',
+                'image' => 'assets/images/destinations/testimonial-traveler.jpg'
+            ],
+
+            // FAQ Data
+            'faqs' => [
+                [
+                    'q' => 'How do I book a travel package with Avenora?',
+                    'a' => 'You can request any curated package directly online or schedule an initial consultation with one of our adventure designers. We will tailor the itinerary to your specific dates and preferences before confirming your reservation.'
+                ],
+                [
+                    'q' => 'Can I customize my travel itinerary?',
+                    'a' => 'Yes. Every itinerary featured on Avenora can be completely customized. We modify daily paces, accommodation tiers, private excursions, and transportation according to your wishes.'
+                ],
+                [
+                    'q' => 'What is included in your tour packages?',
+                    'a' => 'Our packages typically include boutique or luxury accommodations, private ground transportation, verified expert local guides, national park and heritage permits, and curated culinary experiences.'
+                ],
+                [
+                    'q' => 'Do you offer guided adventures for beginners?',
+                    'a' => 'Absolutely. While we organize high-altitude technical ascents, the majority of our journeys are designed for travelers of moderate fitness who desire immersion in nature without extreme physical strain.'
+                ],
+                [
+                    'q' => 'How far in advance should I book?',
+                    'a' => 'We recommend booking 3 to 6 months in advance for peak seasonal journeys, especially for high-demand locations such as Patagonia, the Alps, and private island reserves.'
+                ],
+                [
+                    'q' => 'How can I contact your travel specialist team?',
+                    'a' => 'You can reach us through our online inquiry form, via direct email at hello@avenora.example, or by scheduling a dedicated phone consultation with an expedition lead.'
+                ]
             ]
         ];
 

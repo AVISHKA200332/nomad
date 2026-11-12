@@ -30,7 +30,9 @@
   <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=3.9">
 
   <!-- Lankan Nomad Master Design System -->
-  <link rel="stylesheet" href="<?= asset('assets/css/pages/nomad.css') ?>?v=4.0">
+  <?php if (($activePage ?? 'home') !== 'home'): ?>
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/nomad.css') ?>?v=4.0">
+  <?php endif; ?>
 
   <!-- Page Specific Stylesheets -->
   <?php if (($activePage ?? 'home') === 'home'): ?>
