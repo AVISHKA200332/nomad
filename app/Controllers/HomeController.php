@@ -41,131 +41,258 @@ class HomeController extends Controller
                 ]
             ],
 
-            // Featured Destinations Data
+            // Featured Destinations Data (Synced with Destinations Page)
             'destinations' => [
                 [
-                    'title' => 'Amalfi Coastal Haven',
-                    'location' => 'Campania, Italy',
-                    'tag' => 'Luxury Retreat',
-                    'image' => 'assets/images/destinations/destination-1.jpg',
-                    'desc' => 'Cliffside villas, private yacht charters, and Mediterranean sunsets.'
+                    'num' => '01',
+                    'slug' => 'colombo',
+                    'name' => 'Colombo',
+                    'title' => 'Colombo Urban Living',
+                    'rating' => '4.8',
+                    'tag' => 'Urban & Coastal Capital',
+                    'location' => 'Colombo, Western Province',
+                    'headline' => 'Connected living, with the city at your doorstep.',
+                    'image' => 'assets/images/srilanka/colombo_skyline.jpg',
+                    'desc' => 'Colombo offers a more urban side of Sri Lanka, with restaurants, cafés, shopping, business districts and everyday amenities.'
                 ],
                 [
-                    'title' => 'Geiranger Fjord Vista',
-                    'location' => 'Sunnmøre, Norway',
-                    'tag' => 'Alpine Exploration',
-                    'image' => 'assets/images/destinations/destination-2.jpg',
-                    'desc' => 'Majestic deep turquoise fjords, cascading waterfalls, and mountain peaks.'
+                    'num' => '02',
+                    'slug' => 'weligama',
+                    'name' => 'Weligama & South Coast',
+                    'title' => 'Weligama Coastal Haven',
+                    'rating' => '4.9',
+                    'tag' => 'Coastal Living & Surf',
+                    'location' => 'Weligama, Southern Coast',
+                    'headline' => 'A coastal lifestyle with room to explore.',
+                    'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                    'desc' => 'Known for its beaches, coastal communities, surf culture, cafés and a laid-back atmosphere with ocean breeze.'
+                ],
+                [
+                    'num' => '03',
+                    'slug' => 'ahangama',
+                    'name' => 'Ahangama Coastal Towns',
+                    'title' => 'Ahangama Ocean Community',
+                    'rating' => '4.9',
+                    'tag' => 'Creative Ocean Hub',
+                    'location' => 'Ahangama, Southern Province',
+                    'headline' => 'Creative energy by the ocean.',
+                    'image' => 'assets/images/srilanka/ahangama_coast.jpg',
+                    'desc' => 'Coastal communities with cafés, food spots, surf culture and a mix of quieter neighbourhoods and social spaces.'
+                ],
+                [
+                    'num' => '04',
+                    'slug' => 'kandy',
+                    'name' => 'Kandy Cultural Hills',
+                    'title' => 'Kandy Highland Heritage',
+                    'rating' => '4.7',
+                    'tag' => 'Cultural Heartland',
+                    'location' => 'Kandy, Central Province',
+                    'headline' => 'Green surroundings and cultural character.',
+                    'image' => 'assets/images/srilanka/kandy_temple.jpg',
+                    'desc' => 'Surrounding hills, sacred cultural landmarks, markets and access to other parts of the Central Province.'
+                ],
+                [
+                    'num' => '05',
+                    'slug' => 'ella',
+                    'name' => 'Ella Mountain Rhythm',
+                    'title' => 'Ella Tea Country Vista',
+                    'rating' => '4.9',
+                    'tag' => 'Highlands & Trails',
+                    'location' => 'Ella, Badulla District',
+                    'headline' => 'A slower rhythm among the hills.',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                    'desc' => 'Green hills, mist-wrapped tea plantations, panoramic hiking routes and the famous Nine Arch Bridge.'
+                ],
+                [
+                    'num' => '06',
+                    'slug' => 'cultural-triangle',
+                    'name' => 'The Cultural Triangle',
+                    'title' => 'Cultural Triangle Citadels',
+                    'rating' => '4.8',
+                    'tag' => 'Ancient Citadels & History',
+                    'location' => 'Sigiriya, Central Plains',
+                    'headline' => "A deeper connection with Sri Lanka's heritage.",
+                    'image' => 'assets/images/srilanka/sigiriya.jpg',
+                    'desc' => "Discover historic citadels, archaeological landmarks, cultural traditions and rural landscapes in Sri Lanka's interior."
                 ]
             ],
             'destinationFilters' => [
-                '01 Northern Fjords',
-                '02 Mediterranean Coast',
-                '03 Alpine Summits',
-                '04 Tropical Archipelagos'
+                '01 Colombo',
+                '02 South Coast',
+                '03 Ahangama',
+                '04 Kandy',
+                '05 Ella',
+                '06 Cultural Triangle'
             ],
 
-            // Curated Travel Packages Data
-            'packages' => [
+            // Core Services Data (Synced with Our Services Page - Summary Cards)
+            'homeServices' => [
                 [
-                    'title' => 'Maldives Overwater Sanctuary',
-                    'location' => 'Baa Atoll, Maldives',
-                    'duration' => '7 Days • 6 Nights',
-                    'price' => '$2,850',
-                    'image' => 'assets/images/packages/package-1.jpg',
-                    'desc' => 'Private overwater villa with direct coral lagoon access and private Dhoni sailing.'
+                    'num' => '01',
+                    'title' => 'Accommodation Assistance',
+                    'summary' => 'Explore verified coastal homes and city apartments suited to your workspace, rhythm, and budget.',
+                    'actionText' => 'Learn More',
+                    'rating' => '5.00',
+                    'reviews' => '240',
+                    'image' => 'assets/images/srilanka/galle_fort.jpg',
+                    'ctaParam' => 'Accommodation'
                 ],
                 [
-                    'title' => 'Tahiti & Bora Bora Explorer',
-                    'location' => 'Society Islands, Polynesia',
-                    'duration' => '10 Days • 9 Nights',
-                    'price' => '$3,400',
-                    'image' => 'assets/images/packages/package-2.jpg',
-                    'desc' => 'Lush volcanic peaks, white sand shores, and traditional Polynesian hospitality.'
+                    'num' => '02',
+                    'title' => 'Airport Pickup & Transfers',
+                    'summary' => 'Private, air-conditioned transfers with flight tracking from Colombo Airport directly to your doorstep.',
+                    'actionText' => 'Learn More',
+                    'rating' => '4.95',
+                    'reviews' => '380',
+                    'image' => 'assets/images/srilanka/colombo_skyline.jpg',
+                    'ctaParam' => 'Airport pickup'
                 ],
                 [
-                    'title' => 'Dalmatian Coast & Historic Isles',
-                    'location' => 'Dubrovnik & Hvar, Croatia',
-                    'duration' => '8 Days • 7 Nights',
-                    'price' => '$2,150',
-                    'image' => 'assets/images/packages/package-3.jpg',
-                    'desc' => 'Historic coastal fortresses, sapphire Adriatic bays, and olive grove estates.'
+                    'num' => '03',
+                    'title' => 'Local Transport & Travel',
+                    'summary' => 'Scenic train reservations, trusted private drivers, and vehicle rental guidance across the island.',
+                    'actionText' => 'Learn More',
+                    'rating' => '4.90',
+                    'reviews' => '195',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                    'ctaParam' => 'Local transport'
                 ],
                 [
-                    'title' => 'Bavarian & Swiss Alpine Trail',
-                    'location' => 'Zermatt & Tyrol, Alps',
-                    'duration' => '6 Days • 5 Nights',
-                    'price' => '$1,980',
-                    'image' => 'assets/images/packages/package-4.jpg',
-                    'desc' => 'Medieval castle vistas, high-alpine passes, and luxury mountain chalets.'
+                    'num' => '04',
+                    'title' => 'Everyday Living Support',
+                    'summary' => 'SIM card setup, local markets, trusted healthcare, utilities, and neighbourhood orientation.',
+                    'actionText' => 'Learn More',
+                    'rating' => '5.00',
+                    'reviews' => '310',
+                    'image' => 'assets/images/srilanka/ahangama_coast.jpg',
+                    'ctaParam' => 'Everyday living support'
+                ],
+                [
+                    'num' => '05',
+                    'title' => 'Remote-Work Support',
+                    'summary' => 'Fiber-optic internet checks, power backup verification, and curated coliving and café hubs.',
+                    'actionText' => 'Learn More',
+                    'rating' => '4.98',
+                    'reviews' => '220',
+                    'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                    'ctaParam' => 'Remote-work requirements'
+                ],
+                [
+                    'num' => '06',
+                    'title' => 'Travel & Local Experiences',
+                    'summary' => 'Surf spots, highland tea trails, heritage citadels, and authentic local culinary workshops.',
+                    'actionText' => 'Learn More',
+                    'rating' => '5.00',
+                    'reviews' => '450',
+                    'image' => 'assets/images/srilanka/sigiriya.jpg',
+                    'ctaParam' => 'Travel and experiences'
                 ]
             ],
 
-            // Travel Planning Services Data
+            // Travel Planning Services Data (Synced with Our Services Page)
             'services' => [
                 [
                     'number' => '01',
-                    'title' => 'Personalized Itineraries',
-                    'desc' => 'Custom-designed routes tailored precisely to your pace, passions, and personal adventure style.',
-                    'image' => 'assets/images/destinations/service-1.jpg'
+                    'title' => 'Accommodation Assistance',
+                    'tagline' => 'Find a place that fits your life.',
+                    'desc' => 'Your accommodation shapes your entire experience. Whether you prefer a city apartment, a peaceful coastal home or a place surrounded by nature, start by identifying the location, facilities and lifestyle that matter most to you.',
+                    'image' => 'assets/images/srilanka/galle_fort.jpg',
+                    'ctaParam' => 'Accommodation',
+                    'cta' => 'Enquire About Accommodation'
                 ],
                 [
                     'number' => '02',
-                    'title' => 'Accommodation Arrangements',
-                    'desc' => 'Vetted boutique lodges, secluded oceanfront villas, and panoramic alpine chalets.',
-                    'image' => 'assets/images/destinations/service-2.jpg'
+                    'title' => 'Airport Pickup & Transfers',
+                    'tagline' => 'Start your stay with a clearer arrival plan.',
+                    'desc' => 'Arriving in a new country can be unfamiliar, especially after a long flight. Plan your journey from the airport to your accommodation before you travel with private, air-conditioned transfers.',
+                    'image' => 'assets/images/srilanka/colombo_skyline.jpg',
+                    'ctaParam' => 'Airport pickup',
+                    'cta' => 'Enquire About Airport Transfers'
                 ],
                 [
                     'number' => '03',
-                    'title' => 'Local Experiences',
-                    'desc' => 'Privileged access to indigenous artisans, private vineyard tastings, and hidden sanctuaries.',
-                    'image' => 'assets/images/destinations/service-3.jpg'
+                    'title' => 'Local Transport',
+                    'tagline' => 'Find your way around.',
+                    'desc' => 'From daily journeys to intercity travel, explore relevant transport options including scenic train routes, verified private drivers, and vehicle rental guidance across Sri Lanka.',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                    'ctaParam' => 'Local transport',
+                    'cta' => 'Explore Transport Options'
                 ],
                 [
                     'number' => '04',
-                    'title' => 'Guided Adventures',
-                    'desc' => 'Certified mountaineers and veteran wilderness leaders providing technical safety and storytelling.',
-                    'image' => 'assets/images/destinations/service-4.jpg'
+                    'title' => 'Everyday Living Support',
+                    'tagline' => 'Settle in beyond the first day.',
+                    'desc' => 'A longer stay means learning how everyday life works in a new place. We help you identify useful local resources from SIM cards and grocery markets to trusted healthcare and utilities.',
+                    'image' => 'assets/images/srilanka/ahangama_coast.jpg',
+                    'ctaParam' => 'Everyday living support',
+                    'cta' => 'Discuss Your Requirements'
+                ],
+                [
+                    'number' => '05',
+                    'title' => 'Travel & Local Experiences',
+                    'tagline' => 'Explore more, at your own pace.',
+                    'desc' => 'Discover coastal surf spots, highland tea trails, ancient citadels, wildlife reserves, and authentic local culinary workshops tailored around your interests.',
+                    'image' => 'assets/images/srilanka/sigiriya.jpg',
+                    'ctaParam' => 'Travel and experiences',
+                    'cta' => 'Explore Experiences'
+                ],
+                [
+                    'number' => '06',
+                    'title' => 'Remote-Work Support',
+                    'tagline' => 'Build a routine that works wherever you are.',
+                    'desc' => 'If you\'re working remotely, your daily environment matters. Fiber-optic internet verification, power backup availability, and curated coliving and café hubs.',
+                    'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                    'ctaParam' => 'Remote-work requirements',
+                    'cta' => 'Plan a Work-Friendly Stay'
+                ],
+                [
+                    'number' => '07',
+                    'title' => 'Personalised Stay Planning',
+                    'tagline' => 'One conversation. A clearer plan.',
+                    'desc' => 'Not sure where to begin? Tell us about your intended stay, your budget, your preferred lifestyle and the support you need to build a step-by-step plan.',
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg',
+                    'ctaParam' => 'Personalised stay planning',
+                    'cta' => 'Start Your Stay Enquiry'
                 ]
             ],
 
-            // Journey Experience Categories Data
+            // Journey Experience Categories Data (Synced with Experiences Page)
             'experiences' => [
                 [
-                    'title' => 'Hiking & Trekking',
-                    'desc' => 'Traverse scenic ridgelines, high passes, and secluded valleys.',
-                    'image' => 'assets/images/packages/exp-1.jpg',
-                    'tag' => '24 Tours'
+                    'badge' => 'Card 01',
+                    'title' => 'Coastal Life',
+                    'desc' => "Explore coastal towns, ocean views, morning surf breaks, and the vibrant seaside communities along Sri Lanka's south coast.",
+                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
                 ],
                 [
-                    'title' => 'Mountain Adventures',
-                    'desc' => 'Climb legendary peaks with world-class mountaineering leaders.',
-                    'image' => 'assets/images/packages/exp-2.jpg',
-                    'tag' => '18 Tours'
+                    'badge' => 'Card 02',
+                    'title' => 'Food & Flavours',
+                    'desc' => "Discover clay-pot rice and curry, hoppers, tropical fruits, Ceylon high-grown tea culture, and bustling local markets.",
+                    'image' => 'assets/images/srilanka/srilankan_cuisine.jpg'
                 ],
                 [
-                    'title' => 'Tropical Escapes',
-                    'desc' => 'Unwind on pristine atolls, private islets, and coral lagoons.',
-                    'image' => 'assets/images/packages/exp-3.jpg',
-                    'tag' => '15 Tours'
+                    'badge' => 'Card 03',
+                    'title' => 'Nature & Outdoors',
+                    'desc' => 'Discover scenic mountain trails, rainforest waterfalls, tea landscapes, national parks, and ethical wildlife encounters.',
+                    'image' => 'assets/images/srilanka/yala_wildlife.jpg'
                 ],
                 [
-                    'title' => 'Wildlife Experiences',
-                    'desc' => 'Observe endangered species in protected, ethical sanctuaries.',
-                    'image' => 'assets/images/packages/exp-4.jpg',
-                    'tag' => '12 Tours'
+                    'badge' => 'Card 04',
+                    'title' => 'Culture & Heritage',
+                    'desc' => "Experience historic architecture, ancient UNESCO citadels, sacred temples, craft traditions, and local artisan workshops.",
+                    'image' => 'assets/images/srilanka/sigiriya.jpg'
                 ],
                 [
-                    'title' => 'Island Exploration',
-                    'desc' => 'Discover remote archipelagos, hidden sea caves, and cliff coasts.',
-                    'image' => 'assets/images/packages/exp-5.jpg',
-                    'tag' => '16 Tours'
+                    'badge' => 'Card 05',
+                    'title' => 'Weekend Escapes',
+                    'desc' => 'Take scenic highland rail journeys, explore colonial ramparts in Galle, and escape into quiet mist-wrapped mountain valleys.',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
                 ],
                 [
-                    'title' => 'Cultural Journeys',
-                    'desc' => 'Immerse in ancient heritage, historic landmarks, and traditions.',
-                    'image' => 'assets/images/packages/exp-6.jpg',
-                    'tag' => '20 Tours'
+                    'badge' => 'Card 06',
+                    'title' => 'Highland Tea Country',
+                    'desc' => 'Wander through emerald tea plantations, cloud-draped mountain passes, cascading falls, and colonial heritage bungalows.',
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
                 ]
             ],
 
@@ -185,64 +312,95 @@ class HomeController extends Controller
                 ]
             ],
 
-            // Travel Moments Photo Gallery Data
-            'moments' => [
+            // Curated Gallery Moments (Auto Change Carousel - Matched to Reference Screenshot)
+            'galleryMoments' => [
                 [
-                    'badge' => 'Aiguille du Midi • 3,842m',
-                    'location' => 'Chamonix, French Alps',
-                    'image' => 'assets/images/destinations/moment-1.jpg'
+                    'title' => 'Nine Arch Mountain Rail',
+                    'tag' => 'Adventure',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
                 ],
                 [
-                    'badge' => 'Patagonia Vista • Lake Trail',
-                    'location' => 'Torres del Paine, Chile',
-                    'image' => 'assets/images/destinations/moment-2.jpg'
+                    'title' => 'South Coast Surf Rhythm',
+                    'tag' => 'Coastal Life',
+                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
                 ],
                 [
-                    'badge' => 'Dolomites Lake Reflection',
-                    'location' => 'Lago di Braies, Italy',
-                    'image' => 'assets/images/destinations/moment-3.jpg'
+                    'title' => 'Sigiriya Ancient Citadel',
+                    'tag' => 'Heritage',
+                    'image' => 'assets/images/srilanka/sigiriya.jpg'
                 ],
                 [
-                    'badge' => 'Mont Blanc Glacier Trek',
-                    'location' => 'Haute-Savoie, France',
-                    'image' => 'assets/images/destinations/moment-4.jpg'
+                    'title' => 'Highland Tea Trails',
+                    'tag' => 'Highlands',
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
+                ],
+                [
+                    'title' => 'Wilderness Safari & Nature',
+                    'tag' => 'Wildlife',
+                    'image' => 'assets/images/srilanka/yala_wildlife.jpg'
+                ],
+                [
+                    'title' => 'Historic Galle Fort',
+                    'tag' => 'Culture',
+                    'image' => 'assets/images/srilanka/galle_fort.jpg'
+                ],
+                [
+                    'title' => 'Ahangama Coastline',
+                    'tag' => 'Relaxation',
+                    'image' => 'assets/images/srilanka/ahangama_coast.jpg'
                 ]
             ],
 
-            // Testimonial Feature Data
+            // Testimonial Feature Data (Synced with Reference Design)
+            'testimonials' => [
+                [
+                    'quote' => '“The Lankan Nomad helped us plan a stay that felt personal from the first day. The accommodation, pacing, and private experiences were exactly what we wanted. Their local insight made our time in Sri Lanka effortless, connecting us with authentic communities across the island.”',
+                    'author' => 'Patric Stone',
+                    'role' => 'Traveller',
+                    'image' => 'assets/images/srilanka/ahangama_coast.jpg'
+                ],
+                [
+                    'quote' => '“Moving to Sri Lanka for three months seemed daunting until we connected with The Lankan Nomad. From fiber-optic internet checks to finding our beach house in Ahangama and setting up our transport, everything was seamless.”',
+                    'author' => 'Elena Rostova',
+                    'role' => 'Digital Nomad',
+                    'image' => 'assets/images/srilanka/galle_fort.jpg'
+                ],
+                [
+                    'quote' => '“Every journey with them feels respectful and grounded. We took the scenic hill trains, stayed near UNESCO citadels, and explored local food spots we never would have found on our own.”',
+                    'author' => 'Marcus Vance',
+                    'role' => 'Long-Stay Resident',
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
+                ]
+            ],
             'testimonial' => [
-                'quote' => '“Avenora transformed how we experience the wild. Every mountain pass, private campsite, and local guide was chosen with unmatched care. It wasn’t just a vacation—it was deeply transformative.”',
-                'author' => 'Elena Rostova',
-                'role' => 'Alpine Trekker & Wildlife Photographer',
-                'location' => 'Zurich, Switzerland',
-                'image' => 'assets/images/destinations/testimonial-traveler.jpg'
+                'quote' => '“The Lankan Nomad helped us plan a stay that felt personal from the first day. The accommodation, pacing, and private experiences were exactly what we wanted. Their local insight made our time in Sri Lanka effortless, connecting us with authentic communities across the island.”',
+                'author' => 'Patric Stone',
+                'role' => 'Traveller',
+                'location' => 'United Kingdom',
+                'image' => 'assets/images/srilanka/ahangama_coast.jpg'
             ],
 
-            // FAQ Data
+            // FAQ Data (Matched to Reference Screenshot)
             'faqs' => [
                 [
-                    'q' => 'How do I book a travel package with Avenora?',
-                    'a' => 'You can request any curated package directly online or schedule an initial consultation with one of our adventure designers. We will tailor the itinerary to your specific dates and preferences before confirming your reservation.'
+                    'q' => 'Do I need to choose a destination first?',
+                    'a' => 'No, you do not need to know your destination before contacting us. Share your travel style, budget, preferred dates, and the type of experience you want, and we will help you find the best destination options.'
                 ],
                 [
-                    'q' => 'Can I customize my travel itinerary?',
-                    'a' => 'Yes. Every itinerary featured on Avenora can be completely customized. We modify daily paces, accommodation tiers, private excursions, and transportation according to your wishes.'
+                    'q' => 'Can travel packages be customized?',
+                    'a' => 'Yes, every journey and stay is completely customized. We modify daily paces, accommodation tiers, private excursions, and transportation according to your wishes.'
                 ],
                 [
-                    'q' => 'What is included in your tour packages?',
-                    'a' => 'Our packages typically include boutique or luxury accommodations, private ground transportation, verified expert local guides, national park and heritage permits, and curated culinary experiences.'
+                    'q' => 'Do you plan honeymoons and private trips?',
+                    'a' => 'Absolutely. We specialize in intimate, bespoke travel arrangements, honeymoon getaways, and private island retreats with personalized service.'
                 ],
                 [
-                    'q' => 'Do you offer guided adventures for beginners?',
-                    'a' => 'Absolutely. While we organize high-altitude technical ascents, the majority of our journeys are designed for travelers of moderate fitness who desire immersion in nature without extreme physical strain.'
+                    'q' => 'How does pricing work?',
+                    'a' => 'We provide clear, transparent pricing based on the services you need, your accommodation preferences, length of stay, and transport requirements with no hidden fees.'
                 ],
                 [
-                    'q' => 'How far in advance should I book?',
-                    'a' => 'We recommend booking 3 to 6 months in advance for peak seasonal journeys, especially for high-demand locations such as Patagonia, the Alps, and private island reserves.'
-                ],
-                [
-                    'q' => 'How can I contact your travel specialist team?',
-                    'a' => 'You can reach us through our online inquiry form, via direct email at hello@avenora.example, or by scheduling a dedicated phone consultation with an expedition lead.'
+                    'q' => 'What support do you provide during our stay?',
+                    'a' => 'From pre-arrival preparation and airport pickup to ongoing everyday living advice, local SIM setups, and dedicated concierge assistance, we provide continuous on-the-ground support.'
                 ]
             ]
         ];

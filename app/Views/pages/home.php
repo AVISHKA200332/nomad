@@ -8,7 +8,7 @@
 <!-- ==========================================================================
      SECTION 01: Hero Section
      ========================================================================== -->
-<section class="hero-section" id="hero" style="background-image: url('<?= asset('assets/images/banners/hero-bg.jpg') ?>');">
+<section class="hero-section" id="hero" style="background-image: url('<?= asset('assets/images/srilanka/weligama_beach.jpg') ?>');">
   <div class="hero-overlay"></div>
 
   <div class="container hero-content">
@@ -49,11 +49,11 @@
     <!-- Editorial Introduction Row -->
     <div class="intro-editorial-row">
       <div class="intro-photo-left">
-        <img src="<?= asset('assets/images/destinations/intro-left.jpg') ?>" alt="Winter adventurer in mountain snow" loading="lazy">
+        <img src="<?= asset('assets/images/srilanka/ahangama_coast.jpg') ?>" alt="Ahangama ocean coast living in Sri Lanka" loading="lazy">
       </div>
       <div class="intro-center-content">
         <p class="intro-text">
-          We design mindful travel experiences that connect you with nature's grandeur, untouched trails, and authentic local cultures across the globe.
+          Planning a long stay in Sri Lanka doesn't have to be overwhelming. We help you navigate the essentials, from finding a place to live to getting around and preparing for arrival.
         </p>
         <a href="<?= url('/about') ?>" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.88rem;">
           <span>Our Story</span>
@@ -66,7 +66,7 @@
         </a>
       </div>
       <div class="intro-photo-right">
-        <img src="<?= asset('assets/images/destinations/intro-right.jpg') ?>" alt="Hikers along alpine mountain pass" loading="lazy">
+        <img src="<?= asset('assets/images/srilanka/nine_arch_bridge.jpg') ?>" alt="Scenic Nine Arch Bridge in Ella, Sri Lanka" loading="lazy">
       </div>
     </div>
 
@@ -92,19 +92,17 @@
 
 
 <!-- ==========================================================================
-     SECTION 03: Destinations for Unforgettable Journeys
+     SECTION 03: Destinations for Unforgettable Journeys (Matched to Reference Design)
      ========================================================================== -->
 <section class="section destinations-section" id="destinations">
   <div class="container">
     <div class="destinations-layout">
       <!-- Left Column: Sticky Title, Description & CTA -->
       <div class="destinations-left">
-        <span class="section-badge">DISCOVER THE WORLD</span>
-        <h2 class="section-title">Destinations for unforgettable journeys</h2>
-        <p class="section-desc">From secluded Mediterranean archipelagos to dramatic Nordic fjords, discover landscapes that stay with you forever.</p>
-        <a href="<?= url('/destinations') ?>" class="btn btn-primary" style="margin-top: var(--space-xl);">
-          <span>Explore All</span>
-          <span class="arrow-circle arrow-circle-white">
+        <h2 class="section-title">Destinations For Unforgettable Journeys.</h2>
+        <a href="<?= url('/destinations') ?>" class="btn btn-dest-pill">
+          <span>Explore Destination</span>
+          <span class="arrow-circle arrow-circle-blue">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -113,41 +111,56 @@
         </a>
       </div>
 
-      <!-- Center Column: Vertically Arranged Destination Cards -->
-      <div class="destinations-center-cards">
-        <?php foreach ($destinations as $dest): ?>
-          <a href="<?= url('/destinations') ?>" class="dest-card">
+      <!-- Center Column: Vertically Arranged Destination Cards (Matches Reference Image) -->
+      <div class="destinations-center-cards" id="destCardsContainer">
+        <?php foreach ($destinations as $idx => $dest): ?>
+          <article class="dest-card" id="<?= htmlspecialchars($dest['slug']) ?>" data-index="<?= $idx ?>">
             <div class="dest-card-media">
               <img src="<?= asset($dest['image']) ?>" alt="<?= htmlspecialchars($dest['title']) ?>" loading="lazy">
-              <div class="dest-card-overlay"></div>
             </div>
-            <div class="dest-card-content">
-              <div>
-                <span class="dest-card-tag"><?= htmlspecialchars($dest['tag']) ?></span>
+            <div class="dest-card-body">
+              <div class="dest-card-info">
+                <div class="dest-card-rating">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <span><?= htmlspecialchars($dest['rating'] ?? '4.8') ?></span>
+                </div>
                 <h3 class="dest-card-title"><?= htmlspecialchars($dest['title']) ?></h3>
-                <span class="dest-card-location"><?= htmlspecialchars($dest['location']) ?></span>
+                <div class="dest-card-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><?= htmlspecialchars($dest['location']) ?></span>
+                </div>
               </div>
-              <span class="arrow-circle arrow-circle-white">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <a href="<?= url('/destinations') ?>" class="dest-card-btn" aria-label="Explore <?= htmlspecialchars($dest['name']) ?>">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </a>
             </div>
-          </a>
+          </article>
         <?php endforeach; ?>
       </div>
 
-      <!-- Right Column: Minimal Destination Category List -->
-      <aside class="destinations-sidebar-nav" aria-label="Destination Categories">
-        <h3 class="dest-sidebar-title">REGIONS</h3>
-        <?php foreach ($destinationFilters as $idx => $filter): ?>
-          <div class="dest-sidebar-item <?= $idx === 0 ? 'is-active' : '' ?>">
-            <span><?= htmlspecialchars($filter) ?></span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </div>
+      <!-- Right Column: Interactive Scroll-Tracking Destination List (Matched to Uploaded Photo) -->
+      <aside class="destinations-sidebar-nav" id="destSidebarNav" aria-label="Destination Navigation">
+        <?php foreach ($destinations as $idx => $dest): ?>
+          <a href="#<?= htmlspecialchars($dest['slug']) ?>" 
+             class="dest-nav-item <?= $idx === 0 ? 'is-active' : '' ?>" 
+             data-target="<?= htmlspecialchars($dest['slug']) ?>" 
+             data-index="<?= $idx ?>">
+            <span class="dest-nav-text"><?= htmlspecialchars($dest['title']) ?></span>
+            <div class="dest-nav-indicator">
+              <span class="dest-nav-num"><?= htmlspecialchars($dest['num']) ?></span>
+              <div class="dest-nav-track">
+                <div class="dest-nav-progress" style="<?= $idx === 0 ? 'width: 100%;' : 'width: 0%;' ?>"></div>
+              </div>
+            </div>
+          </a>
         <?php endforeach; ?>
       </aside>
     </div>
@@ -156,203 +169,114 @@
 
 
 <!-- ==========================================================================
-     SECTION 04: Curated Travel Packages (Dark Navy Section)
-     ========================================================================== -->
-<section class="section packages-section" id="packages">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: var(--space-2xl);">
-      <span class="section-badge section-badge-white">CURATED EXPEDITIONS</span>
-      <h2 class="section-title section-title-center">Curated Travel Packages With Every Detail in Mind.</h2>
-      <p class="section-desc section-desc-center">Handcrafted journeys with private mountain guides, verified luxury stays, and seamless logistics.</p>
-    </div>
-
-    <!-- 4 Package Cards Grid (2x2) -->
-    <div class="package-grid">
-      <?php foreach ($packages as $pkg): ?>
-        <div class="package-card">
-          <div class="package-card-media">
-            <img src="<?= asset($pkg['image']) ?>" alt="<?= htmlspecialchars($pkg['title']) ?>" loading="lazy">
-          </div>
-          <div class="package-card-body">
-            <div class="package-card-meta">
-              <span><?= htmlspecialchars($pkg['duration']) ?></span>
-            </div>
-            <h3 class="package-card-title"><?= htmlspecialchars($pkg['title']) ?></h3>
-            <p class="package-card-location"><?= htmlspecialchars($pkg['location']) ?></p>
-            <div class="package-card-footer">
-              <div class="package-card-price">
-                <?= htmlspecialchars($pkg['price']) ?> <span>/ person</span>
-              </div>
-              <a href="<?= url('/packages') ?>" class="arrow-circle arrow-circle-white" aria-label="View package details">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-
-    <!-- Centered Bottom White CTA -->
-    <div class="packages-cta-wrap">
-      <a href="<?= url('/packages') ?>" class="btn btn-dark-pill">
-        <span>Explore All Packages</span>
-        <span class="arrow-circle">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ==========================================================================
-     SECTION 05: Travel Planning Services
+     SECTION 04: Travel Planning Services (Interactive Expandable Accordion)
      ========================================================================== -->
 <section class="section planning-section" id="services">
   <div class="container">
-    <div style="text-align: center;">
-      <span class="section-badge">HOW WE WORK</span>
-      <h2 class="section-title section-title-center">Travel planning services for every kind of meaningful escape.</h2>
+    <div class="planning-header">
+      <span class="planning-badge">Our Service</span>
+      <h2 class="planning-title">Travel planning services for every kind of meaningful escape.</h2>
     </div>
 
-    <!-- Large Rounded White Content Panel -->
-    <div class="planning-panel">
-      <!-- Left Column: Numbered Service List -->
-      <div class="planning-services-list">
-        <?php foreach ($services as $srv): ?>
-          <div class="planning-service-item">
-            <span class="service-num"><?= htmlspecialchars($srv['number']) ?></span>
-            <div class="service-content">
-              <h3><?= htmlspecialchars($srv['title']) ?></h3>
-              <p><?= htmlspecialchars($srv['desc']) ?></p>
+    <!-- Interactive Expandable Service Cards (Matched to Reference Image) -->
+    <div class="planning-accordion-list" id="servicesAccordion">
+      <?php foreach ($services as $idx => $srv): ?>
+        <article class="service-acc-item <?= $idx === 0 ? 'is-active' : '' ?>" data-index="<?= $idx ?>">
+          <div class="service-acc-row">
+            <span class="service-acc-num"><?= htmlspecialchars($srv['number']) ?></span>
+            
+            <div class="service-acc-info">
+              <h3 class="service-acc-title"><?= htmlspecialchars($srv['title']) ?></h3>
+              <div class="service-acc-body">
+                <p class="service-acc-desc"><?= htmlspecialchars($srv['desc']) ?></p>
+                <a href="<?= url('/plan-your-stay?service=' . urlencode($srv['ctaParam'])) ?>" class="service-acc-cta">
+                  <span><?= htmlspecialchars($srv['cta']) ?></span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
 
-      <!-- Right Column: Stacked Travel Photos -->
-      <div class="planning-photos-stack">
-        <?php foreach ($services as $srv): ?>
-          <div class="planning-photo-card">
-            <img src="<?= asset($srv['image']) ?>" alt="<?= htmlspecialchars($srv['title']) ?>" loading="lazy">
+            <div class="service-acc-media">
+              <img src="<?= asset($srv['image']) ?>" alt="<?= htmlspecialchars($srv['title']) ?>" loading="lazy">
+            </div>
+
+            <button type="button" class="service-acc-arrow" aria-label="Toggle <?= htmlspecialchars($srv['title']) ?>">
+              <svg class="icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+              <svg class="icon-down" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </button>
           </div>
-        <?php endforeach; ?>
-      </div>
+        </article>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 
 
 <!-- ==========================================================================
-     SECTION 06: Choose the Kind of Journey
+     SECTION 05: Choose the Kind of Journey (Matched to Reference Screenshot)
      ========================================================================== -->
 <section class="section experience-section" id="experiences">
   <div class="container">
     <div class="experience-header-row">
-      <div>
-        <span class="section-badge">SIGNATURE JOURNEYS</span>
-        <h2 class="section-title" style="margin-bottom: 0;">Choose the kind of journey you want to remember.</h2>
+      <div class="exp-header-left">
+        <span class="exp-pill-badge">Travel Experiences</span>
+        <h2 class="exp-section-title">Choose the kind of journey you want to remember.</h2>
       </div>
-      <p class="section-desc" style="max-width: 440px;">Explore signature styles crafted for seekers of tranquility, high-altitude thrill, and cultural wonder.</p>
+      <p class="exp-header-desc">Every traveler has a different reason for leaving. Select the experience that feels closest to your dream, and we will shape the journey around it.</p>
     </div>
 
-    <!-- 6 Experience Cards Grid (3x2) -->
-    <div class="experience-grid">
-      <?php foreach ($experiences as $exp): ?>
-        <div class="exp-card">
-          <div class="exp-card-media">
-            <img src="<?= asset($exp['image']) ?>" alt="<?= htmlspecialchars($exp['title']) ?>" loading="lazy">
-          </div>
-          <div class="exp-card-body">
-            <div class="exp-card-header">
-              <h3 class="exp-card-title"><?= htmlspecialchars($exp['title']) ?></h3>
-            </div>
-            <p class="exp-card-desc"><?= htmlspecialchars($exp['desc']) ?></p>
-            <div class="exp-card-footer">
-              <span class="exp-card-count"><?= htmlspecialchars($exp['tag']) ?></span>
-              <a href="<?= url('/packages') ?>" class="arrow-circle arrow-circle-dark" aria-label="Browse <?= htmlspecialchars($exp['title']) ?>">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
+    <!-- 6 Experience Cards Grid (Matched to Uploaded Photo) -->
+    <div class="exp-journey-grid">
+      <?php foreach ($experiences as $idx => $exp): ?>
+        <a href="<?= url('/experiences') ?>" class="exp-journey-card" data-index="<?= $idx ?>">
+          <div class="exp-journey-top">
+            <span class="exp-journey-badge"><?= htmlspecialchars($exp['badge'] ?? ('Card ' . sprintf('%02d', $idx + 1))) ?></span>
+            <div class="exp-journey-media">
+              <img src="<?= asset($exp['image']) ?>" alt="<?= htmlspecialchars($exp['title']) ?>" loading="lazy">
             </div>
           </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-
-<!-- ==========================================================================
-     SECTION 07: Blue Feature & Travel Services Section
-     ========================================================================== -->
-<section class="section blue-feature-section" id="why-us">
-  <div class="container">
-    <div class="blue-feature-layout">
-      <!-- Left Column: Heading, Description & CTA -->
-      <div class="blue-feature-left">
-        <span class="section-badge" style="color: var(--color-primary);">THE AVENORA STANDARD</span>
-        <h2 class="section-title">Choose the kind of journey you will remember.</h2>
-        <p class="section-desc">We believe true luxury lies in authentic connection, effortless logistics, and transformative moments in nature.</p>
-        <a href="<?= url('/contact') ?>" class="btn btn-primary">
-          <span>Start Planning</span>
-          <span class="arrow-circle arrow-circle-white">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </span>
+          <div class="exp-journey-body">
+            <h3 class="exp-journey-title"><?= htmlspecialchars($exp['title']) ?></h3>
+            <p class="exp-journey-desc"><?= htmlspecialchars($exp['desc']) ?></p>
+          </div>
         </a>
-      </div>
-
-      <!-- Right Column: 3 White Rounded Service Cards -->
-      <div class="blue-service-cards">
-        <?php foreach ($blueFeatures as $feat): ?>
-          <div class="blue-service-card">
-            <div class="blue-service-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-              </svg>
-            </div>
-            <div class="blue-service-info">
-              <h3><?= htmlspecialchars($feat['title']) ?></h3>
-              <p><?= htmlspecialchars($feat['desc']) ?></p>
-            </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 
 
 <!-- ==========================================================================
-     SECTION 08: Moments That Make the Journey Feel Personal
+     SECTION 06: Our Gallery (Auto Change Carousel - Matched to Reference Screenshot)
      ========================================================================== -->
-<section class="section moments-section" id="moments">
+<section class="section gallery-section" id="gallery">
   <div class="container">
-    <div style="text-align: center;">
-      <span class="section-badge">FIELD PHOTOGRAPHY</span>
-      <h2 class="section-title section-title-center">Moments that make the journey feel personal.</h2>
-      <p class="section-desc section-desc-center">Glimpses of raw alpine summits, glacial lakes, and solitary trails experienced by our travelers.</p>
+    <div class="gallery-header">
+      <span class="gallery-badge">Our Gallery</span>
+      <h2 class="gallery-title">Moments that make the journey feel personal.</h2>
     </div>
+  </div>
 
-    <!-- 4 Tall Vertical Photo Cards Row -->
-    <div class="moments-grid">
-      <?php foreach ($moments as $m): ?>
-        <div class="moment-card">
-          <img src="<?= asset($m['image']) ?>" alt="<?= htmlspecialchars($m['badge']) ?>" loading="lazy">
-          <div class="moment-badge">
-            <?= htmlspecialchars($m['badge']) ?>
+  <!-- Auto-Changing Perspective Carousel Slider -->
+  <div class="gallery-slider-viewport" id="galleryViewport" aria-label="Photo Gallery Carousel">
+    <div class="gallery-slider-track" id="galleryTrack">
+      <?php foreach ($galleryMoments as $idx => $m): ?>
+        <div class="gallery-item <?= $idx === 0 ? 'is-active' : '' ?>" data-index="<?= $idx ?>">
+          <div class="gallery-card">
+            <img src="<?= asset($m['image']) ?>" alt="<?= htmlspecialchars($m['title']) ?>" loading="lazy">
+            <div class="gallery-card-badge">
+              <span class="gallery-badge-dot"></span>
+              <span class="gallery-badge-text"><?= htmlspecialchars($m['tag']) ?></span>
+            </div>
           </div>
         </div>
       <?php endforeach; ?>
@@ -362,41 +286,49 @@
 
 
 <!-- ==========================================================================
-     SECTION 09: From First Idea to Finished Journey (Testimonial)
+     SECTION 07: Testimonials (Matched to Reference Screenshot)
      ========================================================================== -->
 <section class="section testimonial-section" id="testimonials">
   <div class="container">
-    <div style="text-align: center;">
-      <span class="section-badge">TRAVELER STORIES</span>
-      <h2 class="section-title section-title-center">From first idea to finished journey.</h2>
+    <div class="testi-header">
+      <span class="testi-badge">Testimonials</span>
+      <h2 class="testi-title">From first idea to finished itinerary.</h2>
     </div>
 
-    <!-- Large Rounded White Feature Panel -->
-    <div class="testimonial-panel">
-      <div class="testimonial-photo-wrap">
-        <img src="<?= asset($testimonial['image']) ?>" alt="<?= htmlspecialchars($testimonial['author']) ?>" loading="lazy">
+    <!-- 3-Column Luxury Testimonial Panel -->
+    <div class="testi-card-panel" id="testimonialSlider">
+      <!-- Column 1: Traveler Photo -->
+      <div class="testi-photo-col">
+        <div class="testi-photo-wrap">
+          <img src="<?= asset($testimonials[0]['image']) ?>" alt="<?= htmlspecialchars($testimonials[0]['author']) ?>" id="testiPhoto" loading="lazy">
+        </div>
       </div>
-      <div class="testimonial-body">
-        <span class="testimonial-eyebrow">FEATURED EXPEDITION DISPATCH</span>
-        <blockquote class="testimonial-quote">
-          <?= htmlspecialchars($testimonial['quote']) ?>
+
+      <!-- Column 2: Testimonial Quote & Author -->
+      <div class="testi-content-col">
+        <blockquote class="testi-quote" id="testiQuote">
+          <?= htmlspecialchars($testimonials[0]['quote']) ?>
         </blockquote>
-        <div class="testimonial-author-meta">
-          <h4><?= htmlspecialchars($testimonial['author']) ?></h4>
-          <p><?= htmlspecialchars($testimonial['role']) ?> • <?= htmlspecialchars($testimonial['location']) ?></p>
+        <div class="testi-author-row">
+          <span class="testi-author-pill" id="testiAuthor"><?= htmlspecialchars($testimonials[0]['author']) ?></span>
+          <span class="testi-role" id="testiRole"><?= htmlspecialchars($testimonials[0]['role']) ?></span>
         </div>
-        <div class="testimonial-nav-arrows">
-          <button class="testimonial-arrow-btn" aria-label="Previous traveler story">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button class="testimonial-arrow-btn" aria-label="Next traveler story">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </div>
+      </div>
+
+      <!-- Column 3: Stacked Navigation Buttons (Next / Prev) -->
+      <div class="testi-controls-col">
+        <button type="button" class="testi-nav-btn is-next" id="testiNextBtn" aria-label="Next testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+        <button type="button" class="testi-nav-btn is-prev" id="testiPrevBtn" aria-label="Previous testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -404,24 +336,23 @@
 
 
 <!-- ==========================================================================
-     SECTION 10: Frequently Asked Questions
+     SECTION 08: Frequently Asked Questions (Matched to Reference Screenshot)
      ========================================================================== -->
 <section class="section faq-section" id="faq">
   <div class="container">
-    <div style="text-align: center;">
-      <span class="section-badge">TRAVEL INQUIRIES</span>
-      <h2 class="section-title section-title-center">Frequently Asked Questions</h2>
-      <p class="section-desc section-desc-center">Everything you need to know about preparing for your journey with Avenora.</p>
+    <div class="faq-header">
+      <span class="faq-badge">FAQs</span>
+      <h2 class="faq-title">Frequently Asked<br>Questions</h2>
     </div>
 
-    <!-- Centered Narrow Accordion Column -->
+    <!-- Centered Accordion Column -->
     <div class="faq-accordion-wrap">
       <?php foreach ($faqs as $i => $faq): ?>
-        <div class="faq-item">
-          <button class="faq-question-btn" aria-controls="faq-answer-<?= $i ?>" id="faq-btn-<?= $i ?>">
-            <span><?= htmlspecialchars($faq['q']) ?></span>
-            <span class="faq-toggle-icon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <div class="faq-item <?= $i === 0 ? 'is-expanded' : '' ?>">
+          <button type="button" class="faq-question-btn" aria-controls="faq-answer-<?= $i ?>" id="faq-btn-<?= $i ?>" aria-expanded="<?= $i === 0 ? 'true' : 'false' ?>">
+            <span class="faq-question-text"><?= htmlspecialchars($faq['q']) ?></span>
+            <span class="faq-toggle-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="12" y1="5" x2="12" y2="19"></line>
                 <line x1="5" y1="12" x2="19" y2="12"></line>
               </svg>
@@ -440,14 +371,14 @@
 
 
 <!-- ==========================================================================
-     SECTION 11: Final Mountain Adventure CTA
+     SECTION 11: Final Sri Lanka Journey CTA
      ========================================================================== -->
-<section class="final-cta-section" id="cta" style="background-image: url('<?= asset('assets/images/banners/cta-mountain-bg.jpg') ?>');">
+<section class="final-cta-section" id="cta" style="background-image: url('<?= asset('assets/images/srilanka/sigiriya.jpg') ?>');">
   <div class="final-cta-overlay"></div>
   <div class="container">
     <div class="final-cta-content">
-      <h2 class="final-cta-title">Mountains feel more like a journey with personal experiences.</h2>
-      <p class="final-cta-desc">Join our next guided alpine expedition or let our adventure specialists curate a private bespoke journey today.</p>
+      <h2 class="final-cta-title">Sri Lanka feels more like home with personal experiences.</h2>
+      <p class="final-cta-desc">Let our local team curate your private villa stay, island transport, and authentic cultural journeys today.</p>
       <a href="<?= url('/contact') ?>" class="btn btn-white-pill">
         <span>Plan Your Journey Now</span>
         <span class="arrow-circle">

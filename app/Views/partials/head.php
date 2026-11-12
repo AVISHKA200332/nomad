@@ -16,15 +16,15 @@
   <link rel="icon" type="image/png" href="<?= asset('assets/images/logo/logo.png') ?>">
   <link rel="apple-touch-icon" href="<?= asset('assets/images/logo/logo.png') ?>">
 
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
   <!-- Core & Design Tokens Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/variables.css') ?>?v=3.9">
-  <link rel="stylesheet" href="<?= asset('assets/css/reset.css') ?>?v=3.9">
-  <link rel="stylesheet" href="<?= asset('assets/css/global.css') ?>?v=3.9">
+  <link rel="stylesheet" href="<?= asset('assets/css/variables.css') ?>?v=4.4">
+  <link rel="stylesheet" href="<?= asset('assets/css/reset.css') ?>?v=4.4">
+  <link rel="stylesheet" href="<?= asset('assets/css/global.css') ?>?v=4.4">
   <link rel="stylesheet" href="<?= asset('assets/css/layout.css') ?>?v=3.9">
 
   <!-- Component Stylesheets -->
@@ -38,7 +38,7 @@
 
   <!-- Page Specific Stylesheets -->
   <?php if (($activePage ?? 'home') === 'home'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=4.3">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=5.9">
   <?php elseif (($activePage ?? 'home') === 'destinations'): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=4.0">
   <?php elseif (in_array($activePage ?? '', ['stay', 'packages'])): ?>
@@ -48,6 +48,6 @@
   <?php endif; ?>
 
   <!-- Responsive Breakpoints -->
-  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=4.3">
+  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=5.9">
 </head>
 <body class="page-<?= htmlspecialchars($activePage ?? 'home') ?>">
