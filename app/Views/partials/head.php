@@ -44,7 +44,7 @@
   <?php elseif (in_array($activePage ?? '', ['stay', 'packages'])): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/package.css') ?>?v=4.0">
   <?php elseif (($activePage ?? 'home') === 'about'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/about.css') ?>?v=4.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/about.css') ?>?v=6.0">
   <?php endif; ?>
 
   <!-- Responsive Breakpoints -->

@@ -39,7 +39,7 @@
         <p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser settings to decline cookies if you prefer. Please note that disabling cookies may affect certain interactive features on our website.</p>
 
         <h2>4. Contact Us</h2>
-        <p>If you have any questions regarding our use of cookies, please contact us at <a href="mailto:privacy@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">privacy@thelankannomad.com</a>.</p>
+        <p>If you have any questions regarding our use of cookies, please contact us at <a href="mailto:info@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">info@thelankannomad.com</a>.</p>
       </div>
     </div>
   </div>

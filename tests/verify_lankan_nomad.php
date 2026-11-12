@@ -149,12 +149,8 @@ $checks['P06 About: Closing CTA Let\'s start planning your next chapter.'] = str
 $resGuide = dispatchRoute('/guide');
 $htmlGuide = $resGuide['html'];
 $checks['P07 Guide: Status 200'] = ($resGuide['code'] === 200 || $resGuide['code'] === false) && strlen($htmlGuide) > 3000;
-$checks['P07 Guide: Headline Knowledge tailored for extended stays.'] = strpos($htmlGuide, 'Knowledge tailored for extended stays.') !== false;
-$checks['P07 Guide: Categories (Planning, Living, Everyday, Remote Work, Travel)'] =
-    strpos($htmlGuide, 'Planning Your Stay') !== false &&
-    strpos($htmlGuide, 'Choosing Where to Live') !== false &&
-    strpos($htmlGuide, 'Everyday Sri Lanka') !== false &&
-    strpos($htmlGuide, 'Remote Work &amp; Connectivity') !== false;
+$checks['P07 Guide: Essential Topics section cleanly removed'] = strpos($htmlGuide, 'ESSENTIAL TOPICS') === false && strpos($htmlGuide, 'guide-categories') === false;
+$checks['P07 Guide: Suggested Article Guides section starts cleanly'] = strpos($htmlGuide, 'Suggested Article Guides') !== false && strpos($htmlGuide, 'nomad-first-section') !== false;
 $checks['P07 Guide: 10 Suggested Articles present'] =
     strpos($htmlGuide, 'Planning Your First Three Months in Sri Lanka') !== false &&
     strpos($htmlGuide, 'Colombo or the South Coast: Which Lifestyle Suits You?') !== false &&
@@ -218,7 +214,7 @@ $checks['P09 Contact: Preferences (Budget, Type, Work, Accessibility, Additional
 $checks['P09 Contact: Required Consent Checkbox'] = strpos($htmlContact, 'name="consent"') !== false;
 $checks['P09 Contact: Submit Button Send My Enquiry'] = strpos($htmlContact, 'Send My Enquiry') !== false;
 $checks['P09 Contact: Alternative Contact (Email, WhatsApp, Business hours)'] =
-    strpos($htmlContact, 'hello@thelankannomad.com') !== false &&
+    strpos($htmlContact, 'info@thelankannomad.com') !== false &&
     strpos($htmlContact, 'Business hours') !== false;
 
 // Test Form Validation & Submission (AJAX JSON)

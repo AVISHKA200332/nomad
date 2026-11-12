@@ -83,7 +83,7 @@ $checks = [
 
     // Section 09: Footer
     'Footer active state on About' => strpos($aboutHtml, 'footer-nav') !== false && strpos($aboutHtml, 'is-active">About</a>') !== false,
-    'Footer email: Avenora@gmail.com' => strpos($aboutHtml, 'Avenora@gmail.com') !== false,
+    'Footer email: info@thelankannomad.com' => strpos($aboutHtml, 'info@thelankannomad.com') !== false,
 ];
 
 // Regression checks on other pages

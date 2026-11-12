@@ -26,7 +26,7 @@ $checks = [
     'CTA Banner Title' => strpos($html, 'Moments that make the') !== false,
     'CTA Banner Button: See All Maps' => strpos($html, 'See All Maps') !== false,
     'Footer Active state on Package' => strpos($html, 'footer-nav') !== false && strpos($html, 'is-active">Package</a>') !== false,
-    'Footer Email: Avenora@gmail.com' => strpos($html, 'Avenora@gmail.com') !== false,
+    'Footer Email: info@thelankannomad.com' => strpos($html, 'info@thelankannomad.com') !== false,
 ];
 
 $allPassed = true;

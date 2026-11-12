@@ -99,7 +99,7 @@ $currentPage = $activePage ?? 'home';
         <div class="footer-contact-details">
           <div class="contact-item">
             <span class="contact-label">Email:</span>
-            <a href="mailto:hello@avenora.example" class="contact-val">hello@avenora.example</a>
+            <a href="mailto:info@thelankannomad.com" class="contact-val">info@thelankannomad.com</a>
           </div>
           <div class="contact-item">
             <span class="contact-label">WhatsApp:</span>

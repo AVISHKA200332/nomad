@@ -43,7 +43,7 @@ class ContactController extends Controller
             ],
 
             'directContact' => [
-                'email' => 'hello@thelankannomad.com',
+                'email' => 'info@thelankannomad.com',
                 'whatsapp' => '+94 77 000 0000',
                 'whatsappLink' => 'https://wa.me/94770000000',
                 'businessHours' => 'Monday to Friday: 9:00 AM – 6:00 PM (IST / GMT+5:30)'

@@ -54,7 +54,7 @@
         <p>The Lankan Nomad strives to ensure all arrangements run smoothly. In the unlikely event of an issue with accommodation or services, notify our support team immediately so we can assist in resolving the matter. Our liability for any claim arising from our planning services is strictly limited to the service fees paid to us.</p>
 
         <h2>10. Contact Details and Governing Law</h2>
-        <p>These terms are governed by the applicable laws of Sri Lanka. For contractual inquiries, legal notices, or clarifications, contact us at <a href="mailto:legal@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">legal@thelankannomad.com</a>.</p>
+        <p>These terms are governed by the applicable laws of Sri Lanka. For contractual inquiries, legal notices, or clarifications, contact us at <a href="mailto:info@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">info@thelankannomad.com</a>.</p>
       </div>
     </div>
   </div>

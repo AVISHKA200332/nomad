@@ -69,7 +69,7 @@
         <p>Our website uses essential cookies for navigational functionality and basic anonymized analytical tracking to improve user experience. For full information, please review our <a href="<?= url('/cookie-policy') ?>" style="color: var(--color-primary); font-weight: 600;">Cookie Policy</a>.</p>
 
         <h2>9. Contacting Us About Privacy</h2>
-        <p>For questions, data access requests, or concerns regarding your privacy, please contact our data team at <a href="mailto:privacy@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">privacy@thelankannomad.com</a>.</p>
+        <p>For questions, data access requests, or concerns regarding your privacy, please contact our data team at <a href="mailto:info@thelankannomad.com" style="color: var(--color-primary); font-weight: 600;">info@thelankannomad.com</a>.</p>
 
         <h2>10. Applicable Legal Framework and Effective Date</h2>
         <p>This privacy notice is effective as of January 1, 2026, and reflects our commitment to international privacy standards and fair data handling practices.</p>
