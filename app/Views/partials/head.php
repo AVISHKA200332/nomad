@@ -40,7 +40,7 @@
   <?php if (($activePage ?? 'home') === 'home'): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=6.0">
   <?php elseif (($activePage ?? 'home') === 'destinations'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=4.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=7.0">
   <?php elseif (in_array($activePage ?? '', ['stay', 'packages'])): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/package.css') ?>?v=4.0">
   <?php elseif (($activePage ?? 'home') === 'about'): ?>
