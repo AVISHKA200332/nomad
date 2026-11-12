@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?= htmlspecialchars($metaTitle ?? 'The Lankan Nomad | Live Sri Lanka, Your Way') ?>">
   <meta property="og:description" content="<?= htmlspecialchars($metaDescription ?? 'Longer stays. Local experiences. A more personal way to discover Sri Lanka.') ?>">
-  <meta property="og:image" content="<?= asset('assets/images/banners/hero-bg.jpg') ?>">
+  <meta property="og:image" content="<?= asset('assets/images/srilanka/weligama_beach.jpg') ?>">
 
   <!-- Favicon / Brand Icon -->
   <link rel="icon" type="image/png" href="<?= asset('assets/images/logo/logo.png') ?>">
@@ -38,7 +38,7 @@
 
   <!-- Page Specific Stylesheets -->
   <?php if (($activePage ?? 'home') === 'home'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=5.9">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=6.0">
   <?php elseif (($activePage ?? 'home') === 'destinations'): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=4.0">
   <?php elseif (in_array($activePage ?? '', ['stay', 'packages'])): ?>
@@ -48,6 +48,6 @@
   <?php endif; ?>
 
   <!-- Responsive Breakpoints -->
-  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=5.9">
+  <link rel="stylesheet" href="<?= asset('assets/css/responsive.css') ?>?v=6.0">
 </head>
 <body class="page-<?= htmlspecialchars($activePage ?? 'home') ?>">
