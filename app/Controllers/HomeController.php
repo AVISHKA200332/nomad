@@ -9,8 +9,8 @@ class HomeController extends Controller
     public function index(): void
     {
         $data = [
-            'metaTitle' => 'Avenora | Discover Extraordinary Travel Experiences',
-            'metaDescription' => 'Explore unforgettable destinations, curated travel packages, and extraordinary adventures with Avenora.',
+            'metaTitle' => 'Nomad | Discover Extraordinary Travel Experiences',
+            'metaDescription' => 'Explore unforgettable destinations, curated travel packages, and extraordinary adventures with nomad.',
             'activePage' => 'home',
             
             // Hero Data

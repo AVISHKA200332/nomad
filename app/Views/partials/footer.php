@@ -38,8 +38,8 @@ $currentPage = $activePage ?? 'home';
     <div class="footer-grid">
       <!-- Brand & Mission Column -->
       <div class="footer-col footer-col-brand">
-        <a href="<?= url('/') ?>" class="footer-brand" aria-label="Avenora Travel Home">
-          <img src="<?= asset('assets/images/logo/logo.png') ?>" alt="Avenora" class="site-footer-logo">
+        <a href="<?= url('/') ?>" class="footer-brand" aria-label="The Lankan Nomad Home">
+          <img src="<?= asset('assets/images/logo/logo.png') ?>" alt="The Lankan Nomad" class="site-footer-logo">
         </a>
         <p class="footer-tagline-main">Stay longer. Live locally. Discover Sri Lanka.</p>
         <p class="footer-subtext">A more thoughtful way to plan an extended stay in Sri Lanka.</p>
@@ -124,7 +124,7 @@ $currentPage = $activePage ?? 'home';
     <div class="footer-bottom">
       <div class="footer-copyright-group">
         <p class="footer-copyright">
-          &copy; 2026 Avenora. All rights reserved.
+          &copy; 2026 The Lankan Nomad. All rights reserved.
         </p>
       </div>
       <div class="footer-legal-links">

@@ -1,1 +1,804 @@
-﻿/* Contact Page Styles (TODO: Define contact form, info cards, and map container styles) */
+/* ==========================================================================
+   The Lankan Nomad - Contact Page Styles
+   High Quality Animated Layout matching reference (media_1794506417769_2f9f3327)
+   ========================================================================== */
+
+/* Page Wrapper */
+.contact-page {
+  background-color: #f7fafd;
+  min-height: 100vh;
+  padding-top: 130px;
+  padding-bottom: 90px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.contact-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   1. PAGE HEADER (Centered)
+   ========================================================================== */
+.contact-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 52px;
+}
+
+.contact-pill-badge {
+  display: inline-block;
+  background: #031126;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 10px rgba(3, 17, 38, 0.1);
+  transition: transform 0.25s ease;
+}
+
+.contact-pill-badge:hover {
+  transform: translateY(-1px);
+}
+
+.contact-main-title {
+  font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+  font-weight: 800;
+  color: #0a192f;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+}
+
+.contact-main-subtitle {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.62;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. TOP CONTACT METHOD CARDS (4-Column Grid)
+   ========================================================================== */
+.cmethod-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 48px;
+}
+
+.cmethod-card {
+  background: #ffffff;
+  border: 1px solid rgba(3, 17, 38, 0.08);
+  border-radius: 24px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(3, 17, 38, 0.03);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s ease, 
+              border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cmethod-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(3, 17, 38, 0.08);
+  border-color: rgba(37, 68, 236, 0.25);
+}
+
+/* Featured / Active Royal Blue Card */
+.cmethod-card-featured {
+  background: linear-gradient(145deg, #2544ec 0%, #1a35cc 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 14px 34px rgba(37, 68, 236, 0.3);
+}
+
+.cmethod-card-featured:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 44px rgba(37, 68, 236, 0.42);
+}
+
+/* Card Elements */
+.cmethod-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #2544ec;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px rgba(37, 68, 236, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.cmethod-card:hover .cmethod-icon-circle {
+  transform: scale(1.08);
+}
+
+.cmethod-icon-circle.is-white {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.cmethod-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6366f1;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cmethod-label.is-light {
+  color: rgba(191, 219, 254, 0.95);
+}
+
+.cmethod-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.cmethod-value.is-white {
+  color: #ffffff;
+}
+
+.cmethod-note {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin-bottom: 26px;
+}
+
+.cmethod-note.is-light {
+  color: rgba(224, 231, 255, 0.85);
+}
+
+.cmethod-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #2544ec;
+  text-decoration: none;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.cmethod-link.is-white {
+  color: #ffffff;
+}
+
+.cmethod-arrow {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(37, 68, 236, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.cmethod-arrow.is-white {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.cmethod-card:hover .cmethod-arrow {
+  transform: translateX(4px);
+}
+
+.cmethod-card:hover .cmethod-link {
+  gap: 13px;
+}
+
+/* ==========================================================================
+   3. OFFICE LOCATION & SCHEDULE (Split 2-Column Section)
+   ========================================================================== */
+.office-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+/* Left Card: Interactive Dark Radar Map */
+.office-radar-card {
+  background: #031126;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  padding: 26px 30px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(3, 17, 38, 0.16);
+}
+
+.radar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  position: relative;
+}
+
+.radar-tag {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.radar-zoom-ctrl {
+  display: inline-flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+}
+
+.radar-zoom-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  width: 32px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  user-select: none;
+}
+
+.radar-zoom-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.radar-zoom-btn:active {
+  background: rgba(37, 68, 236, 0.6);
+}
+
+/* Radar Canvas Viewport */
+.radar-viewport {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.radar-grid-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+/* Pulsing Radar Beacon */
+.radar-beacon-wrap {
+  position: absolute;
+  top: 48%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.beacon-center-dot {
+  width: 16px;
+  height: 16px;
+  background: #2544ec;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 16px #2544ec, 0 0 32px rgba(37, 68, 236, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.beacon-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 68, 236, 0.85);
+  animation: beaconPulse 2.8s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+.beacon-ring:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.beacon-ring:nth-child(3) {
+  animation-delay: 1.8s;
+}
+
+@keyframes beaconPulse {
+  0% {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    border-color: rgba(37, 68, 236, 0.9);
+  }
+  100% {
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    border-color: rgba(0, 163, 255, 0);
+  }
+}
+
+/* Rotating Radar Scanning Beam */
+.radar-scanner-beam {
+  position: absolute;
+  top: 48%;
+  left: 33%;
+  width: 220px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(37, 68, 236, 0.35) 0deg, transparent 60deg, transparent 360deg);
+  animation: radarSweep 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes radarSweep {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Floating Glass Location Badge */
+.radar-location-badge {
+  background: #ffffff;
+  color: #0a192f;
+  border-radius: 9999px;
+  padding: 10px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.radar-location-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+}
+
+.radar-badge-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(37, 68, 236, 0.12);
+  color: #2544ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.radar-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.radar-badge-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0a192f;
+  line-height: 1.25;
+}
+
+.radar-badge-subtitle {
+  font-size: 0.76rem;
+  color: #64748b;
+  line-height: 1.25;
+}
+
+/* Right Card: Visit Us For Coffee */
+.office-info-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 42px 38px;
+  border: 1px solid rgba(3, 17, 38, 0.08);
+  box-shadow: 0 4px 20px rgba(3, 17, 38, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.office-pill {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+
+.office-title {
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: #0a192f;
+  line-height: 1.22;
+  margin-bottom: 14px;
+  letter-spacing: -0.015em;
+}
+
+.office-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+.sched-table {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.sched-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.94rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(3, 17, 38, 0.06);
+}
+
+.sched-day {
+  color: #334155;
+  font-weight: 500;
+}
+
+.sched-time {
+  color: #0a192f;
+  font-weight: 600;
+}
+
+.sched-time.is-closed {
+  color: #2544ec;
+  font-weight: 700;
+}
+
+.btn-office-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0a192f;
+  text-decoration: none;
+  transition: transform 0.25s ease, color 0.25s ease;
+  align-self: flex-start;
+}
+
+.btn-office-directions .btn-circle-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #2544ec;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(37, 68, 236, 0.28);
+}
+
+.btn-office-directions:hover {
+  color: #2544ec;
+}
+
+.btn-office-directions:hover .btn-circle-arrow {
+  transform: translateX(4px);
+  background: #1a35cc;
+  box-shadow: 0 6px 18px rgba(37, 68, 236, 0.38);
+}
+
+/* ==========================================================================
+   4. CONSULTATION & TRIP PLANNING FORM SECTION (Large White Card)
+   ========================================================================== */
+.consult-wrap {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 50px 48px;
+  border: 1px solid rgba(3, 17, 38, 0.08);
+  box-shadow: 0 10px 36px rgba(3, 17, 38, 0.04);
+}
+
+.consult-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 52px;
+  align-items: start;
+}
+
+/* Left Column: Heading, Text & Traveler Photo */
+.consult-intro-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.consult-heading {
+  font-size: clamp(1.65rem, 2.5vw, 2.15rem);
+  font-weight: 800;
+  color: #0a192f;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.consult-subtext {
+  font-size: 0.98rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.consult-image-card {
+  width: 100%;
+  aspect-ratio: 4 / 3.4;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(3, 17, 38, 0.08);
+  position: relative;
+}
+
+.consult-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.consult-image-card:hover .consult-img {
+  transform: scale(1.04);
+}
+
+/* Right Column: Clean Form */
+.consult-form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.cform-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cform-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.cform-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cform-label .req {
+  color: #ef4444;
+}
+
+.cform-input,
+.cform-select,
+.cform-textarea {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 13px 18px;
+  font-size: 0.94rem;
+  color: #0f172a;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.cform-input:focus,
+.cform-select:focus,
+.cform-textarea:focus {
+  border-color: #2544ec;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 68, 236, 0.12);
+}
+
+.cform-input::placeholder,
+.cform-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.cform-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.75L6 6.25L10.5 1.75' stroke='%2364748B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 42px;
+}
+
+.cform-textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.55;
+}
+
+/* Submit Button */
+.btn-consult-submit {
+  background: #2544ec;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.98rem;
+  border: none;
+  border-radius: 9999px;
+  padding: 15px 36px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(37, 68, 236, 0.28);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.btn-consult-submit:hover {
+  background: #1a35cc;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 68, 236, 0.38);
+}
+
+.btn-consult-submit:active {
+  transform: translateY(0);
+}
+
+.btn-consult-submit.is-loading {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Form Alert Boxes */
+.consult-alert {
+  padding: 14px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: alertFadeIn 0.3s ease;
+}
+
+.consult-alert-success {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.consult-alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+@keyframes alertFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   5. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .cmethod-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .office-split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .consult-image-card {
+    aspect-ratio: 16 / 9;
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-page {
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+
+  .contact-container {
+    padding: 0 18px;
+  }
+
+  .cmethod-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .consult-wrap {
+    padding: 32px 22px;
+  }
+
+  .cform-row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .office-info-card {
+    padding: 32px 24px;
+  }
+
+  .office-radar-card {
+    min-height: 340px;
+    padding: 22px 20px;
+  }
+
+  .radar-location-badge {
+    padding: 8px 16px;
+    font-size: 0.82rem;
+  }
+}

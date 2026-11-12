@@ -61,21 +61,22 @@
 }
 
 .site-logo {
-  height: 28px;
-  max-height: 28px;
+  height: 36px;
+  max-height: 36px;
   width: auto;
-  max-width: 135px;
+  max-width: 175px;
   object-fit: contain;
   display: block;
   image-rendering: -webkit-optimize-contrast;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
   transition: all 0.2s ease;
 }
 
 .mobile-logo {
-  height: 26px;
-  max-height: 26px;
+  height: 32px;
+  max-height: 32px;
   width: auto;
-  max-width: 125px;
+  max-width: 155px;
 }
 
 .brand-dot {
@@ -305,8 +306,8 @@
   }
 
   .site-logo {
-    height: 24px;
-    max-height: 24px;
-    max-width: 115px;
+    height: 30px;
+    max-height: 30px;
+    max-width: 145px;
   }
 }

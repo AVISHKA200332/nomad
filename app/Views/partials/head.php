@@ -13,8 +13,11 @@
   <meta property="og:image" content="<?= asset('assets/images/srilanka/weligama_beach.jpg') ?>">
 
   <!-- Favicon / Brand Icon -->
-  <link rel="icon" type="image/png" href="<?= asset('assets/images/logo/logo.png') ?>">
-  <link rel="apple-touch-icon" href="<?= asset('assets/images/logo/logo.png') ?>">
+  <link rel="icon" type="image/svg+xml" href="<?= asset('assets/images/logo/favicon.svg') ?>?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?= asset('assets/images/logo/favicon-32x32.png') ?>?v=3">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= asset('assets/images/logo/favicon-16x16.png') ?>?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?= asset('assets/images/logo/apple-touch-icon.png') ?>?v=3">
+  <link rel="shortcut icon" href="<?= asset('favicon.ico') ?>?v=3">
 
   <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +31,7 @@
   <link rel="stylesheet" href="<?= asset('assets/css/layout.css') ?>?v=3.9">
 
   <!-- Component Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=4.1">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=4.2">
   <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>?v=4.1">
   <link rel="stylesheet" href="<?= asset('assets/css/components/cards.css') ?>?v=3.9">
   <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=3.9">
@@ -45,6 +48,8 @@
     <link rel="stylesheet" href="<?= asset('assets/css/pages/package.css') ?>?v=4.0">
   <?php elseif (($activePage ?? 'home') === 'about'): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/about.css') ?>?v=6.0">
+  <?php elseif (in_array($activePage ?? '', ['contact', 'plan-your-stay'])): ?>
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/contact.css') ?>?v=5.0">
   <?php endif; ?>
 
   <!-- Responsive Breakpoints -->

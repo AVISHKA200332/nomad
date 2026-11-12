@@ -5,8 +5,8 @@ $currentPage = $activePage ?? 'home';
 <header class="site-header is-inner-header">
   <div class="nav-container">
     <!-- Brand Wordmark / Logo -->
-    <a href="<?= url('/') ?>" class="nav-brand" aria-label="Avenora Travel Home">
-      <img src="<?= asset('assets/images/logo/logo.png') ?>" alt="Avenora" class="site-logo">
+    <a href="<?= url('/') ?>" class="nav-brand" aria-label="The Lankan Nomad Home">
+      <img src="<?= asset('assets/images/logo/logo.png') ?>" alt="The Lankan Nomad" class="site-logo">
     </a>
 
     <!-- Desktop Navigation Links -->
@@ -45,8 +45,8 @@ $currentPage = $activePage ?? 'home';
 <div class="mobile-nav-backdrop"></div>
 <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
   <button class="mobile-nav-close" aria-label="Close navigation menu">&times;</button>
-  <a href="<?= url('/') ?>" class="nav-brand" style="margin-bottom: 16px;" aria-label="Avenora Travel Home">
-    <img src="<?= asset('assets/images/logo/logo.png') ?>" alt="Avenora" class="site-logo mobile-logo">
+  <a href="<?= url('/') ?>" class="nav-brand" style="margin-bottom: 16px;" aria-label="The Lankan Nomad Home">
+    <img src="<?= asset('assets/images/logo/logo.png') ?>" alt="The Lankan Nomad" class="site-logo mobile-logo">
   </a>
   <nav style="display: flex; flex-direction: column; gap: 4px;">
     <a href="<?= url('/') ?>" class="nav-link <?= $currentPage === 'home' ? 'is-active' : '' ?>">Home</a>
