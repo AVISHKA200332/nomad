@@ -35,17 +35,17 @@
   background-color: var(--color-primary-hover);
 }
 
-/* Royal Blue Pill Button */
+/* Cerulean Light Blue Pill Button (10% Accent) */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
-  box-shadow: 0 4px 20px rgba(48, 71, 244, 0.3);
+  box-shadow: 0 4px 20px rgba(18, 155, 224, 0.3);
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(48, 71, 244, 0.45);
+  box-shadow: 0 6px 24px rgba(18, 155, 224, 0.45);
 }
 
 .btn-primary:hover .arrow-circle-white {

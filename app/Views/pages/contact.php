@@ -138,8 +138,8 @@
           <svg class="radar-grid-svg" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <radialGradient id="gridGlow" cx="33%" cy="48%" r="60%">
-                <stop offset="0%" stop-color="#2544ec" stop-opacity="0.25"/>
-                <stop offset="100%" stop-color="#031126" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#129be0" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#004782" stop-opacity="0"/>
               </radialGradient>
             </defs>
             <rect width="600" height="400" fill="url(#gridGlow)"/>
@@ -152,7 +152,7 @@
             <line x1="0" y1="300" x2="600" y2="300" stroke="rgba(255, 255, 255, 0.04)" stroke-dasharray="4 4"/>
 
             <!-- Topo / Sounding Rings -->
-            <ellipse cx="200" cy="192" rx="140" ry="110" stroke="rgba(37, 68, 236, 0.18)" stroke-width="1.5"/>
+            <ellipse cx="200" cy="192" rx="140" ry="110" stroke="rgba(18, 155, 224, 0.22)" stroke-width="1.5"/>
             <ellipse cx="200" cy="192" rx="220" ry="160" stroke="rgba(37, 68, 236, 0.12)" stroke-width="1" stroke-dasharray="6 6"/>
             <ellipse cx="440" cy="140" rx="90" ry="60" fill="rgba(37, 68, 236, 0.04)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
             <ellipse cx="120" cy="140" rx="70" ry="50" fill="rgba(37, 68, 236, 0.05)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>

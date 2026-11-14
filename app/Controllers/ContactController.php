@@ -164,19 +164,19 @@ class ContactController extends Controller
 <head>
 <meta charset="utf-8">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f4f7fa; color: #1e293b; margin: 0; padding: 24px; }
-  .email-container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-  .email-header { background: #031126; color: #ffffff; padding: 28px 32px; border-bottom: 3px solid #2544ec; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #fefcff; color: #00223f; margin: 0; padding: 24px; }
+  .email-container { max-width: 600px; margin: 0 auto; background: #fefcff; border-radius: 16px; border: 1px solid #d4e3ee; overflow: hidden; box-shadow: 0 4px 20px rgba(0,71,130,0.08); }
+  .email-header { background: #004782; color: #fefcff; padding: 28px 32px; border-bottom: 3px solid #129be0; }
   .email-header h2 { margin: 0 0 6px; font-size: 22px; }
-  .email-header p { margin: 0; font-size: 13px; color: #94a3b8; }
+  .email-header p { margin: 0; font-size: 13px; color: #8caec7; }
   .email-body { padding: 32px; }
-  .badge { display: inline-block; background: #2544ec; color: #ffffff; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; margin-bottom: 20px; }
+  .badge { display: inline-block; background: #129be0; color: #fefcff; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; margin-bottom: 20px; }
   .info-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
-  .info-table td { padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
-  .info-table td.label { font-weight: 600; color: #64748b; width: 36%; }
-  .info-table td.val { color: #0f172a; font-weight: 500; }
-  .message-box { background: #f8fafc; border-left: 4px solid #2544ec; border-radius: 6px; padding: 16px; margin: 20px 0; font-size: 14px; line-height: 1.6; color: #334155; }
-  .email-footer { background: #f8fafc; padding: 20px 32px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #94a3b8; text-align: center; }
+  .info-table td { padding: 10px 0; border-bottom: 1px solid #eef4f9; font-size: 14px; }
+  .info-table td.label { font-weight: 600; color: #5d7891; width: 36%; }
+  .info-table td.val { color: #00223f; font-weight: 500; }
+  .message-box { background: #f4f8fc; border-left: 4px solid #129be0; border-radius: 6px; padding: 16px; margin: 20px 0; font-size: 14px; line-height: 1.6; color: #24415c; }
+  .email-footer { background: #f4f8fc; padding: 20px 32px; border-top: 1px solid #d4e3ee; font-size: 12px; color: #8caec7; text-align: center; }
 </style>
 </head>
 <body>

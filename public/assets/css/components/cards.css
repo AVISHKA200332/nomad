@@ -30,7 +30,7 @@
 .stat-card-highlight {
   background-color: var(--color-primary);
   color: var(--color-white);
-  box-shadow: 0 12px 36px rgba(48, 71, 244, 0.35);
+  box-shadow: 0 12px 36px rgba(18, 155, 224, 0.35);
 }
 
 .stat-card-highlight .stat-number,

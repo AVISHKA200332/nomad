@@ -52,15 +52,15 @@
 }
 
 .dest-badge-pill:hover {
-  background: rgba(37, 99, 235, 0.1);
-  color: #2563eb;
+  background: rgba(18, 155, 224, 0.1);
+  color: #129be0;
 }
 
 /* Main Heading */
 .dest-main-title {
   font-size: clamp(2.3rem, 4.2vw, 3.4rem);
   font-weight: 600;
-  color: #0f172a;
+  color: #004782;
   line-height: 1.15;
   letter-spacing: -0.028em;
   margin: 0 0 14px 0;
@@ -86,7 +86,7 @@
 }
 
 .dest-tab-btn {
-  background: #ffffff;
+  background: #fefcff;
   color: #334155;
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 9999px;
@@ -104,8 +104,8 @@
 }
 
 .dest-tab-btn:hover {
-  color: #2563eb;
-  border-color: rgba(37, 99, 235, 0.3);
+  color: #129be0;
+  border-color: rgba(18, 155, 224, 0.3);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
 }
@@ -115,19 +115,19 @@
 }
 
 .dest-tab-btn.is-active {
-  background: #2563eb;
-  color: #ffffff;
-  border-color: #2563eb;
+  background: #129be0;
+  color: #fefcff;
+  border-color: #129be0;
   font-weight: 600;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 6px 20px rgba(18, 155, 224, 0.35);
   transform: translateY(-1px);
 }
 
 .dest-tab-btn.is-active:hover {
   background: #1d4ed8;
   border-color: #1d4ed8;
-  color: #ffffff;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+  color: #fefcff;
+  box-shadow: 0 8px 24px rgba(18, 155, 224, 0.45);
 }
 
 /* ==========================================================================
@@ -142,7 +142,7 @@
 
 /* Individual Destination Card */
 .dshow-card {
-  background: #ffffff !important;
+  background: #fefcff !important;
   border-radius: 26px !important;
   padding: 16px !important;
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03) !important;
@@ -178,7 +178,7 @@
 .dshow-card:hover {
   transform: translateY(-8px) !important;
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.09) !important;
-  border-color: rgba(37, 99, 235, 0.2) !important;
+  border-color: rgba(18, 155, 224, 0.2) !important;
 }
 
 .dshow-card-link {
@@ -234,13 +234,13 @@
   gap: 6px !important;
   font-size: 0.88rem !important;
   font-weight: 600 !important;
-  color: #0f172a !important;
+  color: #004782 !important;
   margin-bottom: 8px !important;
 }
 
 .dshow-star {
-  color: #0f172a !important;
-  fill: #0f172a !important;
+  color: #004782 !important;
+  fill: #004782 !important;
   flex-shrink: 0 !important;
 }
 
@@ -248,7 +248,7 @@
 .dshow-title {
   font-size: 1.25rem !important;
   font-weight: 600 !important;
-  color: #0f172a !important;
+  color: #004782 !important;
   line-height: 1.35 !important;
   margin: 0 0 16px 0 !important;
   letter-spacing: -0.015em !important;
@@ -257,7 +257,7 @@
 }
 
 .dshow-card:hover .dshow-title {
-  color: #2563eb !important;
+  color: #129be0 !important;
 }
 
 /* Bottom Location & Circle Action Button */
@@ -302,10 +302,10 @@
 }
 
 .dshow-card:hover .dshow-btn {
-  background: #2563eb !important;
-  color: #ffffff !important;
+  background: #129be0 !important;
+  color: #fefcff !important;
   transform: scale(1.08) translateX(2px) !important;
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35) !important;
+  box-shadow: 0 6px 16px rgba(18, 155, 224, 0.35) !important;
 }
 
 .dshow-card:hover .dshow-btn svg {
@@ -327,7 +327,7 @@
   grid-column: 1 / -1;
   text-align: center;
   padding: 60px 20px;
-  background: #ffffff;
+  background: #fefcff;
   border-radius: 24px;
   border: 1px dashed rgba(15, 23, 42, 0.15);
   animation: dshowCardReveal 0.5s ease forwards;
@@ -336,7 +336,7 @@
 .dest-empty-notice h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #0f172a;
+  color: #004782;
   margin-bottom: 8px;
 }
 

@@ -1,27 +1,34 @@
 :root {
-  /* Color Palette */
-  --color-primary: #3047F4;
-  --color-primary-hover: #2135d9;
-  --color-primary-light: rgba(48, 71, 244, 0.1);
-  --color-primary-glow: rgba(48, 71, 244, 0.25);
+  /* ==========================================================================
+     60, 30, 10 UI/UX Rule Color System
+     - 60% Dominant (Canvas / Surface / Clean Whitespace): #fefcff
+     - 30% Secondary (Structural / Navy / Header / Footer): #004782
+     - 10% Accent (Interactive / Buttons / Badges / Highlights): #129be0
+     ========================================================================== */
+  --color-primary: #129be0;
+  --color-primary-hover: #0e84c1;
+  --color-primary-light: rgba(18, 155, 224, 0.12);
+  --color-primary-glow: rgba(18, 155, 224, 0.28);
 
-  --color-navy: #031126;
-  --color-navy-card: #091c38;
-  --color-navy-border: rgba(255, 255, 255, 0.1);
-  --color-navy-muted: #8c9cb0;
+  --color-navy: #004782;
+  --color-navy-dark: #003360;
+  --color-navy-card: #003b6d;
+  --color-navy-border: rgba(254, 252, 255, 0.14);
+  --color-navy-muted: #8caec7;
 
-  --color-bg-light: #EAF1F5;
-  --color-bg-sky: #B9E5FB;
-  --color-bg-sky-light: #E4F4FD;
-  --color-white: #FFFFFF;
+  --color-bg-light: #fefcff;
+  --color-bg-subtle: #f4f8fc;
+  --color-bg-sky: #e1f2fc;
+  --color-bg-sky-light: #eff8fe;
+  --color-white: #fefcff;
 
-  --color-text-main: #101820;
-  --color-text-body: #3c4858;
-  --color-text-muted: #6B7885;
-  --color-text-dim: #9aa7b5;
+  --color-text-main: #00223f;
+  --color-text-body: #24415c;
+  --color-text-muted: #5d7891;
+  --color-text-dim: #8ba2b5;
 
-  --color-border: #DCE5EB;
-  --color-border-light: rgba(3, 17, 38, 0.06);
+  --color-border: #d4e3ee;
+  --color-border-light: rgba(0, 71, 130, 0.08);
 
   /* Typography */
   --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -61,11 +68,11 @@
   --radius-pill: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(3, 17, 38, 0.04);
-  --shadow-md: 0 8px 24px rgba(3, 17, 38, 0.07);
-  --shadow-lg: 0 16px 40px rgba(3, 17, 38, 0.1);
-  --shadow-xl: 0 24px 60px rgba(3, 17, 38, 0.14);
-  --shadow-glow: 0 8px 30px rgba(48, 71, 244, 0.35);
+  --shadow-sm: 0 2px 8px rgba(0, 71, 130, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 71, 130, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 71, 130, 0.12);
+  --shadow-xl: 0 24px 60px rgba(0, 71, 130, 0.16);
+  --shadow-glow: 0 8px 30px rgba(18, 155, 224, 0.35);
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);

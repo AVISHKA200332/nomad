@@ -54,7 +54,7 @@
 }
 
 .footer-email-link:hover {
-  color: #a8baff;
+  color: var(--color-primary);
   transform: translateY(-2px);
 }
 
@@ -89,7 +89,7 @@
   background-color: var(--color-primary);
   color: var(--color-white);
   font-weight: var(--fw-semibold);
-  box-shadow: 0 4px 14px rgba(48, 71, 244, 0.4);
+  box-shadow: 0 4px 14px rgba(18, 155, 224, 0.4);
 }
 
 /* Social Media Links with Labels */
