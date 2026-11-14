@@ -10,6 +10,12 @@
   --color-primary-light: rgba(18, 155, 224, 0.12);
   --color-primary-glow: rgba(18, 155, 224, 0.28);
 
+  /* Crimson Orange Accent (#ff574a) for Small Design Details (Button Arrows & Directional Accents) */
+  --color-crimson: #ff574a;
+  --color-crimson-hover: #e04438;
+  --color-crimson-light: rgba(255, 87, 74, 0.12);
+  --color-crimson-glow: rgba(255, 87, 74, 0.35);
+
   --color-navy: #004782;
   --color-navy-dark: #003360;
   --color-navy-card: #003b6d;

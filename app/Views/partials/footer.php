@@ -124,7 +124,7 @@ $currentPage = $activePage ?? 'home';
     <div class="footer-bottom">
       <div class="footer-copyright-group">
         <p class="footer-copyright">
-          &copy; 2026 The Lankan Nomad. All rights reserved.
+          &copy; All in this document are fully owned by Ardent Hive Creative Marketing Agency - 2026
         </p>
       </div>
       <div class="footer-legal-links">

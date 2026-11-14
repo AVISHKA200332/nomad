@@ -230,24 +230,25 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--color-pkg-primary);
+  background-color: var(--color-crimson, #ff574a);
   color: #fefcff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.25s ease, background-color 0.25s ease;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(255, 87, 74, 0.28);
 }
 
 .pkg-card:hover .btn-pkg-cta {
-  border-color: rgba(18, 155, 224, 0.35);
-  box-shadow: 0 4px 14px rgba(18, 155, 224, 0.12);
+  border-color: rgba(255, 87, 74, 0.35);
+  box-shadow: 0 4px 14px rgba(255, 87, 74, 0.12);
 }
 
 .pkg-card:hover .btn-pkg-cta .arrow-circle-blue,
 .btn-pkg-cta:hover .arrow-circle-blue {
   transform: rotate(-45deg);
-  background-color: var(--color-pkg-primary-hover);
+  background-color: var(--color-crimson-hover, #e04438);
 }
 
 /* Card Right Column: Image Inset */

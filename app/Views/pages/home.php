@@ -8,7 +8,7 @@
 <!-- ==========================================================================
      SECTION 01: Hero Section
      ========================================================================== -->
-<section class="hero-section" id="hero" style="background-image: url('<?= asset('assets/images/srilanka/weligama_beach.jpg') ?>');">
+<section class="hero-section" id="hero" style="background-image: url('<?= asset('assets/images/banners/hero-sigiriya-trevello.jpg') ?>?v=2');">
   <div class="hero-overlay"></div>
 
   <div class="container hero-content">

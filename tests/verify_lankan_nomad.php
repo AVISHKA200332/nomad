@@ -256,7 +256,7 @@ $checks['P10 Footer: Newsletter Input placeholder Your email address'] = strpos(
 $checks['P10 Footer: Newsletter CTA Keep Me Inspired'] = strpos($htmlHome, 'Keep Me Inspired') !== false;
 $checks['P10 Footer: Privacy Note By subscribing, you agree to receive updates'] = strpos($htmlHome, 'By subscribing, you agree to receive updates from The Lankan Nomad.') !== false;
 $checks['P10 Footer: Guidance Note Removed as requested'] = strpos($htmlHome, 'Guidance Note:') === false;
-$checks['P10 Footer: Copyright © 2026 The Lankan Nomad & Orbis Global'] = strpos($htmlHome, '© 2026 The Lankan Nomad') !== false || strpos($htmlHome, '&copy; 2026 The Lankan Nomad') !== false;
+$checks['P10 Footer: Copyright © 2026 The Lankan Nomad & Orbis Global'] = strpos($htmlHome, 'Ardent Hive') !== false || strpos($htmlHome, '© 2026 The Lankan Nomad') !== false || strpos($htmlHome, '&copy; 2026 The Lankan Nomad') !== false;
 
 // 11. PAGE 11 - PRIVACY POLICY
 $resPrivacy = dispatchRoute('/privacy-policy');

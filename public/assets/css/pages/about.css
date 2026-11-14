@@ -133,13 +133,14 @@ body.page-about {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--color-about-primary);
+  background-color: var(--color-crimson, #ff574a);
   color: #fefcff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.25s ease, background-color 0.25s ease;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(255, 87, 74, 0.28);
 }
 
 .btn-white-pill:hover {
@@ -150,7 +151,7 @@ body.page-about {
 
 .btn-white-pill:hover .arrow-circle-blue {
   transform: rotate(-45deg);
-  background-color: var(--color-about-primary-hover);
+  background-color: var(--color-crimson-hover, #e04438);
 }
 
 

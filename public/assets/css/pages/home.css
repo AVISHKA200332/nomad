@@ -5,16 +5,16 @@
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 90vh;
+  min-height: 92vh;
   display: flex;
   align-items: center;
   background-color: #004782;
-  background-image: url('../../images/srilanka/weligama_beach.jpg');
-  background-position: center right;
+  background-image: url('../../images/banners/hero-sigiriya-trevello.jpg?v=2');
+  background-position: right top;
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--color-white);
-  padding-top: 140px;
+  padding-top: 150px;
   padding-bottom: 80px;
   overflow: hidden;
 }
@@ -23,23 +23,22 @@
   position: absolute;
   inset: 0;
   background: 
-    /* Primary: Deep directional dark scrim on the left side */
+    /* Primary: Deep directional dark blue scrim on the left side for optimal text contrast */
     linear-gradient(
       90deg,
-      rgba(2, 11, 24, 0.96) 0%,
-      rgba(2, 11, 24, 0.90) 36%,
-      rgba(0, 71, 130, 0.72) 54%,
-      rgba(0, 71, 130, 0.32) 72%,
-      rgba(0, 71, 130, 0.05) 88%,
-      transparent 100%
+      rgba(2, 14, 28, 0.92) 0%,
+      rgba(2, 14, 28, 0.82) 34%,
+      rgba(0, 71, 130, 0.55) 48%,
+      rgba(0, 71, 130, 0.12) 64%,
+      transparent 78%
     ),
-    /* Secondary: Atmospheric top & bottom framing */
+    /* Secondary: Atmospheric subtle top & bottom framing that clears Trevello and Sigiriya */
     linear-gradient(
       180deg,
-      rgba(2, 11, 24, 0.65) 0%,
-      transparent 25%,
-      transparent 75%,
-      rgba(2, 11, 24, 0.80) 100%
+      rgba(0, 71, 130, 0.35) 0%,
+      transparent 15%,
+      transparent 80%,
+      rgba(2, 14, 28, 0.65) 100%
     );
   pointer-events: none;
   z-index: 1;
@@ -232,17 +231,19 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #129be0;
+  background: var(--color-crimson, #ff574a);
   color: #fefcff;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, background 0.25s ease;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(255, 87, 74, 0.3);
 }
 
 .btn-dest-pill:hover .arrow-circle-blue {
   transform: rotate(-45deg);
+  background: var(--color-crimson-hover, #e04438);
 }
 
 /* Center Scrollable Destination Cards */
@@ -345,20 +346,21 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #eef4ff;
-  color: #0f172a;
+  background: rgba(255, 87, 74, 0.12);
+  color: #ff574a;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
   text-decoration: none;
 }
 
 .dest-card:hover .dest-card-btn {
-  background: #129be0;
+  background: var(--color-crimson, #ff574a);
   color: #fefcff;
   transform: translateX(3px);
+  box-shadow: 0 4px 14px rgba(255, 87, 74, 0.35);
 }
 
 /* Right Interactive Scroll-Tracking Navigation */
@@ -575,8 +577,8 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  color: #fefcff;
+  background: rgba(255, 87, 74, 0.16);
+  color: var(--color-crimson, #ff574a);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -586,7 +588,7 @@
 }
 
 .service-summary-card:hover .service-summary-arrow {
-  background: #129be0;
+  background: var(--color-crimson, #ff574a);
   color: #fefcff;
   transform: translateX(3px);
 }
@@ -777,13 +779,13 @@
   gap: 5px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #129be0;
+  color: var(--color-crimson, #ff574a);
   text-decoration: none;
   transition: gap 0.3s ease, color 0.3s ease;
 }
 
 .service-acc-cta:hover {
-  color: #0e84c1;
+  color: var(--color-crimson-hover, #e04438);
   gap: 8px;
 }
 
@@ -895,7 +897,8 @@
 }
 
 .service-acc-item.is-active .service-acc-arrow {
-  background: #f1f5f9;
+  background: var(--color-crimson, #ff574a);
+  color: #fefcff;
 }
 
 .service-acc-item.is-active .service-acc-arrow .icon-right {
@@ -1419,13 +1422,13 @@
 }
 
 .testi-nav-btn.is-next {
-  color: #129be0;
+  color: var(--color-crimson, #ff574a);
   border-bottom: 1px solid #f1f5f9;
 }
 
 .testi-nav-btn.is-next:hover {
-  background: #f8fafc;
-  color: #0e84c1;
+  background: #fff5f4;
+  color: var(--color-crimson-hover, #e04438);
 }
 
 .testi-nav-btn.is-next:hover svg {
@@ -1578,9 +1581,9 @@
 .faq-item.is-expanded .faq-toggle-icon {
   transform: rotate(45deg);
   color: #fefcff;
-  background: #129be0;
-  border-color: #129be0;
-  box-shadow: 0 4px 14px rgba(18, 155, 224, 0.28);
+  background: var(--color-crimson, #ff574a);
+  border-color: var(--color-crimson, #ff574a);
+  box-shadow: 0 4px 14px rgba(255, 87, 74, 0.35);
 }
 
 .faq-answer-panel {

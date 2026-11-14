@@ -32,7 +32,7 @@
 
 .btn-white-pill:hover .arrow-circle {
   transform: translateX(3px) rotate(-45deg);
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-crimson-hover, #e04438);
 }
 
 /* Cerulean Light Blue Pill Button (10% Accent) */
@@ -50,6 +50,7 @@
 
 .btn-primary:hover .arrow-circle-white {
   transform: translateX(3px) rotate(-45deg);
+  background-color: var(--color-crimson-hover, #e04438);
 }
 
 /* Outline Pill Button */
@@ -60,8 +61,8 @@
 }
 
 .btn-outline .arrow-circle {
-  background-color: var(--color-primary);
-  color: #ffffff;
+  background-color: var(--color-crimson, #ff574a);
+  color: #fefcff;
 }
 
 .btn-outline:hover {
@@ -72,8 +73,8 @@
 
 .btn-outline:hover .arrow-circle {
   transform: translateX(3px) rotate(-45deg);
-  background-color: var(--color-primary-hover);
-  color: #ffffff;
+  background-color: var(--color-crimson-hover, #e04438);
+  color: #fefcff;
 }
 
 /* Compact Nav Button */
@@ -90,6 +91,8 @@
 .btn-nav-cta .arrow-circle {
   width: 28px;
   height: 28px;
+  background-color: var(--color-crimson, #ff574a);
+  color: #fefcff;
 }
 
 .btn-nav-cta:hover {
@@ -99,6 +102,7 @@
 
 .btn-nav-cta:hover .arrow-circle {
   transform: rotate(-45deg);
+  background-color: var(--color-crimson-hover, #e04438);
 }
 
 /* Dark Section Button */

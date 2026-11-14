@@ -190,7 +190,8 @@
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: rgba(18, 155, 224, 0.08);
+  background: rgba(255, 87, 74, 0.12);
+  color: var(--color-crimson, #ff574a);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -198,11 +199,13 @@
 }
 
 .cmethod-arrow.is-white {
-  background: rgba(255, 255, 255, 0.22);
+  background: var(--color-crimson, #ff574a);
   color: #fefcff;
 }
 
 .cmethod-card:hover .cmethod-arrow {
+  background: var(--color-crimson, #ff574a);
+  color: #fefcff;
   transform: translateX(4px);
 }
 
@@ -517,23 +520,23 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #129be0;
+  background: var(--color-crimson, #ff574a);
   color: #fefcff;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 14px rgba(18, 155, 224, 0.28);
+  box-shadow: 0 4px 14px rgba(255, 87, 74, 0.32);
 }
 
 .btn-office-directions:hover {
-  color: #129be0;
+  color: var(--color-crimson, #ff574a);
 }
 
 .btn-office-directions:hover .btn-circle-arrow {
   transform: translateX(4px);
-  background: #0e84c1;
-  box-shadow: 0 6px 18px rgba(18, 155, 224, 0.38);
+  background: var(--color-crimson-hover, #e04438);
+  box-shadow: 0 6px 18px rgba(255, 87, 74, 0.42);
 }
 
 /* ==========================================================================

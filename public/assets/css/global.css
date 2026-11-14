@@ -90,7 +90,7 @@ body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, a, span, li {
   text-align: center;
 }
 
-/* Circular Arrow Icon Container */
+/* Circular Arrow Icon Container (Crimson Orange #ff574a) */
 .arrow-circle {
   display: inline-flex;
   align-items: center;
@@ -98,10 +98,11 @@ body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, a, span, li {
   width: 32px;
   height: 32px;
   border-radius: var(--radius-pill);
-  background-color: var(--color-primary);
-  color: #ffffff;
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  background-color: var(--color-crimson, #ff574a);
+  color: #fefcff;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(255, 87, 74, 0.28);
 }
 
 .arrow-circle svg {
@@ -110,27 +111,27 @@ body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, a, span, li {
 }
 
 .arrow-circle-white {
-  background-color: var(--color-white);
-  color: var(--color-primary);
+  background-color: var(--color-crimson, #ff574a);
+  color: #fefcff;
 }
 
 .arrow-circle-dark {
-  background-color: var(--color-navy);
-  color: var(--color-white);
+  background-color: var(--color-crimson, #ff574a);
+  color: #fefcff;
 }
 
-/* Ensure any outline button or primary-bg circle has a crisp white arrow */
+/* Ensure any outline button or primary-bg circle has a crisp crimson arrow */
 .btn-outline .arrow-circle,
 .btn-outline .arrow-circle-white,
 .arrow-circle[style*="var(--color-primary)"] {
-  background-color: var(--color-primary) !important;
-  color: #ffffff !important;
+  background-color: var(--color-crimson, #ff574a) !important;
+  color: #fefcff !important;
 }
 
 .btn-outline:hover .arrow-circle,
 .btn-outline:hover .arrow-circle-white {
-  background-color: var(--color-primary-hover) !important;
-  color: #ffffff !important;
+  background-color: var(--color-crimson-hover, #e04438) !important;
+  color: #fefcff !important;
   transform: translateX(3px) rotate(-45deg);
 }
 

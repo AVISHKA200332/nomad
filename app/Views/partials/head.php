@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?= htmlspecialchars($metaTitle ?? 'The Lankan Nomad | Live Sri Lanka, Your Way') ?>">
   <meta property="og:description" content="<?= htmlspecialchars($metaDescription ?? 'Longer stays. Local experiences. A more personal way to discover Sri Lanka.') ?>">
-  <meta property="og:image" content="<?= asset('assets/images/srilanka/weligama_beach.jpg') ?>">
+  <meta property="og:image" content="<?= asset('assets/images/banners/hero-sigiriya-trevello.jpg') ?>">
 
   <!-- Favicon / Brand Icon -->
   <link rel="icon" type="image/svg+xml" href="<?= asset('assets/images/logo/favicon.svg') ?>?v=3">
@@ -25,31 +25,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
   <!-- Core & Design Tokens Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/variables.css') ?>?v=6.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/variables.css') ?>?v=6.1">
   <link rel="stylesheet" href="<?= asset('assets/css/reset.css') ?>?v=6.0">
-  <link rel="stylesheet" href="<?= asset('assets/css/global.css') ?>?v=6.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/global.css') ?>?v=6.1">
   <link rel="stylesheet" href="<?= asset('assets/css/layout.css') ?>?v=5.0">
 
   <!-- Component Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=6.0">
-  <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>?v=5.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=6.1">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>?v=5.1">
   <link rel="stylesheet" href="<?= asset('assets/css/components/cards.css') ?>?v=5.0">
   <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=5.0">
 
   <!-- Master Design System (for unified navbar and footer) -->
-  <link rel="stylesheet" href="<?= asset('assets/css/pages/nomad.css') ?>?v=6.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/pages/nomad.css') ?>?v=6.1">
 
   <!-- Page Specific Stylesheets -->
   <?php if (($activePage ?? 'home') === 'home'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=9.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=11.0">
   <?php elseif (($activePage ?? 'home') === 'destinations'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=9.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=9.1">
   <?php elseif (in_array($activePage ?? '', ['stay', 'packages'])): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/package.css') ?>?v=6.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/package.css') ?>?v=6.1">
   <?php elseif (($activePage ?? 'home') === 'about'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/about.css') ?>?v=8.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/about.css') ?>?v=8.1">
   <?php elseif (in_array($activePage ?? '', ['contact', 'plan-your-stay'])): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/contact.css') ?>?v=7.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/contact.css') ?>?v=7.1">
   <?php endif; ?>
 
   <!-- Responsive Breakpoints -->

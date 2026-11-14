@@ -283,13 +283,13 @@
   flex-shrink: 0 !important;
 }
 
-/* Circular Arrow Button */
+/* Circular Arrow Button (Crimson Orange #ff574a) */
 .dshow-btn {
   width: 38px !important;
   height: 38px !important;
   border-radius: 50% !important;
-  background: #e0f2fe !important;
-  color: #0284c7 !important;
+  background: rgba(255, 87, 74, 0.12) !important;
+  color: var(--color-crimson, #ff574a) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -302,10 +302,10 @@
 }
 
 .dshow-card:hover .dshow-btn {
-  background: #129be0 !important;
+  background: var(--color-crimson, #ff574a) !important;
   color: #fefcff !important;
   transform: scale(1.08) translateX(2px) !important;
-  box-shadow: 0 6px 16px rgba(18, 155, 224, 0.35) !important;
+  box-shadow: 0 6px 16px rgba(255, 87, 74, 0.4) !important;
 }
 
 .dshow-card:hover .dshow-btn svg {
