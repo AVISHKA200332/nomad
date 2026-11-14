@@ -27,12 +27,12 @@
   --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-serif: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  /* Font Weights */
+  /* Font Weights (Calibrated for Poppins so Bold styles render as clean Semi-Bold 600) */
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
-  --fw-bold: 700;
-  --fw-extrabold: 800;
+  --fw-bold: 600;
+  --fw-extrabold: 600;
 
   /* Spacing Scale */
   --space-xs: 4px;

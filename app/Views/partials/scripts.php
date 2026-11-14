@@ -1,6 +1,6 @@
   <!-- Application Scripts -->
   <script src="<?= asset('assets/js/navigation.js') ?>?v=4.6"></script>
-  <script src="<?= asset('assets/js/main.js') ?>?v=5.1"></script>
+  <script src="<?= asset('assets/js/main.js') ?>?v=6.0"></script>
   <?php if (($activePage ?? 'home') === 'about'): ?>
     <script src="<?= asset('assets/js/modules/about.js') ?>?v=4.6"></script>
   <?php endif; ?>

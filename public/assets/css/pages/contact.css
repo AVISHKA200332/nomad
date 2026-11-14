@@ -48,7 +48,7 @@
 
 .contact-main-title {
   font-size: clamp(2.3rem, 4.2vw, 3.4rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #0a192f;
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -134,7 +134,7 @@
 
 .cmethod-label {
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #6366f1;
@@ -148,7 +148,7 @@
 
 .cmethod-value {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0a192f;
   margin-bottom: 6px;
   line-height: 1.3;
@@ -419,7 +419,7 @@
 
 .radar-badge-title {
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0a192f;
   line-height: 1.25;
 }
@@ -456,7 +456,7 @@
 
 .office-title {
   font-size: 1.95rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #0a192f;
   line-height: 1.22;
   margin-bottom: 14px;
@@ -498,14 +498,14 @@
 
 .sched-time.is-closed {
   color: #2544ec;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .btn-office-directions {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   color: #0a192f;
   text-decoration: none;
@@ -537,83 +537,59 @@
 }
 
 /* ==========================================================================
-   4. CONSULTATION & TRIP PLANNING FORM SECTION (Large White Card)
+   4. CONSULTATION & TRIP PLANNING FORM SECTION (Properly Aligned Card)
    ========================================================================== */
 .consult-wrap {
+  max-width: 900px;
+  margin: 0 auto;
   background: #ffffff;
   border-radius: 28px;
-  padding: 50px 48px;
+  padding: 56px 60px;
   border: 1px solid rgba(3, 17, 38, 0.08);
   box-shadow: 0 10px 36px rgba(3, 17, 38, 0.04);
 }
 
-.consult-grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 52px;
-  align-items: start;
-}
-
-/* Left Column: Heading, Text & Traveler Photo */
-.consult-intro-col {
-  display: flex;
-  flex-direction: column;
+.consult-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 38px;
 }
 
 .consult-heading {
-  font-size: clamp(1.65rem, 2.5vw, 2.15rem);
-  font-weight: 800;
+  font-size: clamp(1.85rem, 3.2vw, 2.4rem);
+  font-weight: 600;
   color: #0a192f;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 14px;
 }
 
 .consult-subtext {
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   color: #64748b;
-  line-height: 1.65;
-  margin-bottom: 28px;
+  line-height: 1.62;
+  margin: 0 auto;
 }
 
-.consult-image-card {
+.consult-form-wrap {
   width: 100%;
-  aspect-ratio: 4 / 3.4;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(3, 17, 38, 0.08);
-  position: relative;
 }
 
-.consult-img {
+.consult-form {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  display: block;
-}
-
-.consult-image-card:hover .consult-img {
-  transform: scale(1.04);
-}
-
-/* Right Column: Clean Form */
-.consult-form-col {
-  display: flex;
-  flex-direction: column;
 }
 
 .cform-row-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 22px;
+  margin-bottom: 22px;
 }
 
 .cform-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .cform-label {
@@ -635,7 +611,7 @@
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 13px 18px;
+  padding: 14px 18px;
   font-size: 0.94rem;
   color: #0f172a;
   font-family: inherit;
@@ -660,25 +636,31 @@
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.75L6 6.25L10.5 1.75' stroke='%2364748B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 16px center;
-  padding-right: 42px;
+  background-position: right 18px center;
+  padding-right: 44px;
 }
 
 .cform-textarea {
   resize: vertical;
-  min-height: 110px;
+  min-height: 120px;
   line-height: 1.55;
 }
 
-/* Submit Button */
+/* Centered Submit Button */
+.cform-submit-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
 .btn-consult-submit {
   background: #2544ec;
   color: #ffffff;
-  font-weight: 700;
-  font-size: 0.98rem;
+  font-weight: 600;
+  font-size: 1.02rem;
   border: none;
   border-radius: 9999px;
-  padding: 15px 36px;
+  padding: 16px 44px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 8px 24px rgba(37, 68, 236, 0.28);
@@ -686,14 +668,12 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 8px;
-  align-self: flex-start;
 }
 
 .btn-consult-submit:hover {
   background: #1a35cc;
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(37, 68, 236, 0.38);
+  box-shadow: 0 14px 34px rgba(37, 68, 236, 0.38);
 }
 
 .btn-consult-submit:active {
@@ -752,16 +732,6 @@
   .office-split-grid {
     grid-template-columns: 1fr;
   }
-
-  .consult-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .consult-image-card {
-    aspect-ratio: 16 / 9;
-    max-height: 320px;
-  }
 }
 
 @media (max-width: 640px) {
@@ -780,12 +750,21 @@
   }
 
   .consult-wrap {
-    padding: 32px 22px;
+    padding: 36px 20px;
+    border-radius: 22px;
+  }
+
+  .consult-header {
+    margin-bottom: 26px;
   }
 
   .cform-row-2 {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .btn-consult-submit {
+    width: 100%;
   }
 
   .office-info-card {

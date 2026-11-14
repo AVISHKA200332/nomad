@@ -25,31 +25,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
   <!-- Core & Design Tokens Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/variables.css') ?>?v=4.4">
-  <link rel="stylesheet" href="<?= asset('assets/css/reset.css') ?>?v=4.4">
-  <link rel="stylesheet" href="<?= asset('assets/css/global.css') ?>?v=4.4">
-  <link rel="stylesheet" href="<?= asset('assets/css/layout.css') ?>?v=3.9">
+  <link rel="stylesheet" href="<?= asset('assets/css/variables.css') ?>?v=5.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/reset.css') ?>?v=5.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/global.css') ?>?v=5.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/layout.css') ?>?v=4.0">
 
   <!-- Component Stylesheets -->
-  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=4.2">
-  <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>?v=4.1">
-  <link rel="stylesheet" href="<?= asset('assets/css/components/cards.css') ?>?v=3.9">
-  <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=3.9">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/navbar.css') ?>?v=5.1">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/buttons.css') ?>?v=4.2">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/cards.css') ?>?v=4.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/components/footer.css') ?>?v=4.0">
 
   <!-- Master Design System (for unified navbar and footer) -->
-  <link rel="stylesheet" href="<?= asset('assets/css/pages/nomad.css') ?>?v=4.0">
+  <link rel="stylesheet" href="<?= asset('assets/css/pages/nomad.css') ?>?v=5.0">
 
   <!-- Page Specific Stylesheets -->
   <?php if (($activePage ?? 'home') === 'home'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=6.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=8.0">
   <?php elseif (($activePage ?? 'home') === 'destinations'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=7.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=8.0">
   <?php elseif (in_array($activePage ?? '', ['stay', 'packages'])): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/package.css') ?>?v=4.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/package.css') ?>?v=5.0">
   <?php elseif (($activePage ?? 'home') === 'about'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/about.css') ?>?v=6.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/about.css') ?>?v=7.0">
   <?php elseif (in_array($activePage ?? '', ['contact', 'plan-your-stay'])): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/contact.css') ?>?v=5.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/contact.css') ?>?v=6.0">
   <?php endif; ?>
 
   <!-- Responsive Breakpoints -->

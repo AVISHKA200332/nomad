@@ -170,7 +170,7 @@ class ContactController extends Controller
   .email-header h2 { margin: 0 0 6px; font-size: 22px; }
   .email-header p { margin: 0; font-size: 13px; color: #94a3b8; }
   .email-body { padding: 32px; }
-  .badge { display: inline-block; background: #2544ec; color: #ffffff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; margin-bottom: 20px; }
+  .badge { display: inline-block; background: #2544ec; color: #ffffff; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; margin-bottom: 20px; }
   .info-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
   .info-table td { padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
   .info-table td.label { font-weight: 600; color: #64748b; width: 36%; }

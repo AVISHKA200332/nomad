@@ -4,44 +4,102 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. FAQ Accordion Behavior (supporting both .faq-nomad-item and legacy classes)
-  const faqItems = document.querySelectorAll('.faq-nomad-item, .faq-item');
+  // 1. FAQ Accordion Behavior (Expand on Cursor Hover / MouseEnter + Click, identical to Services)
+  const faqGroups = document.querySelectorAll('.faq-accordion-wrap, .faq-nomad-list');
 
-  faqItems.forEach((item, index) => {
-    const questionBtn = item.querySelector('.faq-nomad-trigger, .faq-question-btn');
-    const answerPanel = item.querySelector('.faq-nomad-panel, .faq-answer-panel');
+  faqGroups.forEach((group) => {
+    const faqItems = group.querySelectorAll('.faq-nomad-item, .faq-item');
+    if (!faqItems.length) return;
 
-    // Expand first item by default if none is open
-    if (index === 0 && !item.classList.contains('is-expanded')) {
-      item.classList.add('is-expanded');
-      questionBtn?.setAttribute('aria-expanded', 'true');
-      if (answerPanel) {
-        answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
-      }
-    }
+    let hoverTimer = null;
 
-    questionBtn?.addEventListener('click', () => {
-      const isCurrentlyExpanded = item.classList.contains('is-expanded');
+    const activateFaq = (targetItem) => {
+      if (targetItem.classList.contains('is-expanded')) return;
 
-      // Close all accordion panels
-      faqItems.forEach((otherItem) => {
-        otherItem.classList.remove('is-expanded');
-        otherItem.querySelector('.faq-nomad-trigger, .faq-question-btn')?.setAttribute('aria-expanded', 'false');
-        const otherPanel = otherItem.querySelector('.faq-nomad-panel, .faq-answer-panel');
-        if (otherPanel) {
-          otherPanel.style.maxHeight = null;
+      faqItems.forEach((item) => {
+        const questionBtn = item.querySelector('.faq-nomad-trigger, .faq-question-btn');
+        const answerPanel = item.querySelector('.faq-nomad-panel, .faq-answer-panel');
+
+        if (item === targetItem) {
+          item.classList.add('is-expanded');
+          questionBtn?.setAttribute('aria-expanded', 'true');
+          if (answerPanel) {
+            answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
+          }
+        } else {
+          item.classList.remove('is-expanded');
+          questionBtn?.setAttribute('aria-expanded', 'false');
+          if (answerPanel) {
+            answerPanel.style.maxHeight = null;
+          }
         }
       });
+    };
 
-      // Toggle current panel
-      if (!isCurrentlyExpanded) {
+    faqItems.forEach((item, index) => {
+      const questionBtn = item.querySelector('.faq-nomad-trigger, .faq-question-btn');
+      const answerPanel = item.querySelector('.faq-nomad-panel, .faq-answer-panel');
+
+      // Expand first item by default if none is open
+      if (index === 0 && !group.querySelector('.is-expanded')) {
         item.classList.add('is-expanded');
-        questionBtn.setAttribute('aria-expanded', 'true');
+      }
+
+      if (item.classList.contains('is-expanded')) {
+        questionBtn?.setAttribute('aria-expanded', 'true');
         if (answerPanel) {
           answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
         }
+      } else {
+        questionBtn?.setAttribute('aria-expanded', 'false');
+        if (answerPanel) {
+          answerPanel.style.maxHeight = null;
+        }
       }
+
+      // Expand smoothly when cursor hovers over the card with a gentle intent pause (matches Services)
+      item.addEventListener('mouseenter', () => {
+        clearTimeout(hoverTimer);
+        hoverTimer = setTimeout(() => {
+          activateFaq(item);
+        }, 120);
+      });
+
+      item.addEventListener('mouseleave', () => {
+        clearTimeout(hoverTimer);
+      });
+
+      // Keep touch/click support for mobile screens and instant user click
+      item.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        clearTimeout(hoverTimer);
+
+        const isCurrentlyExpanded = item.classList.contains('is-expanded');
+        if (isCurrentlyExpanded) {
+          // If already expanded and user clicks the toggle/button directly, allow collapsing
+          if (e.target.closest('.faq-nomad-trigger, .faq-question-btn')) {
+            item.classList.remove('is-expanded');
+            questionBtn?.setAttribute('aria-expanded', 'false');
+            if (answerPanel) {
+              answerPanel.style.maxHeight = null;
+            }
+          }
+        } else {
+          activateFaq(item);
+        }
+      });
     });
+
+    // Re-adjust max-height on window resize for the active panel
+    window.addEventListener('resize', () => {
+      const activeItem = group.querySelector('.is-expanded');
+      if (activeItem) {
+        const activePanel = activeItem.querySelector('.faq-nomad-panel, .faq-answer-panel');
+        if (activePanel) {
+          activePanel.style.maxHeight = activePanel.scrollHeight + 'px';
+        }
+      }
+    }, { passive: true });
   });
 
   // 2. Smooth anchor scrolling for internal section links
