@@ -4,6 +4,11 @@
     # Prevent directory listing
     Options -Indexes
 
+    # MIME types
+    <IfModule mod_mime.c>
+        AddType image/webp .webp
+    </IfModule>
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

@@ -36,7 +36,7 @@ class StayController extends Controller
                     ],
                     'cta' => 'Plan a Three-Month Stay',
                     'durationParam' => '3 months',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
+                    'image' => 'assets/images/srilanka/weligama_beach.webp'
                 ],
                 [
                     'id' => '6-months',
@@ -54,7 +54,7 @@ class StayController extends Controller
                     'cta' => 'Plan a Six-Month Stay',
                     'durationParam' => '6 months',
                     'highlight' => true,
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.webp'
                 ],
                 [
                     'id' => '12-months',
@@ -71,7 +71,7 @@ class StayController extends Controller
                     ],
                     'cta' => 'Plan a Twelve-Month Stay',
                     'durationParam' => '12 months',
-                    'image' => 'assets/images/srilanka/sigiriya.jpg'
+                    'image' => 'assets/images/srilanka/sigiriya.webp'
                 ]
             ],
 

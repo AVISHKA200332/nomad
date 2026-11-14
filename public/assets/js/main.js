@@ -368,19 +368,19 @@ document.addEventListener('DOMContentLoaded', () => {
         quote: "“The Lankan Nomad helped us plan a stay that felt personal from the first day. The accommodation, pacing, and private experiences were exactly what we wanted. Their local insight made our time in Sri Lanka effortless, connecting us with authentic communities across the island.”",
         author: "Patric Stone",
         role: "Traveller",
-        image: "assets/images/srilanka/ahangama_coast.jpg"
+        image: "assets/images/srilanka/ahangama_coast.webp"
       },
       {
         quote: "“Moving to Sri Lanka for three months seemed daunting until we connected with The Lankan Nomad. From fiber-optic internet checks to finding our beach house in Ahangama and setting up our transport, everything was seamless.”",
         author: "Elena Rostova",
         role: "Digital Nomad",
-        image: "assets/images/srilanka/galle_fort.jpg"
+        image: "assets/images/srilanka/galle_fort.webp"
       },
       {
         quote: "“Every journey with them feels respectful and grounded. We took the scenic hill trains, stayed near UNESCO citadels, and explored local food spots we never would have found on our own.”",
         author: "Marcus Vance",
         role: "Long-Stay Resident",
-        image: "assets/images/srilanka/nuwara_eliya_tea.jpg"
+        image: "assets/images/srilanka/nuwara_eliya_tea.webp"
       }
     ];
 

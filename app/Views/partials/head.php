@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?= htmlspecialchars($metaTitle ?? 'The Lankan Nomad | Live Sri Lanka, Your Way') ?>">
   <meta property="og:description" content="<?= htmlspecialchars($metaDescription ?? 'Longer stays. Local experiences. A more personal way to discover Sri Lanka.') ?>">
-  <meta property="og:image" content="<?= asset('assets/images/banners/hero-sigiriya-trevello.jpg') ?>">
+  <meta property="og:image" content="<?= asset('assets/images/banners/hero-sigiriya-trevello.webp') ?>">
 
   <!-- Favicon / Brand Icon -->
   <link rel="icon" type="image/svg+xml" href="<?= asset('assets/images/logo/favicon.svg') ?>?v=3">
@@ -41,7 +41,7 @@
 
   <!-- Page Specific Stylesheets -->
   <?php if (($activePage ?? 'home') === 'home'): ?>
-    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=11.0">
+    <link rel="stylesheet" href="<?= asset('assets/css/pages/home.css') ?>?v=12.0">
   <?php elseif (($activePage ?? 'home') === 'destinations'): ?>
     <link rel="stylesheet" href="<?= asset('assets/css/pages/destination.css') ?>?v=9.1">
   <?php elseif (in_array($activePage ?? '', ['stay', 'packages'])): ?>

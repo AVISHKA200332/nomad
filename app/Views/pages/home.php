@@ -8,7 +8,7 @@
 <!-- ==========================================================================
      SECTION 01: Hero Section
      ========================================================================== -->
-<section class="hero-section" id="hero" style="background-image: url('<?= asset('assets/images/banners/hero-sigiriya-trevello.jpg') ?>?v=2');">
+<section class="hero-section" id="hero" style="background-image: url('<?= asset('assets/images/banners/hero-sigiriya-trevello.webp') ?>?v=2');">
   <div class="hero-overlay"></div>
 
   <div class="container hero-content">
@@ -49,7 +49,7 @@
     <!-- Editorial Introduction Row -->
     <div class="intro-editorial-row">
       <div class="intro-photo-left">
-        <img src="<?= asset('assets/images/srilanka/ahangama_coast.jpg') ?>" alt="Ahangama ocean coast living in Sri Lanka" loading="lazy">
+        <img src="<?= asset('assets/images/srilanka/ahangama_coast.webp') ?>" alt="Ahangama ocean coast living in Sri Lanka" loading="lazy">
       </div>
       <div class="intro-center-content">
         <p class="intro-text">
@@ -66,7 +66,7 @@
         </a>
       </div>
       <div class="intro-photo-right">
-        <img src="<?= asset('assets/images/srilanka/nine_arch_bridge.jpg') ?>" alt="Scenic Nine Arch Bridge in Ella, Sri Lanka" loading="lazy">
+        <img src="<?= asset('assets/images/srilanka/nine_arch_bridge.webp') ?>" alt="Scenic Nine Arch Bridge in Ella, Sri Lanka" loading="lazy">
       </div>
     </div>
 
@@ -373,7 +373,7 @@
 <!-- ==========================================================================
      SECTION 11: Final Sri Lanka Journey CTA
      ========================================================================== -->
-<section class="final-cta-section" id="cta" style="background-image: url('<?= asset('assets/images/srilanka/sigiriya.jpg') ?>');">
+<section class="final-cta-section" id="cta" style="background-image: url('<?= asset('assets/images/srilanka/sigiriya.webp') ?>');">
   <div class="final-cta-overlay"></div>
   <div class="container">
     <div class="final-cta-content">

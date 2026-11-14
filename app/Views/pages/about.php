@@ -1,7 +1,7 @@
 <?php
 /**
  * The Lankan Nomad - About Us Page View
- * Faithfully engineered to match the reference design in media_1794504090029_5f6c8b66.jpg
+ * Faithfully engineered to match the reference design in media_1794504090029_5f6c8b66.webp
  * 100% Sri Lankan destinations, authentic stories, and high-quality animations.
  *
  * @var array $hero

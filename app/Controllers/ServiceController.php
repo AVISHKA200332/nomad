@@ -36,7 +36,7 @@ class ServiceController extends Controller
                     ],
                     'cta' => 'Enquire About Accommodation',
                     'ctaParam' => 'Accommodation',
-                    'image' => 'assets/images/srilanka/galle_fort.jpg'
+                    'image' => 'assets/images/srilanka/galle_fort.webp'
                 ],
                 [
                     'num' => '02',
@@ -52,7 +52,7 @@ class ServiceController extends Controller
                     ],
                     'cta' => 'Enquire About Airport Transfers',
                     'ctaParam' => 'Airport pickup',
-                    'image' => 'assets/images/srilanka/colombo_skyline.jpg'
+                    'image' => 'assets/images/srilanka/colombo_skyline.webp'
                 ],
                 [
                     'num' => '03',
@@ -67,7 +67,7 @@ class ServiceController extends Controller
                     ],
                     'cta' => 'Explore Transport Options',
                     'ctaParam' => 'Local transport',
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.webp'
                 ],
                 [
                     'num' => '04',
@@ -82,7 +82,7 @@ class ServiceController extends Controller
                     ],
                     'cta' => 'Discuss Your Requirements',
                     'ctaParam' => 'Everyday living support',
-                    'image' => 'assets/images/srilanka/ahangama_coast.jpg'
+                    'image' => 'assets/images/srilanka/ahangama_coast.webp'
                 ],
                 [
                     'num' => '05',
@@ -97,7 +97,7 @@ class ServiceController extends Controller
                     ],
                     'cta' => 'Explore Experiences',
                     'ctaParam' => 'Travel and experiences',
-                    'image' => 'assets/images/srilanka/sigiriya.jpg'
+                    'image' => 'assets/images/srilanka/sigiriya.webp'
                 ],
                 [
                     'num' => '06',
@@ -112,7 +112,7 @@ class ServiceController extends Controller
                     ],
                     'cta' => 'Plan a Work-Friendly Stay',
                     'ctaParam' => 'Remote-work requirements',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
+                    'image' => 'assets/images/srilanka/weligama_beach.webp'
                 ],
                 [
                     'num' => '07',
@@ -127,7 +127,7 @@ class ServiceController extends Controller
                     ],
                     'cta' => 'Start Your Stay Enquiry',
                     'ctaParam' => 'Personalised stay planning',
-                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp'
                 ]
             ]
         ];

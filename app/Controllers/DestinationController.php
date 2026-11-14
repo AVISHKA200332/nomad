@@ -15,7 +15,7 @@ class DestinationController extends Controller
                 'location' => 'Weligama, Southern Coast',
                 'region' => 'south-coast',
                 'rating' => '4.9',
-                'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                'image' => 'assets/images/srilanka/weligama_beach.webp',
             ],
             [
                 'id' => 2,
@@ -23,7 +23,7 @@ class DestinationController extends Controller
                 'location' => 'Ella, Central Highlands',
                 'region' => 'highlands',
                 'rating' => '4.9',
-                'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                'image' => 'assets/images/srilanka/nine_arch_bridge.webp',
             ],
             [
                 'id' => 3,
@@ -31,7 +31,7 @@ class DestinationController extends Controller
                 'location' => 'Ahangama, Southern Coast',
                 'region' => 'south-coast',
                 'rating' => '4.8',
-                'image' => 'assets/images/srilanka/ahangama_coast.jpg',
+                'image' => 'assets/images/srilanka/ahangama_coast.webp',
             ],
             [
                 'id' => 4,
@@ -39,7 +39,7 @@ class DestinationController extends Controller
                 'location' => 'Sigiriya, Cultural Triangle',
                 'region' => 'cultural-triangle',
                 'rating' => '4.9',
-                'image' => 'assets/images/srilanka/sigiriya.jpg',
+                'image' => 'assets/images/srilanka/sigiriya.webp',
             ],
             [
                 'id' => 5,
@@ -47,7 +47,7 @@ class DestinationController extends Controller
                 'location' => 'Nuwara Eliya, Highlands',
                 'region' => 'highlands',
                 'rating' => '4.8',
-                'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg',
+                'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp',
             ],
             [
                 'id' => 6,
@@ -55,7 +55,7 @@ class DestinationController extends Controller
                 'location' => 'Galle, Southern Coast',
                 'region' => 'south-coast',
                 'rating' => '4.9',
-                'image' => 'assets/images/srilanka/galle_fort.jpg',
+                'image' => 'assets/images/srilanka/galle_fort.webp',
             ],
             [
                 'id' => 7,
@@ -63,7 +63,7 @@ class DestinationController extends Controller
                 'location' => 'Colombo, Western Province',
                 'region' => 'colombo',
                 'rating' => '4.7',
-                'image' => 'assets/images/srilanka/colombo_skyline.jpg',
+                'image' => 'assets/images/srilanka/colombo_skyline.webp',
             ],
             [
                 'id' => 8,
@@ -71,7 +71,7 @@ class DestinationController extends Controller
                 'location' => 'Yala National Park, South Coast',
                 'region' => 'south-coast',
                 'rating' => '4.9',
-                'image' => 'assets/images/srilanka/yala_wildlife.jpg',
+                'image' => 'assets/images/srilanka/yala_wildlife.webp',
             ],
             [
                 'id' => 9,
@@ -79,7 +79,7 @@ class DestinationController extends Controller
                 'location' => 'Kandy, Cultural Triangle',
                 'region' => 'cultural-triangle',
                 'rating' => '4.8',
-                'image' => 'assets/images/srilanka/kandy_temple.jpg',
+                'image' => 'assets/images/srilanka/kandy_temple.webp',
             ],
             [
                 'id' => 10,
@@ -87,7 +87,7 @@ class DestinationController extends Controller
                 'location' => 'Mirissa, Southern Coast',
                 'region' => 'south-coast',
                 'rating' => '4.8',
-                'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                'image' => 'assets/images/srilanka/weligama_beach.webp',
             ],
             [
                 'id' => 11,
@@ -95,7 +95,7 @@ class DestinationController extends Controller
                 'location' => 'Dambulla, Cultural Triangle',
                 'region' => 'cultural-triangle',
                 'rating' => '4.8',
-                'image' => 'assets/images/srilanka/sigiriya.jpg',
+                'image' => 'assets/images/srilanka/sigiriya.webp',
             ],
             [
                 'id' => 12,
@@ -103,7 +103,7 @@ class DestinationController extends Controller
                 'location' => 'Haputale, Central Highlands',
                 'region' => 'highlands',
                 'rating' => '4.9',
-                'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg',
+                'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp',
             ],
         ];
 

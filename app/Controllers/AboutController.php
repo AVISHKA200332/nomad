@@ -13,7 +13,7 @@ class AboutController extends Controller
             'eyebrow' => 'About The Lankan Nomad',
             'title' => "Your next journey\nawaits",
             'desc' => 'From meaningful coastal stays to extraordinary highland trails, we create personalized Sri Lankan journeys designed around you.',
-            'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
+            'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp'
         ];
 
         // Section 02: Introduction Data
@@ -22,7 +22,7 @@ class AboutController extends Controller
             'title' => "A travel studio for people\nwho want more than a\nstandard trip.",
             'desc1' => 'The Lankan Nomad is built around the belief that the most memorable journeys in Sri Lanka are the ones that feel personal. We bring together inspiring island destinations, thoughtful travel planning, and meaningful living arrangements designed around each traveler.',
             'desc2' => 'From peaceful southern coastal villas to misty highland tea trails and UNESCO citadels, our goal is to help you discover authentic local communities, settle in comfortably, and create lifelong memories.',
-            'image' => 'assets/images/srilanka/ahangama_coast.jpg'
+            'image' => 'assets/images/srilanka/ahangama_coast.webp'
         ];
 
         // Section 03: Statistics Data
@@ -54,7 +54,7 @@ class AboutController extends Controller
                 'slug' => 'coastal-living',
                 'title' => 'Coastal Surf & Villa Living',
                 'desc' => 'Private beachfront villas, ocean sunrises, world-class surf breaks, and peaceful coastal rhythms along Weligama and Ahangama.',
-                'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                'image' => 'assets/images/srilanka/weligama_beach.webp',
                 'cta_text' => 'Explore this trip',
                 'cta_url' => url('/destinations#weligama'),
                 'is_active' => true,
@@ -64,7 +64,7 @@ class AboutController extends Controller
                 'slug' => 'tea-trails',
                 'title' => 'Central Highland Tea Country',
                 'desc' => 'Misty mountain valleys, heritage colonial bungalows, crisp highland air, and endless emerald tea estates in Nuwara Eliya and Hatton.',
-                'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg',
+                'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp',
                 'cta_text' => 'Explore this trip',
                 'cta_url' => url('/destinations#ella'),
                 'is_active' => false,
@@ -74,7 +74,7 @@ class AboutController extends Controller
                 'slug' => 'scenic-railway',
                 'title' => 'Scenic Railway & Mountain Treks',
                 'desc' => 'The iconic hill-country train across the Nine Arch Bridge, Little Adam’s Peak trails, and panoramic sunrise vistas in Ella.',
-                'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                'image' => 'assets/images/srilanka/nine_arch_bridge.webp',
                 'cta_text' => 'Explore this trip',
                 'cta_url' => url('/destinations#ella'),
                 'is_active' => false,
@@ -84,7 +84,7 @@ class AboutController extends Controller
                 'slug' => 'ancient-citadels',
                 'title' => 'Ancient Citadels & UNESCO Heritage',
                 'desc' => 'Explore 5th-century palace fortresses at Sigiriya, sacred cave temples in Dambulla, and sacred cultural character in Kandy.',
-                'image' => 'assets/images/srilanka/sigiriya.jpg',
+                'image' => 'assets/images/srilanka/sigiriya.webp',
                 'cta_text' => 'Explore this trip',
                 'cta_url' => url('/destinations#cultural-triangle'),
                 'is_active' => false,
@@ -94,7 +94,7 @@ class AboutController extends Controller
                 'slug' => 'colonial-forts',
                 'title' => 'Historic Colonial Fort Walks',
                 'desc' => 'Cobblestone alleyways, Dutch ramparts, ocean-facing boutique cafés, and maritime history within the UNESCO Galle Fort.',
-                'image' => 'assets/images/srilanka/galle_fort.jpg',
+                'image' => 'assets/images/srilanka/galle_fort.webp',
                 'cta_text' => 'Explore this trip',
                 'cta_url' => url('/destinations#ahangama'),
                 'is_active' => false,
@@ -104,7 +104,7 @@ class AboutController extends Controller
                 'slug' => 'wildlife-safari',
                 'title' => 'Wild Leopard & Elephant Safaris',
                 'desc' => 'Private jeep safaris across Yala National Park, roaming elephant herds in Udawalawe, and untouched tropical wilderness.',
-                'image' => 'assets/images/srilanka/yala_wildlife.jpg',
+                'image' => 'assets/images/srilanka/yala_wildlife.webp',
                 'cta_text' => 'Explore this trip',
                 'cta_url' => url('/experiences'),
                 'is_active' => false,
@@ -118,7 +118,7 @@ class AboutController extends Controller
                 'num' => '01',
                 'title' => 'Share Your Stay Vision',
                 'desc' => 'Tell us about your preferred island region, travel style, pace, and workspace requirements.',
-                'image' => 'assets/images/srilanka/colombo_skyline.jpg',
+                'image' => 'assets/images/srilanka/colombo_skyline.webp',
                 'position' => 'below',
                 'is_active' => false,
             ],
@@ -127,7 +127,7 @@ class AboutController extends Controller
                 'num' => '02',
                 'title' => 'Discover Sri Lanka Regions',
                 'desc' => 'We explore inspiring coastal routes, private hill-country stays, and local orientation.',
-                'image' => 'assets/images/srilanka/kandy_temple.jpg',
+                'image' => 'assets/images/srilanka/kandy_temple.webp',
                 'position' => 'above',
                 'is_active' => false,
             ],
@@ -136,7 +136,7 @@ class AboutController extends Controller
                 'num' => '03',
                 'title' => 'Curate Stays & High-Speed WiFi',
                 'desc' => 'Together we fine-tune a tailored itinerary with verified accommodation and seamless transfers.',
-                'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                'image' => 'assets/images/srilanka/weligama_beach.webp',
                 'position' => 'below',
                 'is_active' => true, // Default active step matching reference screenshot
             ],
@@ -145,7 +145,7 @@ class AboutController extends Controller
                 'num' => '04',
                 'title' => 'Airport Arrival & Local Setup',
                 'desc' => 'We greet you upon arrival, handle airport transport, local SIM cards, and neighborhood setups.',
-                'image' => 'assets/images/srilanka/galle_fort.jpg',
+                'image' => 'assets/images/srilanka/galle_fort.webp',
                 'position' => 'above',
                 'is_active' => false,
             ],
@@ -154,7 +154,7 @@ class AboutController extends Controller
                 'num' => '05',
                 'title' => 'Live Effortlessly on the Island',
                 'desc' => 'Enjoy your extended stay with dedicated on-ground local support every step of the way.',
-                'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                'image' => 'assets/images/srilanka/nine_arch_bridge.webp',
                 'position' => 'below',
                 'is_active' => false,
             ],
@@ -193,25 +193,25 @@ class AboutController extends Controller
             [
                 'id' => 1,
                 'title' => 'Coastal Surf Escapes',
-                'image' => 'assets/images/srilanka/ahangama_coast.jpg',
+                'image' => 'assets/images/srilanka/ahangama_coast.webp',
                 'offset_class' => 'gal-offset-down',
             ],
             [
                 'id' => 2,
                 'title' => 'Historic Galle Fort Stays',
-                'image' => 'assets/images/srilanka/galle_fort.jpg',
+                'image' => 'assets/images/srilanka/galle_fort.webp',
                 'offset_class' => 'gal-offset-up',
             ],
             [
                 'id' => 3,
                 'title' => 'Highland Tea Country',
-                'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg',
+                'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp',
                 'offset_class' => 'gal-offset-down',
             ],
             [
                 'id' => 4,
                 'title' => 'Sigiriya Citadel Treks',
-                'image' => 'assets/images/srilanka/sigiriya.jpg',
+                'image' => 'assets/images/srilanka/sigiriya.webp',
                 'offset_class' => 'gal-offset-up',
             ],
         ];
@@ -220,7 +220,7 @@ class AboutController extends Controller
         $cta = [
             'title' => "Moments that make the\njourney feel personal.",
             'desc' => 'The Lankan Nomad brings together personalized island journeys, seamless planning, and extraordinary experiences.',
-            'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+            'image' => 'assets/images/srilanka/nine_arch_bridge.webp',
             'ctaText' => 'Plan Your Stay',
             'ctaUrl' => url('/plan-your-stay')
         ];

@@ -25,10 +25,10 @@ $checks = [
     'Hero eyebrow: About Avenora' => strpos($aboutHtml, 'About Avenora</span>') !== false,
     'Hero Contact Us button' => strpos($aboutHtml, '<span>Contact Us</span>') !== false,
     'Hero Explore Journeys button' => strpos($aboutHtml, '<span>Explore Journeys</span>') !== false,
-    'Hero background image: about-hero-bg.jpg' => strpos($aboutHtml, 'about-hero-bg.jpg') !== false,
+    'Hero background image: about-hero-bg.webp' => strpos($aboutHtml, 'about-hero-bg.webp') !== false,
 
     // Section 02: Introduction
-    'Intro traveler image: intro-traveler.jpg' => strpos($aboutHtml, 'intro-traveler.jpg') !== false,
+    'Intro traveler image: intro-traveler.webp' => strpos($aboutHtml, 'intro-traveler.webp') !== false,
     'Intro eyebrow: About Us' => strpos($aboutHtml, 'About Us</span>') !== false,
     'Intro heading: A travel studio for people' => strpos($aboutHtml, 'A travel studio for people<br>') !== false,
     'Intro copy present' => strpos($aboutHtml, 'Avenora is a travel-focused studio built around') !== false,

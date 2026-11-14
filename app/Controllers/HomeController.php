@@ -52,7 +52,7 @@ class HomeController extends Controller
                     'tag' => 'Urban & Coastal Capital',
                     'location' => 'Colombo, Western Province',
                     'headline' => 'Connected living, with the city at your doorstep.',
-                    'image' => 'assets/images/srilanka/colombo_skyline.jpg',
+                    'image' => 'assets/images/srilanka/colombo_skyline.webp',
                     'desc' => 'Colombo offers a more urban side of Sri Lanka, with restaurants, cafés, shopping, business districts and everyday amenities.'
                 ],
                 [
@@ -64,7 +64,7 @@ class HomeController extends Controller
                     'tag' => 'Coastal Living & Surf',
                     'location' => 'Weligama, Southern Coast',
                     'headline' => 'A coastal lifestyle with room to explore.',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                    'image' => 'assets/images/srilanka/weligama_beach.webp',
                     'desc' => 'Known for its beaches, coastal communities, surf culture, cafés and a laid-back atmosphere with ocean breeze.'
                 ],
                 [
@@ -76,7 +76,7 @@ class HomeController extends Controller
                     'tag' => 'Creative Ocean Hub',
                     'location' => 'Ahangama, Southern Province',
                     'headline' => 'Creative energy by the ocean.',
-                    'image' => 'assets/images/srilanka/ahangama_coast.jpg',
+                    'image' => 'assets/images/srilanka/ahangama_coast.webp',
                     'desc' => 'Coastal communities with cafés, food spots, surf culture and a mix of quieter neighbourhoods and social spaces.'
                 ],
                 [
@@ -88,7 +88,7 @@ class HomeController extends Controller
                     'tag' => 'Cultural Heartland',
                     'location' => 'Kandy, Central Province',
                     'headline' => 'Green surroundings and cultural character.',
-                    'image' => 'assets/images/srilanka/kandy_temple.jpg',
+                    'image' => 'assets/images/srilanka/kandy_temple.webp',
                     'desc' => 'Surrounding hills, sacred cultural landmarks, markets and access to other parts of the Central Province.'
                 ],
                 [
@@ -100,7 +100,7 @@ class HomeController extends Controller
                     'tag' => 'Highlands & Trails',
                     'location' => 'Ella, Badulla District',
                     'headline' => 'A slower rhythm among the hills.',
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.webp',
                     'desc' => 'Green hills, mist-wrapped tea plantations, panoramic hiking routes and the famous Nine Arch Bridge.'
                 ],
                 [
@@ -112,7 +112,7 @@ class HomeController extends Controller
                     'tag' => 'Ancient Citadels & History',
                     'location' => 'Sigiriya, Central Plains',
                     'headline' => "A deeper connection with Sri Lanka's heritage.",
-                    'image' => 'assets/images/srilanka/sigiriya.jpg',
+                    'image' => 'assets/images/srilanka/sigiriya.webp',
                     'desc' => "Discover historic citadels, archaeological landmarks, cultural traditions and rural landscapes in Sri Lanka's interior."
                 ]
             ],
@@ -134,7 +134,7 @@ class HomeController extends Controller
                     'actionText' => 'Learn More',
                     'rating' => '5.00',
                     'reviews' => '240',
-                    'image' => 'assets/images/srilanka/galle_fort.jpg',
+                    'image' => 'assets/images/srilanka/galle_fort.webp',
                     'ctaParam' => 'Accommodation'
                 ],
                 [
@@ -144,7 +144,7 @@ class HomeController extends Controller
                     'actionText' => 'Learn More',
                     'rating' => '4.95',
                     'reviews' => '380',
-                    'image' => 'assets/images/srilanka/colombo_skyline.jpg',
+                    'image' => 'assets/images/srilanka/colombo_skyline.webp',
                     'ctaParam' => 'Airport pickup'
                 ],
                 [
@@ -154,7 +154,7 @@ class HomeController extends Controller
                     'actionText' => 'Learn More',
                     'rating' => '4.90',
                     'reviews' => '195',
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.webp',
                     'ctaParam' => 'Local transport'
                 ],
                 [
@@ -164,7 +164,7 @@ class HomeController extends Controller
                     'actionText' => 'Learn More',
                     'rating' => '5.00',
                     'reviews' => '310',
-                    'image' => 'assets/images/srilanka/ahangama_coast.jpg',
+                    'image' => 'assets/images/srilanka/ahangama_coast.webp',
                     'ctaParam' => 'Everyday living support'
                 ],
                 [
@@ -174,7 +174,7 @@ class HomeController extends Controller
                     'actionText' => 'Learn More',
                     'rating' => '4.98',
                     'reviews' => '220',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                    'image' => 'assets/images/srilanka/weligama_beach.webp',
                     'ctaParam' => 'Remote-work requirements'
                 ],
                 [
@@ -184,7 +184,7 @@ class HomeController extends Controller
                     'actionText' => 'Learn More',
                     'rating' => '5.00',
                     'reviews' => '450',
-                    'image' => 'assets/images/srilanka/sigiriya.jpg',
+                    'image' => 'assets/images/srilanka/sigiriya.webp',
                     'ctaParam' => 'Travel and experiences'
                 ]
             ],
@@ -196,7 +196,7 @@ class HomeController extends Controller
                     'title' => 'Accommodation Assistance',
                     'tagline' => 'Find a place that fits your life.',
                     'desc' => 'Your accommodation shapes your entire experience. Whether you prefer a city apartment, a peaceful coastal home or a place surrounded by nature, start by identifying the location, facilities and lifestyle that matter most to you.',
-                    'image' => 'assets/images/srilanka/galle_fort.jpg',
+                    'image' => 'assets/images/srilanka/galle_fort.webp',
                     'ctaParam' => 'Accommodation',
                     'cta' => 'Enquire About Accommodation'
                 ],
@@ -205,7 +205,7 @@ class HomeController extends Controller
                     'title' => 'Airport Pickup & Transfers',
                     'tagline' => 'Start your stay with a clearer arrival plan.',
                     'desc' => 'Arriving in a new country can be unfamiliar, especially after a long flight. Plan your journey from the airport to your accommodation before you travel with private, air-conditioned transfers.',
-                    'image' => 'assets/images/srilanka/colombo_skyline.jpg',
+                    'image' => 'assets/images/srilanka/colombo_skyline.webp',
                     'ctaParam' => 'Airport pickup',
                     'cta' => 'Enquire About Airport Transfers'
                 ],
@@ -214,7 +214,7 @@ class HomeController extends Controller
                     'title' => 'Local Transport',
                     'tagline' => 'Find your way around.',
                     'desc' => 'From daily journeys to intercity travel, explore relevant transport options including scenic train routes, verified private drivers, and vehicle rental guidance across Sri Lanka.',
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg',
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.webp',
                     'ctaParam' => 'Local transport',
                     'cta' => 'Explore Transport Options'
                 ],
@@ -223,7 +223,7 @@ class HomeController extends Controller
                     'title' => 'Everyday Living Support',
                     'tagline' => 'Settle in beyond the first day.',
                     'desc' => 'A longer stay means learning how everyday life works in a new place. We help you identify useful local resources from SIM cards and grocery markets to trusted healthcare and utilities.',
-                    'image' => 'assets/images/srilanka/ahangama_coast.jpg',
+                    'image' => 'assets/images/srilanka/ahangama_coast.webp',
                     'ctaParam' => 'Everyday living support',
                     'cta' => 'Discuss Your Requirements'
                 ],
@@ -232,7 +232,7 @@ class HomeController extends Controller
                     'title' => 'Travel & Local Experiences',
                     'tagline' => 'Explore more, at your own pace.',
                     'desc' => 'Discover coastal surf spots, highland tea trails, ancient citadels, wildlife reserves, and authentic local culinary workshops tailored around your interests.',
-                    'image' => 'assets/images/srilanka/sigiriya.jpg',
+                    'image' => 'assets/images/srilanka/sigiriya.webp',
                     'ctaParam' => 'Travel and experiences',
                     'cta' => 'Explore Experiences'
                 ],
@@ -241,7 +241,7 @@ class HomeController extends Controller
                     'title' => 'Remote-Work Support',
                     'tagline' => 'Build a routine that works wherever you are.',
                     'desc' => 'If you\'re working remotely, your daily environment matters. Fiber-optic internet verification, power backup availability, and curated coliving and café hubs.',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg',
+                    'image' => 'assets/images/srilanka/weligama_beach.webp',
                     'ctaParam' => 'Remote-work requirements',
                     'cta' => 'Plan a Work-Friendly Stay'
                 ],
@@ -250,7 +250,7 @@ class HomeController extends Controller
                     'title' => 'Personalised Stay Planning',
                     'tagline' => 'One conversation. A clearer plan.',
                     'desc' => 'Not sure where to begin? Tell us about your intended stay, your budget, your preferred lifestyle and the support you need to build a step-by-step plan.',
-                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg',
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp',
                     'ctaParam' => 'Personalised stay planning',
                     'cta' => 'Start Your Stay Enquiry'
                 ]
@@ -262,37 +262,37 @@ class HomeController extends Controller
                     'badge' => 'Card 01',
                     'title' => 'Coastal Life',
                     'desc' => "Explore coastal towns, ocean views, morning surf breaks, and the vibrant seaside communities along Sri Lanka's south coast.",
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
+                    'image' => 'assets/images/srilanka/weligama_beach.webp'
                 ],
                 [
                     'badge' => 'Card 02',
                     'title' => 'Food & Flavours',
                     'desc' => "Discover clay-pot rice and curry, hoppers, tropical fruits, Ceylon high-grown tea culture, and bustling local markets.",
-                    'image' => 'assets/images/srilanka/srilankan_cuisine.jpg'
+                    'image' => 'assets/images/srilanka/srilankan_cuisine.webp'
                 ],
                 [
                     'badge' => 'Card 03',
                     'title' => 'Nature & Outdoors',
                     'desc' => 'Discover scenic mountain trails, rainforest waterfalls, tea landscapes, national parks, and ethical wildlife encounters.',
-                    'image' => 'assets/images/srilanka/yala_wildlife.jpg'
+                    'image' => 'assets/images/srilanka/yala_wildlife.webp'
                 ],
                 [
                     'badge' => 'Card 04',
                     'title' => 'Culture & Heritage',
                     'desc' => "Experience historic architecture, ancient UNESCO citadels, sacred temples, craft traditions, and local artisan workshops.",
-                    'image' => 'assets/images/srilanka/sigiriya.jpg'
+                    'image' => 'assets/images/srilanka/sigiriya.webp'
                 ],
                 [
                     'badge' => 'Card 05',
                     'title' => 'Weekend Escapes',
                     'desc' => 'Take scenic highland rail journeys, explore colonial ramparts in Galle, and escape into quiet mist-wrapped mountain valleys.',
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.webp'
                 ],
                 [
                     'badge' => 'Card 06',
                     'title' => 'Highland Tea Country',
                     'desc' => 'Wander through emerald tea plantations, cloud-draped mountain passes, cascading falls, and colonial heritage bungalows.',
-                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp'
                 ]
             ],
 
@@ -317,37 +317,37 @@ class HomeController extends Controller
                 [
                     'title' => 'Nine Arch Mountain Rail',
                     'tag' => 'Adventure',
-                    'image' => 'assets/images/srilanka/nine_arch_bridge.jpg'
+                    'image' => 'assets/images/srilanka/nine_arch_bridge.webp'
                 ],
                 [
                     'title' => 'South Coast Surf Rhythm',
                     'tag' => 'Coastal Life',
-                    'image' => 'assets/images/srilanka/weligama_beach.jpg'
+                    'image' => 'assets/images/srilanka/weligama_beach.webp'
                 ],
                 [
                     'title' => 'Sigiriya Ancient Citadel',
                     'tag' => 'Heritage',
-                    'image' => 'assets/images/srilanka/sigiriya.jpg'
+                    'image' => 'assets/images/srilanka/sigiriya.webp'
                 ],
                 [
                     'title' => 'Highland Tea Trails',
                     'tag' => 'Highlands',
-                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp'
                 ],
                 [
                     'title' => 'Wilderness Safari & Nature',
                     'tag' => 'Wildlife',
-                    'image' => 'assets/images/srilanka/yala_wildlife.jpg'
+                    'image' => 'assets/images/srilanka/yala_wildlife.webp'
                 ],
                 [
                     'title' => 'Historic Galle Fort',
                     'tag' => 'Culture',
-                    'image' => 'assets/images/srilanka/galle_fort.jpg'
+                    'image' => 'assets/images/srilanka/galle_fort.webp'
                 ],
                 [
                     'title' => 'Ahangama Coastline',
                     'tag' => 'Relaxation',
-                    'image' => 'assets/images/srilanka/ahangama_coast.jpg'
+                    'image' => 'assets/images/srilanka/ahangama_coast.webp'
                 ]
             ],
 
@@ -357,19 +357,19 @@ class HomeController extends Controller
                     'quote' => '“The Lankan Nomad helped us plan a stay that felt personal from the first day. The accommodation, pacing, and private experiences were exactly what we wanted. Their local insight made our time in Sri Lanka effortless, connecting us with authentic communities across the island.”',
                     'author' => 'Patric Stone',
                     'role' => 'Traveller',
-                    'image' => 'assets/images/srilanka/ahangama_coast.jpg'
+                    'image' => 'assets/images/srilanka/ahangama_coast.webp'
                 ],
                 [
                     'quote' => '“Moving to Sri Lanka for three months seemed daunting until we connected with The Lankan Nomad. From fiber-optic internet checks to finding our beach house in Ahangama and setting up our transport, everything was seamless.”',
                     'author' => 'Elena Rostova',
                     'role' => 'Digital Nomad',
-                    'image' => 'assets/images/srilanka/galle_fort.jpg'
+                    'image' => 'assets/images/srilanka/galle_fort.webp'
                 ],
                 [
                     'quote' => '“Every journey with them feels respectful and grounded. We took the scenic hill trains, stayed near UNESCO citadels, and explored local food spots we never would have found on our own.”',
                     'author' => 'Marcus Vance',
                     'role' => 'Long-Stay Resident',
-                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.jpg'
+                    'image' => 'assets/images/srilanka/nuwara_eliya_tea.webp'
                 ]
             ],
             'testimonial' => [
@@ -377,7 +377,7 @@ class HomeController extends Controller
                 'author' => 'Patric Stone',
                 'role' => 'Traveller',
                 'location' => 'United Kingdom',
-                'image' => 'assets/images/srilanka/ahangama_coast.jpg'
+                'image' => 'assets/images/srilanka/ahangama_coast.webp'
             ],
 
             // FAQ Data (Matched to Reference Screenshot)
