@@ -80,14 +80,14 @@ body.page-about {
   border-radius: var(--radius-pill);
   padding: 5px 16px;
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 
 .about-hero-title {
   font-size: clamp(2.8rem, 5vw, 4.4rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.12;
   letter-spacing: -0.03em;
   color: #ffffff;
@@ -122,7 +122,7 @@ body.page-about {
   border-radius: var(--radius-pill);
   padding: 10px 14px 10px 24px;
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: all 0.25s ease;
@@ -208,14 +208,14 @@ body.page-about {
   border-radius: var(--radius-pill);
   padding: 5px 16px;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
   margin-bottom: 12px;
 }
 
 .about-intro-title {
   font-size: clamp(2rem, 3.2vw, 2.75rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--color-about-text-main);
   line-height: 1.22;
   letter-spacing: -0.025em;
@@ -295,7 +295,7 @@ body.page-about {
 
 .stat-number {
   font-size: clamp(2.8rem, 4vw, 3.6rem);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1;
   margin: 0;
@@ -358,7 +358,7 @@ body.page-about {
 
 .about-exp-title {
   font-size: clamp(2rem, 3.4vw, 2.7rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--color-about-text-main);
   letter-spacing: -0.025em;
   line-height: 1.2;
@@ -462,7 +462,7 @@ body.page-about {
   transform-origin: center center;
   white-space: nowrap;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   letter-spacing: 0.02em;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -498,7 +498,7 @@ body.page-about {
 
 .about-exp-expanded-title {
   font-size: clamp(1.6rem, 2.4vw, 2.2rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   margin: 0 0 10px 0;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
@@ -528,7 +528,7 @@ body.page-about {
 /* Decorative Marquee Outline Typography */
 .about-timeline-marquee {
   font-size: clamp(3.2rem, 7.5vw, 6.5rem);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.14);
@@ -560,14 +560,14 @@ body.page-about {
   border-radius: var(--radius-pill);
   padding: 5px 16px;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
   margin-bottom: 12px;
 }
 
 .about-timeline-title {
   font-size: clamp(2rem, 3.4vw, 2.7rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   letter-spacing: -0.025em;
   line-height: 1.2;
@@ -589,7 +589,7 @@ body.page-about {
 }
 
 .about-timeline-counter strong {
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
 }
 
@@ -668,7 +668,7 @@ body.page-about {
   background-color: #ffffff;
   color: var(--color-about-navy);
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -739,7 +739,7 @@ body.page-about {
 
 .timeline-card-title {
   font-size: 0.92rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.25;
   margin: 0 0 6px 0;
 }
@@ -794,14 +794,14 @@ body.page-about {
   border-radius: var(--radius-pill);
   padding: 5px 16px;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
   margin-bottom: 12px;
 }
 
 .about-why-title {
   font-size: clamp(2.2rem, 3.6vw, 3.1rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--color-about-navy);
   letter-spacing: -0.025em;
   line-height: 1.18;
@@ -853,7 +853,7 @@ body.page-about {
 
 .about-why-card-title {
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--color-about-text-main);
   margin: 0 0 8px 0;
   line-height: 1.3;
@@ -883,7 +883,7 @@ body.page-about {
 
 .about-gal-title {
   font-size: clamp(2.2rem, 3.4vw, 2.85rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--color-about-text-main);
   letter-spacing: -0.025em;
   margin: 12px 0 10px 0;
@@ -952,7 +952,7 @@ body.page-about {
   border-radius: var(--radius-pill);
   padding: 8px 24px;
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-about-text-main);
   white-space: nowrap;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
@@ -1009,7 +1009,7 @@ body.page-about {
 
 .about-cta-title {
   font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.03em;
   color: #ffffff;

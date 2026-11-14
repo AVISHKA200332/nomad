@@ -228,152 +228,145 @@
     </section>
 
     <!-- ==========================================================================
-         4. CONSULTATION & TRIP PLANNING FORM SECTION (Large White Card)
+         4. CONSULTATION & TRIP PLANNING FORM SECTION (Properly Aligned Card)
          ========================================================================== -->
     <section class="consult-wrap" id="enquiry-form" data-animate="fade-up">
-      <div class="consult-grid">
-        
-        <!-- Left Column: Story Heading & Backpacker Photo -->
-        <div class="consult-intro-col">
-          <h3 class="consult-heading">
-            Ready to plan a journey that feels truly yours?
-          </h3>
-          <p class="consult-subtext">
-            From hotels to transfers, experiences, timing, and local support, every detail is considered.
-          </p>
-          <div class="consult-image-card">
-            <img src="<?= asset('assets/images/banners/pkg-cta-hiker.jpg') ?>" 
-                 alt="Traveler exploring Sri Lankan highland trails" 
-                 class="consult-img" 
-                 loading="lazy">
+      <!-- Section Header: Centered & Cleanly Aligned (Image removed) -->
+      <div class="consult-header text-center">
+        <h3 class="consult-heading">
+          Ready to plan a journey that feels truly yours?
+        </h3>
+        <p class="consult-subtext">
+          From hotels to transfers, experiences, timing, and local support, every detail is considered.
+        </p>
+      </div>
+
+      <!-- Consultation Booking Form Container -->
+      <div class="consult-form-wrap">
+        <!-- Status Alert Display -->
+        <div id="consultAjaxAlert" style="display: none;"></div>
+
+        <?php if (!empty($successMsg)): ?>
+          <div class="consult-alert consult-alert-success">
+            <?= htmlspecialchars($successMsg) ?>
           </div>
-        </div>
+        <?php endif; ?>
 
-        <!-- Right Column: Interactive Consultation Booking Form -->
-        <div class="consult-form-col">
-          <!-- Status Alert Display -->
-          <div id="consultAjaxAlert" style="display: none;"></div>
+        <?php if (!empty($errorMsg)): ?>
+          <div class="consult-alert consult-alert-error">
+            <?= htmlspecialchars($errorMsg) ?>
+          </div>
+        <?php endif; ?>
 
-          <?php if (!empty($successMsg)): ?>
-            <div class="consult-alert consult-alert-success">
-              <?= htmlspecialchars($successMsg) ?>
-            </div>
-          <?php endif; ?>
+        <form action="<?= url('/contact') ?>" method="POST" id="contactConsultForm" class="consult-form" novalidate>
+          <!-- CSRF / Honeypot or Token if needed -->
+          <input type="hidden" name="ref" value="<?= htmlspecialchars($preselected['ref'] ?? '') ?>">
 
-          <?php if (!empty($errorMsg)): ?>
-            <div class="consult-alert consult-alert-error">
-              <?= htmlspecialchars($errorMsg) ?>
-            </div>
-          <?php endif; ?>
-
-          <form action="<?= url('/contact') ?>" method="POST" id="contactConsultForm" class="consult-form" novalidate>
-            <!-- CSRF / Honeypot or Token if needed -->
-            <input type="hidden" name="ref" value="<?= htmlspecialchars($preselected['ref'] ?? '') ?>">
-
-            <!-- Row 1: Name & Last Name -->
-            <div class="cform-row-2">
-              <div class="cform-group">
-                <label for="first_name" class="cform-label">Name</label>
-                <input type="text" 
-                       name="first_name" 
-                       id="first_name" 
-                       class="cform-input" 
-                       placeholder="Enter your name" 
-                       required>
-              </div>
-              <div class="cform-group">
-                <label for="last_name" class="cform-label">Last Name <span class="req">*</span></label>
-                <input type="text" 
-                       name="last_name" 
-                       id="last_name" 
-                       class="cform-input" 
-                       placeholder="Enter your last name" 
-                       required>
-              </div>
-            </div>
-
-            <!-- Row 2: Travel Date & Work Email -->
-            <div class="cform-row-2">
-              <div class="cform-group">
-                <label for="arrival_date" class="cform-label">Travel Date <span class="req">*</span></label>
-                <input type="date" 
-                       name="arrival_date" 
-                       id="arrival_date" 
-                       class="cform-input" 
-                       placeholder="DD/MM/YYYY" 
-                       required>
-              </div>
-              <div class="cform-group">
-                <label for="email" class="cform-label">Work Email <span class="req">*</span></label>
-                <input type="email" 
-                       name="email" 
-                       id="email" 
-                       class="cform-input" 
-                       placeholder="example@company.com" 
-                       required>
-              </div>
-            </div>
-
-            <!-- Row 3: Trip Types & Estimated Budget -->
-            <div class="cform-row-2">
-              <div class="cform-group">
-                <label for="length_of_stay" class="cform-label">Trip Types <span class="req">*</span></label>
-                <select name="length_of_stay" id="length_of_stay" class="cform-select" required>
-                  <option value="" disabled selected>Choose your selected trip</option>
-                  <option value="Extended Stay (3 Months)" <?= ($preselected['duration'] ?? '') === '3-months' ? 'selected' : '' ?>>Extended Stay (3 Months)</option>
-                  <option value="Extended Stay (6 Months)" <?= ($preselected['duration'] ?? '') === '6-months' ? 'selected' : '' ?>>Extended Stay (6 Months)</option>
-                  <option value="Extended Stay (12 Months)" <?= ($preselected['duration'] ?? '') === '12-months' ? 'selected' : '' ?>>Extended Stay (12 Months)</option>
-                  <option value="Digital Nomad & Remote Work">Digital Nomad &amp; Remote Work</option>
-                  <option value="Custom Sri Lanka Discovery">Custom Sri Lanka Discovery</option>
-                  <option value="Coastal & Surf Retreat">Coastal &amp; Surf Retreat</option>
-                  <option value="Highlands & Cultural Heritage">Highlands &amp; Cultural Heritage</option>
-                </select>
-              </div>
-
-              <div class="cform-group">
-                <label for="budget" class="cform-label">Estimated Budget <span class="req">*</span></label>
-                <select name="budget" id="budget" class="cform-select" required>
-                  <option value="" disabled selected>Select one...</option>
-                  <option value="$1,500 – $3,000">$1,500 – $3,000</option>
-                  <option value="$3,000 – $6,000">$3,000 – $6,000</option>
-                  <option value="$6,000 – $10,000">$6,000 – $10,000</option>
-                  <option value="$10,000+">$10,000+</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Row 4: Message -->
+          <!-- Row 1: Name & Last Name -->
+          <div class="cform-row-2">
             <div class="cform-group">
-              <label for="additional_info" class="cform-label">Message</label>
-              <textarea name="additional_info" 
-                        id="additional_info" 
-                        class="cform-textarea" 
-                        rows="4" 
-                        placeholder="Tell us more about your needs..."><?= !empty($preselected['topic']) ? 'Enquiry regarding: ' . htmlspecialchars($preselected['topic']) : '' ?></textarea>
+              <label for="first_name" class="cform-label">Name</label>
+              <input type="text" 
+                     name="first_name" 
+                     id="first_name" 
+                     class="cform-input" 
+                     placeholder="Enter your name" 
+                     required>
+            </div>
+            <div class="cform-group">
+              <label for="last_name" class="cform-label">Last Name <span class="req">*</span></label>
+              <input type="text" 
+                     name="last_name" 
+                     id="last_name" 
+                     class="cform-input" 
+                     placeholder="Enter your last name" 
+                     required>
+            </div>
+          </div>
+
+          <!-- Row 2: Travel Date & Work Email -->
+          <div class="cform-row-2">
+            <div class="cform-group">
+              <label for="arrival_date" class="cform-label">Travel Date <span class="req">*</span></label>
+              <input type="date" 
+                     name="arrival_date" 
+                     id="arrival_date" 
+                     class="cform-input" 
+                     placeholder="DD/MM/YYYY" 
+                     required>
+            </div>
+            <div class="cform-group">
+              <label for="email" class="cform-label">Work Email <span class="req">*</span></label>
+              <input type="email" 
+                     name="email" 
+                     id="email" 
+                     class="cform-input" 
+                     placeholder="example@company.com" 
+                     required>
+            </div>
+          </div>
+
+          <!-- Row 3: Trip Types & Estimated Budget -->
+          <div class="cform-row-2">
+            <div class="cform-group">
+              <label for="length_of_stay" class="cform-label">Trip Types <span class="req">*</span></label>
+              <select name="length_of_stay" id="length_of_stay" class="cform-select" required>
+                <option value="" disabled selected>Choose your selected trip</option>
+                <option value="Extended Stay (3 Months)" <?= ($preselected['duration'] ?? '') === '3-months' ? 'selected' : '' ?>>Extended Stay (3 Months)</option>
+                <option value="Extended Stay (6 Months)" <?= ($preselected['duration'] ?? '') === '6-months' ? 'selected' : '' ?>>Extended Stay (6 Months)</option>
+                <option value="Extended Stay (12 Months)" <?= ($preselected['duration'] ?? '') === '12-months' ? 'selected' : '' ?>>Extended Stay (12 Months)</option>
+                <option value="Digital Nomad & Remote Work">Digital Nomad &amp; Remote Work</option>
+                <option value="Custom Sri Lanka Discovery">Custom Sri Lanka Discovery</option>
+                <option value="Coastal & Surf Retreat">Coastal &amp; Surf Retreat</option>
+                <option value="Highlands & Cultural Heritage">Highlands &amp; Cultural Heritage</option>
+              </select>
             </div>
 
-            <!-- Smart Compatible Fields (ensuring full support for controller & automated test suite) -->
-            <div style="display: none;">
-              <input type="text" name="country" id="country" value="International Traveller">
-              <input type="tel" name="whatsapp" id="whatsapp" value="">
-              <input type="text" name="travellers" id="travellers" value="1 Solo Traveller">
-              <input type="text" name="destination" id="destination" value="Sri Lanka Islandwide">
-              <input type="text" name="accommodation_type" id="accommodation_type" value="Boutique / Villa">
-              <input type="text" name="work_requirements" id="work_requirements" value="High-Speed Fiber">
-              <input type="checkbox" name="help_with[]" value="Accommodation" checked>
-              <input type="checkbox" name="help_with[]" value="Airport pickup" checked>
-              <input type="checkbox" name="help_with[]" value="Local transport" checked>
-              <input type="checkbox" name="help_with[]" value="Everyday living support" checked>
-              <input type="checkbox" name="help_with[]" value="Remote-work requirements" checked>
-              <input type="checkbox" name="consent" id="consent" value="1" checked>
+            <div class="cform-group">
+              <label for="budget" class="cform-label">Estimated Budget <span class="req">*</span></label>
+              <select name="budget" id="budget" class="cform-select" required>
+                <option value="" disabled selected>Select one...</option>
+                <option value="$1,500 – $3,000">$1,500 – $3,000</option>
+                <option value="$3,000 – $6,000">$3,000 – $6,000</option>
+                <option value="$6,000 – $10,000">$6,000 – $10,000</option>
+                <option value="$10,000+">$10,000+</option>
+              </select>
             </div>
+          </div>
 
-            <!-- Privacy Note & Business Hours (Matches Test Suite Requirements) -->
-            <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 16px; line-height: 1.5;">
-              Business hours: Monday to Friday: 9:00 AM – 6:00 PM (IST). By submitting, you agree to receive communications regarding your trip.
-            </div>
+          <!-- Row 4: Message -->
+          <div class="cform-group">
+            <label for="additional_info" class="cform-label">Message</label>
+            <textarea name="additional_info" 
+                      id="additional_info" 
+                      class="cform-textarea" 
+                      rows="4" 
+                      placeholder="Tell us more about your needs..."><?= !empty($preselected['topic']) ? 'Enquiry regarding: ' . htmlspecialchars($preselected['topic']) : '' ?></textarea>
+          </div>
 
-            <!-- Submit Button (Contains both "Book a Consultation" and "Send My Enquiry" for seamless compatibility) -->
+          <!-- Smart Compatible Fields (ensuring full support for controller & automated test suite) -->
+          <div style="display: none;">
+            <input type="text" name="country" id="country" value="International Traveller">
+            <input type="tel" name="whatsapp" id="whatsapp" value="">
+            <input type="text" name="travellers" id="travellers" value="1 Solo Traveller">
+            <input type="text" name="destination" id="destination" value="Sri Lanka Islandwide">
+            <input type="text" name="accommodation_type" id="accommodation_type" value="Boutique / Villa">
+            <input type="text" name="work_requirements" id="work_requirements" value="High-Speed Fiber">
+            <input type="checkbox" name="help_with[]" value="Accommodation" checked>
+            <input type="checkbox" name="help_with[]" value="Airport pickup" checked>
+            <input type="checkbox" name="help_with[]" value="Local transport" checked>
+            <input type="checkbox" name="help_with[]" value="Everyday living support" checked>
+            <input type="checkbox" name="help_with[]" value="Remote-work requirements" checked>
+            <input type="checkbox" name="consent" id="consent" value="1" checked>
+          </div>
+
+          <!-- Privacy Note & Business Hours (Matches Test Suite Requirements) -->
+          <div style="font-size: 0.82rem; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; text-align: center;">
+            Business hours: Monday to Friday: 9:00 AM – 6:00 PM (IST). By submitting, you agree to receive communications regarding your trip.
+          </div>
+
+          <!-- Submit Button Centered -->
+          <div class="cform-submit-wrap">
             <button type="submit" class="btn-consult-submit" id="btnSubmitConsult">
               <span>Book a Consultation</span>
               <span class="visually-hidden" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0);">Send My Enquiry</span>
@@ -384,9 +377,8 @@
                 </svg>
               </span>
             </button>
-          </form>
-        </div>
-
+          </div>
+        </form>
       </div>
     </section>
 

@@ -59,7 +59,7 @@
 /* Main Heading */
 .dest-main-title {
   font-size: clamp(2.3rem, 4.2vw, 3.4rem);
-  font-weight: 700;
+  font-weight: 600;
   color: #0f172a;
   line-height: 1.15;
   letter-spacing: -0.028em;
@@ -247,7 +247,7 @@
 /* Card Title */
 .dshow-title {
   font-size: 1.25rem !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   color: #0f172a !important;
   line-height: 1.35 !important;
   margin: 0 0 16px 0 !important;
@@ -335,7 +335,7 @@
 
 .dest-empty-notice h3 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f172a;
   margin-bottom: 8px;
 }

@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent directory browsing
+    Options -Indexes -MultiViews
+
+    # Security: Deny access to sensitive files and directories
+    RewriteRule ^\.(.*)$ - [F,L]
+    RewriteRule ^(app|bootstrap|config|routes|storage|tests|scratch)/ - [F,L]
+    RewriteRule ^composer\.(json|lock)$ - [F,L]
+    RewriteRule ^\.env.*$ - [F,L]
+
+    # If already targeting public, do not rewrite
+    RewriteCond %{REQUEST_URI} ^/public/ [NC]
+    RewriteRule ^ - [L]
+
+    # Rewrite all traffic into the /public directory
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+

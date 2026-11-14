@@ -26,7 +26,7 @@
              data-animate="fade-up" 
              data-delay="<?= 60 * ($aIdx % 4 + 1) ?>">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-            <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-primary); background: rgba(48, 71, 244, 0.08); padding: 5px 14px; border-radius: 9999px;">
+            <span style="font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-primary); background: rgba(48, 71, 244, 0.08); padding: 5px 14px; border-radius: 9999px;">
               <?= htmlspecialchars($art['category']) ?>
             </span>
             <span style="font-size: 0.82rem; color: var(--color-text-muted); font-weight: 600;">
@@ -34,7 +34,7 @@
             </span>
           </div>
 
-          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--color-navy); line-height: 1.3; margin-bottom: 12px;">
+          <h3 style="font-size: 1.35rem; font-weight: 600; color: var(--color-navy); line-height: 1.3; margin-bottom: 12px;">
             <?= htmlspecialchars($art['title']) ?>
           </h3>
 
